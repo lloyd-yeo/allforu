@@ -715,7 +715,10 @@
                 <div class="col_full">
                     <div id="post-lists" class="widget clearfix">
 
-                        <h4 class="highlight-me">Recent Events</h4>
+                        {{--<h4 class="highlight-me">Freshman Orientation Camp 2018</h4>--}}
+                        <div class="fancy-title title-dotted-border title-center">
+                            <h2>Freshman Orientation Camp 2018</h2>
+                        </div>
                         <div id="post-list-footer">
                             <div class="spost clearfix">
                                 <div class="entry-image">
@@ -727,6 +730,7 @@
                                     </div>
                                     <ul class="entry-meta">
                                         <li>55 people going</li>
+                                        <li><span><i class="icon-calendar3"></i>Date:</span> Tue, 26th Dec 2018 - 12pm</li>
                                     </ul>
                                 </div>
                                 <div id="related-portfolio" style="margin-top:30px;" class="owl-carousel portfolio-carousel carousel-widget"
@@ -821,16 +825,25 @@
                     </div>
                 </div><!-- .portfolio-single-image end -->
 
-                <div class="col_one_third nobottommargin">
+                {{--<div class="col_one_third nobottommargin">--}}
+                <div class="col_full nobottommargin">
+
+                    {{--<div class="fancy-title title-dotted-border title-center">--}}
+                        {{--<h2>Freshman Orientation Camp 2018</h2>--}}
+                    {{--</div>--}}
+
+                    <a href="#" class="button button-3d button-xlarge
+                    button-rounded button-aqua visible-lg-block text-center">LEARN MORE</a>
+
                     <!-- Portfolio Single - Meta
                     ============================================= -->
-                    <div class="panel panel-default events-meta">
+                    <div class="panel panel-default events-meta" style="display:none;">
                         <div class="panel-body">
                             <ul class="portfolio-meta nobottommargin">
-                                <li><span><i class="icon-user"></i>Created by:</span> John Doe</li>
-                                <li><span><i class="icon-calendar3"></i>Completed on:</span> 17th March 2014</li>
-                                <li><span><i class="icon-lightbulb"></i>Skills:</span> HTML5 / PHP / CSS3</li>
-                                <li><span><i class="icon-link"></i>Client:</span> <a href="#">Google</a></li>
+                                {{--<li><span><i class="icon-user"></i>Created by:</span> John Doe</li>--}}
+                                <li><span><i class="icon-calendar3"></i>Date:</span> Tue, 26th Dec 2018 - 12pm</li>
+                                {{--<li><span><i class="icon-lightbulb"></i>Skills:</span> HTML5 / PHP / CSS3</li>--}}
+                                {{--<li><span><i class="icon-link"></i>Client:</span> <a href="#">Google</a></li>--}}
                             </ul>
                         </div>
                     </div>
@@ -838,7 +851,7 @@
 
                     <!-- Portfolio Single - Share
                     ============================================= -->
-                    <div class="si-share noborder clearfix">
+                    <div class="si-share noborder clearfix" style="display:none;">
                         <span>Share:</span>
                         <div>
                             <a href="#" class="social-icon si-borderless si-facebook">
@@ -873,7 +886,7 @@
 
                 <!-- Portfolio Single Content
                 ============================================= -->
-                <div class="col_two_third portfolio-single-content col_last nobottommargin">
+                <div class="col_two_third portfolio-single-content col_last nobottommargin" style="display:none;">
 
                     <!-- Portfolio Single - Description
                     ============================================= -->
