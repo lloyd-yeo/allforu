@@ -694,29 +694,33 @@
     <section id="page-title">
 
         <div class="container clearfix">
-            <h1>Events</h1>
-            <div id="portfolio-navigation">
-                <a href="#"><i class="icon-angle-left"></i></a>
-                <a href="#"><i class="icon-line-grid"></i></a>
-                <a href="#"><i class="icon-angle-right"></i></a>
-            </div>
+            <h1>AllForU</h1>
+            {{--<div id="portfolio-navigation">--}}
+                {{--<a href="#"><i class="icon-angle-left"></i></a>--}}
+                {{--<a href="#"><i class="icon-line-grid"></i></a>--}}
+                {{--<a href="#"><i class="icon-angle-right"></i></a>--}}
+            {{--</div>--}}
         </div>
 
     </section><!-- #page-title end -->
 
     <!-- Content
     ============================================= -->
-    <section id="content">
+    <section id="content" style="background-color:#E7EAF5;">
 
         <div class="content-wrap">
 
             <div class="container clearfix">
-
-                <div class="col_full">
+                <div class="fancy-title title-bottom-border">
+                    <h2>Events</h2>
+                </div>
+                <div class="col_full testimonial" style="margin-bottom:20px;">
                     <div id="post-lists" class="widget clearfix">
-
                         {{--<h4 class="highlight-me">Freshman Orientation Camp 2018</h4>--}}
-                        <div class="fancy-title title-dotted-border title-center">
+                        {{--<div class="fancy-title title-dotted-border title-center">--}}
+                            {{--<h2>Freshman Orientation Camp 2018</h2>--}}
+                        {{--</div>--}}
+                        <div class="fancy-title title-bottom-border">
                             <h2>Freshman Orientation Camp 2018</h2>
                         </div>
                         <div id="post-list-footer">
@@ -726,14 +730,17 @@
                                 </div>
                                 <div class="entry-c">
                                     <div class="entry-title">
-                                        <h4><a href="#">NTU Biological Science Club</a></h4>
+                                        <h4><a href="#">NTU Biological Science Club</a> <span class="label label-primary" style="color:white;">Featured</span></h4>
                                     </div>
                                     <ul class="entry-meta">
                                         <li>55 people going</li>
+                                    </ul>
+                                    <br/>
+                                    <ul class="entry-meta" style="margin-top:0px;">
                                         <li><span><i class="icon-calendar3"></i>Date:</span> Tue, 26th Dec 2018 - 12pm</li>
                                     </ul>
                                 </div>
-                                <div id="related-portfolio" style="margin-top:30px;" class="owl-carousel portfolio-carousel carousel-widget"
+                                <div id="related-portfolio" style="margin-top:30px; margin-bottom:30px;" class="owl-carousel portfolio-carousel carousel-widget"
                                      data-margin="30"
                                      data-nav="false" data-autoplay="5000" data-items-xxs="1"
                                      data-items-xs="1" data-items-sm="1" data-items-lg="3">
@@ -806,6 +813,10 @@
                                         </div>
                                     </div>
                                 </div><!-- .portfolio-carousel end -->
+                                <a href="#" class="button button-3d button-xlarge
+                                    button-rounded button-aqua visible-lg-block
+                                    visible-md-block visible-sm-block visible-xs-block
+                                    text-center">LEARN MORE</a>
                             </div>
                         </div>
                     </div>
@@ -826,7 +837,7 @@
                 </div><!-- .portfolio-single-image end -->
 
                 {{--<div class="col_one_third nobottommargin">--}}
-                <div class="col_full nobottommargin">
+                <div class="col_full nobottommargin" style="display:none;">
 
                     {{--<div class="fancy-title title-dotted-border title-center">--}}
                         {{--<h2>Freshman Orientation Camp 2018</h2>--}}
@@ -883,7 +894,6 @@
                         </div>
                     </div>
                     <!-- Portfolio Single - Share End -->
-
                 </div>
 
                 <!-- Portfolio Single Content
@@ -1096,11 +1106,8 @@
                     </div>
 
                 </div><!-- .portfolio-carousel end -->
-
             </div>
-
         </div>
-
     </section><!-- #content end -->
 
     <!-- Footer
