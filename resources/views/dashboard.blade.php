@@ -1469,21 +1469,21 @@
                         @include('cards.club-carousel', ['image' => 'canvas/images/portfolio/4/2.jpg'])
                     </div>
 
-                    <div class="oc-item">
-                        @include('cards.club-carousel', ['image' => 'canvas/images/portfolio/4/3.jpg'])
-                    </div>
+                    {{--<div class="oc-item">--}}
+                        {{--@include('cards.club-carousel', ['image' => 'canvas/images/portfolio/4/3.jpg'])--}}
+                    {{--</div>--}}
 
-                    <div class="oc-item">
-                        @include('cards.club-carousel', ['image' => 'canvas/images/portfolio/4/4.jpg'])
-                    </div>
+                    {{--<div class="oc-item">--}}
+                        {{--@include('cards.club-carousel', ['image' => 'canvas/images/portfolio/4/4.jpg'])--}}
+                    {{--</div>--}}
 
-                    <div class="oc-item">
-                        @include('cards.club-carousel', ['image' => 'canvas/images/portfolio/4/5.jpg'])
-                    </div>
+                    {{--<div class="oc-item">--}}
+                        {{--@include('cards.club-carousel', ['image' => 'canvas/images/portfolio/4/5.jpg'])--}}
+                    {{--</div>--}}
 
-                    <div class="oc-item">
-                        @include('cards.club-carousel', ['image' => 'canvas/images/portfolio/4/6.jpg'])
-                    </div>
+                    {{--<div class="oc-item">--}}
+                        {{--@include('cards.club-carousel', ['image' => 'canvas/images/portfolio/4/6.jpg'])--}}
+                    {{--</div>--}}
                 </div><!-- .portfolio-carousel end -->
             </div>
         </div>
