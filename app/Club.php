@@ -5,6 +5,8 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Spatie\MediaLibrary\HasMedia\HasMediaTrait;
 use Spatie\MediaLibrary\HasMedia\Interfaces\HasMedia;
+use Overtrue\LaravelFollow\Traits\CanBeLiked;
+use Overtrue\LaravelFollow\Traits\CanBeFollowed;
 
 /**
  * Class Club
@@ -20,12 +22,12 @@ use Spatie\MediaLibrary\HasMedia\Interfaces\HasMedia;
 */
 class Club extends Model implements HasMedia
 {
-    use SoftDeletes, HasMediaTrait;
+    use SoftDeletes, HasMediaTrait, CanBeLiked, CanBeFollowed;
 
     protected $fillable = ['name', 'description', 'website', 'fb_page_url', 'ig_page_url', 'cover_img', 'school_id'];
     protected $hidden = [];
-    
-    
+
+
     public static function boot()
     {
         parent::boot();
@@ -41,10 +43,10 @@ class Club extends Model implements HasMedia
     {
         $this->attributes['school_id'] = $input ? $input : null;
     }
-    
+
     public function school()
     {
         return $this->belongsTo(School::class, 'school_id')->withTrashed();
     }
-    
+
 }

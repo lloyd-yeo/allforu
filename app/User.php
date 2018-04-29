@@ -5,6 +5,8 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Auth\Notifications\ResetPassword;
 use Hash;
+use Overtrue\LaravelFollow\Traits\CanFollow;
+use Overtrue\LaravelFollow\Traits\CanLike;
 
 /**
  * Class User
@@ -18,18 +20,18 @@ use Hash;
 */
 class User extends Authenticatable
 {
-    use Notifiable;
+    use Notifiable, CanFollow, CanLike;
     protected $fillable = ['name', 'email', 'password', 'remember_token', 'role_id'];
     protected $hidden = ['password', 'remember_token'];
-    
-    
+
+
     public static function boot()
     {
         parent::boot();
 
         User::observe(new \App\Observers\UserActionsObserver);
     }
-    
+
     /**
      * Hash password
      * @param $input
@@ -39,7 +41,7 @@ class User extends Authenticatable
         if ($input)
             $this->attributes['password'] = app('hash')->needsRehash($input) ? Hash::make($input) : $input;
     }
-    
+
 
     /**
      * Set to null if empty
@@ -49,19 +51,19 @@ class User extends Authenticatable
     {
         $this->attributes['role_id'] = $input ? $input : null;
     }
-    
+
     public function role()
     {
         return $this->belongsTo(Role::class, 'role_id');
     }
-    
+
     public function clubs()
     {
         return $this->belongsToMany(Club::class, 'club_user')->withTrashed();
     }
-    
-    
-    
+
+
+
 
     public function sendPasswordResetNotification($token)
     {
