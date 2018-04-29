@@ -717,7 +717,6 @@
 
                         <h4 class="highlight-me">Recent Events</h4>
                         <div id="post-list-footer">
-
                             <div class="spost clearfix">
                                 <div class="entry-image">
                                     <a href="#" class="nobg"><img src="canvas/images/magazine/small/1.jpg" alt=""></a>
@@ -730,15 +729,87 @@
                                         <li>55 people going</li>
                                     </ul>
                                 </div>
+                                <div id="related-portfolio" style="margin-top:30px;" class="owl-carousel portfolio-carousel carousel-widget"
+                                     data-margin="30"
+                                     data-nav="false" data-autoplay="5000" data-items-xxs="1"
+                                     data-items-xs="1" data-items-sm="1" data-items-lg="3">
+                                    <div class="oc-item">
+                                        <div class="iportfolio">
+                                            <div class="portfolio-image">
+                                                <a href="canvas/portfolio-single.html">
+                                                    <img src="canvas/images/portfolio/4/1.jpg" alt="Open Imagination">
+                                                </a>
+                                                <div class="portfolio-overlay">
+                                                    <a href="canvas/images/portfolio/full/1.jpg" class="left-icon" data-lightbox="image"><i class="icon-line-plus"></i></a>
+                                                    <a href="canvas/portfolio-single.html" class="right-icon"><i class="icon-line-ellipsis"></i></a>
+                                                </div>
+                                            </div>
+                                            {{--<div class="portfolio-desc">--}}
+                                                {{--<h3><a href="canvas/portfolio-single.html">Open Imagination</a></h3>--}}
+                                                {{--<span><a href="#">Media</a>, <a href="#">Icons</a></span>--}}
+                                            {{--</div>--}}
+                                        </div>
+                                    </div>
+                                    <div class="oc-item">
+                                        <div class="iportfolio">
+                                            <div class="portfolio-image">
+                                                <a href="canvas/portfolio-single.html">
+                                                    <img src="canvas/images/portfolio/4/2.jpg" alt="Locked Steel Gate">
+                                                </a>
+                                                <div class="portfolio-overlay">
+                                                    <a href="canvas/images/portfolio/full/2.jpg" class="left-icon" data-lightbox="image"><i class="icon-line-plus"></i></a>
+                                                    <a href="canvas/portfolio-single.html" class="right-icon"><i class="icon-line-ellipsis"></i></a>
+                                                </div>
+                                            </div>
+                                            {{--<div class="portfolio-desc">--}}
+                                                {{--<h3><a href="canvas/portfolio-single.html">Locked Steel Gate</a></h3>--}}
+                                                {{--<span><a href="#">Illustrations</a></span>--}}
+                                            {{--</div>--}}
+                                        </div>
+                                    </div>
+                                    <div class="oc-item">
+                                        <div class="iportfolio">
+                                            <div class="portfolio-image">
+                                                <a href="canvas/portfolio-single-video.html">
+                                                    <img src="canvas/images/portfolio/4/10.jpg" alt="Study Table">
+                                                </a>
+                                                <div class="portfolio-overlay">
+                                                    <a href="canvas/http://vimeo.com/91973305" class="left-icon" data-lightbox="iframe"><i class="icon-line-play"></i></a>
+                                                    <a href="canvas/portfolio-single-video.html" class="right-icon"><i class="icon-line-ellipsis"></i></a>
+                                                </div>
+                                            </div>
+                                            {{--<div class="portfolio-desc">--}}
+                                                {{--<h3><a href="canvas/portfolio-single-video.html">Study Table</a></h3>--}}
+                                                {{--<span><a href="#">Graphics</a>, <a href="#">Media</a></span>--}}
+                                            {{--</div>--}}
+                                        </div>
+                                    </div>
+                                    <div class="oc-item">
+                                        <div class="iportfolio">
+                                            <div class="portfolio-image">
+                                                <a href="canvas/portfolio-single-video.html">
+                                                    <img src="canvas/images/portfolio/4/10.jpg" alt="Study Table">
+                                                </a>
+                                                <div class="portfolio-overlay">
+                                                    <a href="canvas/http://vimeo.com/91973305" class="left-icon" data-lightbox="iframe"><i class="icon-line-play"></i></a>
+                                                    <a href="canvas/portfolio-single-video.html" class="right-icon"><i class="icon-line-ellipsis"></i></a>
+                                                </div>
+                                            </div>
+                                            {{--<div class="portfolio-desc">--}}
+                                            {{--<h3><a href="canvas/portfolio-single-video.html">Study Table</a></h3>--}}
+                                            {{--<span><a href="#">Graphics</a>, <a href="#">Media</a></span>--}}
+                                            {{--</div>--}}
+                                        </div>
+                                    </div>
+                                </div><!-- .portfolio-carousel end -->
                             </div>
-
                         </div>
-
                     </div>
                 </div>
+
                 <!-- Portfolio Single Gallery
                 ============================================= -->
-                <div class="col_full portfolio-single-image">
+                <div class="col_full portfolio-single-image" style="display:none;">
                     <div class="fslider" data-arrows="true" data-animation="slide">
                         <div class="flexslider">
                             <div class="slider-wrap">
