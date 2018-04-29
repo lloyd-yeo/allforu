@@ -77,10 +77,19 @@
                         </div>
                     </div>
                 </div><!-- .portfolio-carousel end -->
-                <a href="#" class="button button-3d button-xlarge
-                                    button-rounded button-aqua visible-lg-block
-                                    visible-md-block visible-sm-block visible-xs-block
-                                    text-center">LEARN MORE</a>
+                {{--visible-lg-block--}}
+                {{--visible-md-block visible-sm-block visible-xs-block--}}
+                <center>
+
+                    <a href="#" class="button button-3d button-rounded button-reveal button-large button-red tright">
+                        <i class="icon-heart"></i><span>LIKE</span>
+                    </a>
+                </center>
+                <br/>
+                <center>
+                    <a href="#" class="button button-3d button-xlarge
+                                    button-rounded button-aqua
+                                    text-center">LEARN MORE</a></center>
             </div>
         </div>
     </div>
