@@ -18,10 +18,8 @@ class Create1524975920SchoolsTable extends Migration
                 $table->string('name')->nullable();
                 $table->string('acronym')->nullable();
                 $table->string('cover_img')->nullable();
-                
                 $table->timestamps();
                 $table->softDeletes();
-
                 $table->index(['deleted_at']);
             });
         }

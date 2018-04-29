@@ -12,7 +12,7 @@ class Create1524975815ClubsTable extends Migration
      */
     public function up()
     {
-        if(! Schema::hasTable('clubs')) {
+        if (!Schema::hasTable('clubs')) {
             Schema::create('clubs', function (Blueprint $table) {
                 $table->increments('id');
                 $table->string('name')->nullable();
@@ -21,10 +21,8 @@ class Create1524975815ClubsTable extends Migration
                 $table->string('fb_page_url')->nullable();
                 $table->string('ig_page_url')->nullable();
                 $table->string('cover_img')->nullable();
-                
                 $table->timestamps();
                 $table->softDeletes();
-
                 $table->index(['deleted_at']);
             });
         }

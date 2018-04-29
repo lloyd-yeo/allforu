@@ -12,12 +12,11 @@ class Add5ae54955e77f8RelationshipsToClubTable extends Migration
      */
     public function up()
     {
-        Schema::table('clubs', function(Blueprint $table) {
+        Schema::table('clubs', function (Blueprint $table) {
             if (!Schema::hasColumn('clubs', 'school_id')) {
                 $table->integer('school_id')->unsigned()->nullable();
                 $table->foreign('school_id', '151182_5ae549522e32b')->references('id')->on('schools')->onDelete('cascade');
-                }
-                
+            }
         });
     }
 
@@ -28,8 +27,8 @@ class Add5ae54955e77f8RelationshipsToClubTable extends Migration
      */
     public function down()
     {
-        Schema::table('clubs', function(Blueprint $table) {
-            
+        Schema::table('clubs', function (Blueprint $table) {
+
         });
     }
 }

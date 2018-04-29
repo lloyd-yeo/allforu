@@ -12,15 +12,15 @@ class Create1524975432UserActionsTable extends Migration
      */
     public function up()
     {
-        if(! Schema::hasTable('user_actions')) {
+        if (!Schema::hasTable('user_actions')) {
             Schema::create('user_actions', function (Blueprint $table) {
                 $table->increments('id');
                 $table->string('action');
                 $table->string('action_model')->nullable();
                 $table->integer('action_id')->nullable();
-                
+
                 $table->timestamps();
-                
+
             });
         }
     }
