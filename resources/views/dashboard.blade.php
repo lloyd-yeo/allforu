@@ -833,7 +833,9 @@
                     {{--</div>--}}
 
                     <a href="#" class="button button-3d button-xlarge
-                    button-rounded button-aqua visible-lg-block text-center">LEARN MORE</a>
+                    button-rounded button-aqua visible-lg-block
+                    visible-md-block visible-sm-block visible-xs-block
+                    text-center">LEARN MORE</a>
 
                     <!-- Portfolio Single - Meta
                     ============================================= -->
