@@ -7,6 +7,7 @@ use Illuminate\Auth\Notifications\ResetPassword;
 use Hash;
 use Overtrue\LaravelFollow\Traits\CanFollow;
 use Overtrue\LaravelFollow\Traits\CanLike;
+use Overtrue\LaravelFollow\Traits\CanSubscribe;
 
 /**
  * Class User
@@ -20,7 +21,7 @@ use Overtrue\LaravelFollow\Traits\CanLike;
 */
 class User extends Authenticatable
 {
-    use Notifiable, CanFollow, CanLike;
+    use Notifiable, CanFollow, CanLike, CanSubscribe;
     protected $fillable = ['name', 'email', 'password', 'remember_token', 'role_id'];
     protected $hidden = ['password', 'remember_token'];
 

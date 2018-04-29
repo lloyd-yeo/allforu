@@ -21,6 +21,10 @@ class Create1524975815ClubsTable extends Migration
                 $table->string('fb_page_url')->nullable();
                 $table->string('ig_page_url')->nullable();
                 $table->string('cover_img')->nullable();
+                $table->integer('dollars_saved')->nullable();
+                $table->integer('cash_sponsored')->nullable();
+                $table->integer('products_sponsored')->nullable();
+                $table->integer('students_impacted')->nullable();
                 $table->timestamps();
                 $table->softDeletes();
                 $table->index(['deleted_at']);

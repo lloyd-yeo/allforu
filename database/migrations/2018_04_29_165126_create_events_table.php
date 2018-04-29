@@ -15,13 +15,12 @@ class CreateEventsTable extends Migration
     {
         Schema::create('events', function (Blueprint $table) {
             $table->increments('id');
-            $table->timestamps();
-            $table->increments('id');
             $table->string('name')->nullable();
             $table->text('description')->nullable();
             $table->string('cover_img')->nullable();
             $table->dateTime('start_date')->nullable();
             $table->dateTime('end_date')->nullable();
+            $table->tinyInteger('public')->nullable();
             $table->timestamps();
             $table->softDeletes();
             $table->index(['deleted_at']);
