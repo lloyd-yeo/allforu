@@ -691,7 +691,7 @@
 
     <!-- Page Title
     ============================================= -->
-    <section id="page-title">
+    <section id="page-title" style="display:none;">
 
         <div class="container clearfix">
             <h1>AllForU</h1>
@@ -711,9 +711,16 @@
         <div class="content-wrap">
 
             <div class="container clearfix">
-                <div class="fancy-title title-bottom-border">
-                    <h2>Events</h2>
+
+                {{--<div class="fancy-title title-bottom-border">--}}
+                    {{--<h2>Events</h2>--}}
+                {{--</div>--}}
+
+                <div class="title-block">
+                    <h1>Events</h1>
+                    <span></span>
                 </div>
+
                 <div class="col_full testimonial" style="margin-bottom:20px;">
                     <div id="post-lists" class="widget clearfix">
                         {{--<h4 class="highlight-me">Freshman Orientation Camp 2018</h4>--}}
