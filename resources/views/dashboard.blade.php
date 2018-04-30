@@ -45,17 +45,19 @@
                 ============================================= -->
                 <div id="logo">
                     <a href="canvas/index.html" class="standard-logo" data-dark-logo="canvas/images/logo-dark.png"><img
-                                src="canvas/images/logo.png" alt="Canvas Logo"></a>
+                                src="canvas/images/afu-logo.png" alt="Canvas Logo"></a>
                     <a href="canvas/index.html" class="retina-logo" data-dark-logo="canvas/images/logo-dark@2x.png"><img
-                                src="canvas/images/logo@2x.png" alt="Canvas Logo"></a>
+                                src="canvas/images/afu-logo.png"
+                                {{--src="canvas/images/logo@2x.png" --}}
+                                alt="Canvas Logo"></a>
                 </div><!-- #logo end -->
 
                 <!-- Primary Navigation
                 ============================================= -->
                 <nav id="primary-menu">
-
                     <ul>
-                        <li><a href="canvas/index.html">
+                        <li style="display:none;">
+                            <a href="canvas/index.html">
                                 <div>Home</div>
                             </a>
                             <ul>
@@ -77,7 +79,7 @@
                                             </a></li>
                                     </ul>
                                 </li>
-                                <li><a href="canvas/index-portfolio.html">
+                                <li style="display:none;"><a href="canvas/index-portfolio.html">
                                         <div>Home - Portfolio</div>
                                     </a>
                                     <ul>
@@ -95,7 +97,7 @@
                                             </a></li>
                                     </ul>
                                 </li>
-                                <li><a href="canvas/index-blog.html">
+                                <li style="display:none;"><a href="canvas/index-blog.html">
                                         <div>Home - Blog</div>
                                     </a>
                                     <ul>
@@ -110,7 +112,7 @@
                                             </a></li>
                                     </ul>
                                 </li>
-                                <li><a href="canvas/index-shop.html">
+                                <li style="display:none;"><a href="canvas/index-shop.html">
                                         <div>Home - Shop</div>
                                     </a>
                                     <ul>
@@ -122,7 +124,7 @@
                                             </a></li>
                                     </ul>
                                 </li>
-                                <li><a href="canvas/index-magazine.html">
+                                <li style="display:none;"><a href="canvas/index-magazine.html">
                                         <div>Home - Magazine</div>
                                     </a>
                                     <ul>
@@ -137,7 +139,7 @@
                                             </a></li>
                                     </ul>
                                 </li>
-                                <li><a href="canvas/landing.html">
+                                <li style="display:none;"><a href="canvas/landing.html">
                                         <div>Home - Landing Page</div>
                                     </a>
                                     <ul>
@@ -158,7 +160,7 @@
                                             </a></li>
                                     </ul>
                                 </li>
-                                <li><a href="canvas/index-fullscreen-image.html">
+                                <li style="display:none;"><a href="canvas/index-fullscreen-image.html">
                                         <div>Home - Full Screen</div>
                                     </a>
                                     <ul>
@@ -173,7 +175,7 @@
                                             </a></li>
                                     </ul>
                                 </li>
-                                <li><a href="canvas/index-onepage.html">
+                                <li style="display:none;"><a href="canvas/index-onepage.html">
                                         <div>Home - One Page</div>
                                     </a>
                                     <ul>
@@ -208,7 +210,8 @@
                                     </a></li>
                             </ul>
                         </li>
-                        <li><a href="#">
+                        <li style="display:none;">
+                            <a href="#">
                                 <div>Features</div>
                             </a>
                             <ul>
@@ -704,7 +707,8 @@
                                     </a></li>
                             </ul>
                         </li>
-                        <li class="mega-menu"><a href="#">
+                        <li style="display:none;" class="mega-menu">
+                            <a href="#">
                                 <div>Pages</div>
                             </a>
                             <div class="mega-menu-content style-2 clearfix">
@@ -838,7 +842,8 @@
                                 </ul>
                             </div>
                         </li>
-                        <li class="current mega-menu"><a href="#">
+                        <li style="display:none;" class="current mega-menu">
+                            <a href="#">
                                 <div>Portfolio</div>
                             </a>
                             <div class="mega-menu-content style-2 clearfix">
@@ -974,7 +979,8 @@
                                 </ul>
                             </div>
                         </li>
-                        <li class="mega-menu"><a href="#">
+                        <li style="display:none;"  class="mega-menu">
+                            <a href="#">
                                 <div>Blog</div>
                             </a>
                             <div class="mega-menu-content style-2 clearfix">
@@ -1120,7 +1126,8 @@
                                 </ul>
                             </div>
                         </li>
-                        <li><a href="canvas/shop.html">
+                        <li style="display:none;" >
+                            <a href="canvas/shop.html">
                                 <div>Shop</div>
                             </a>
                             <ul>
@@ -1207,7 +1214,8 @@
                                     </a></li>
                             </ul>
                         </li>
-                        <li class="mega-menu"><a href="#">
+                        <li style="display:none;" class="mega-menu">
+                            <a href="#">
                                 <div>Shortcodes</div>
                             </a>
                             <div class="mega-menu-content clearfix">
@@ -1360,45 +1368,6 @@
                         </li>
                     </ul>
 
-                    <!-- Top Cart
-                    ============================================= -->
-                    <div id="top-cart">
-                        <a href="#" id="top-cart-trigger"><i class="icon-shopping-cart"></i><span>5</span></a>
-                        <div class="top-cart-content">
-                            <div class="top-cart-title">
-                                <h4>Shopping Cart</h4>
-                            </div>
-                            <div class="top-cart-items">
-                                <div class="top-cart-item clearfix">
-                                    <div class="top-cart-item-image">
-                                        <a href="#"><img src="canvas/images/shop/small/1.jpg"
-                                                         alt="Blue Round-Neck Tshirt"/></a>
-                                    </div>
-                                    <div class="top-cart-item-desc">
-                                        <a href="#">Blue Round-Neck Tshirt</a>
-                                        <span class="top-cart-item-price">$19.99</span>
-                                        <span class="top-cart-item-quantity">x 2</span>
-                                    </div>
-                                </div>
-                                <div class="top-cart-item clearfix">
-                                    <div class="top-cart-item-image">
-                                        <a href="#"><img src="canvas/images/shop/small/6.jpg"
-                                                         alt="Light Blue Denim Dress"/></a>
-                                    </div>
-                                    <div class="top-cart-item-desc">
-                                        <a href="#">Light Blue Denim Dress</a>
-                                        <span class="top-cart-item-price">$24.99</span>
-                                        <span class="top-cart-item-quantity">x 3</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="top-cart-action clearfix">
-                                <span class="fleft top-checkout-price">$114.95</span>
-                                <button class="button button-3d button-small nomargin fright">View Cart</button>
-                            </div>
-                        </div>
-                    </div><!-- #top-cart end -->
-
                     <!-- Top Search
                     ============================================= -->
                     <div id="top-search">
@@ -1491,7 +1460,7 @@
 
     <!-- Footer
     ============================================= -->
-    <footer id="footer" class="dark">
+    <footer style="display:none;"  id="footer" class="dark">
 
         <div class="container">
 

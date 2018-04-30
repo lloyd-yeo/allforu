@@ -20,7 +20,7 @@
             <img class="center" style="display: inline;
             width:64px; height:64px; border-radius:64px; border-style:solid; border-width:1px; border-color:black;" src="http://206.189.42.39/thumb/1525030196-sbs-logo.jpeg" alt="">
             <h3 style="margin-top:20px;">NTU Biological Science Club<span class="subtitle">Nanyang Technological University</span></h3>
-            <p><a href="#" class="button button-3d button-rounded button-blue" style="margin-top:20px;"><i class="icon-angle-right"></i>Find out</a></p>
+            <p style="margin-bottom:0;"><a href="#" class="button button-3d button-rounded button-blue" style="margin-top:20px;"><i class="icon-angle-right"></i>Find out</a></p>
         </div>
 
         {{--<div id="post-list-footer">--}}
