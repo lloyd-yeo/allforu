@@ -44,9 +44,9 @@
                 <!-- Logo
                 ============================================= -->
                 <div id="logo">
-                    <a href="canvas/index.html" class="standard-logo" data-dark-logo="canvas/images/logo-dark.png"><img
+                    <a href="/" class="standard-logo" data-dark-logo="canvas/images/logo-dark.png"><img
                                 src="canvas/images/afu-logo.png" alt="Canvas Logo"></a>
-                    <a href="canvas/index.html" class="retina-logo" data-dark-logo="canvas/images/logo-dark@2x.png"><img
+                    <a href="/" class="retina-logo" data-dark-logo="canvas/images/logo-dark@2x.png"><img
                                 src="canvas/images/afu-logo.png"
                                 {{--src="canvas/images/logo@2x.png" --}}
                                 alt="Canvas Logo"></a>
@@ -57,7 +57,7 @@
                 <nav id="primary-menu">
                     <ul>
                         <li style="display:none;">
-                            <a href="canvas/index.html">
+                            <a href="/">
                                 <div>Home</div>
                             </a>
                             <ul>
