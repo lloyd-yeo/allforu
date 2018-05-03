@@ -160,8 +160,11 @@
 
                             <div class="center">
                                 <h4 style="margin-bottom: 15px;">or Login with:</h4>
-
-                                <div style="width:240px; margin-left:40px;">
+                                @desktop
+                                    <div style="width:240px; margin-left:40px;">
+                                @elsedesktop
+                                    <div>
+                                @enddesktop
                                     <div class="fb-login-button" data-max-rows="1"
                                          onlogin="checkLoginState();"
                                          data-scope="public_profile,email"

@@ -18,12 +18,12 @@ class UsersController extends Controller
      */
     public function index()
     {
-        if (! Gate::allows('user_access')) {
+        if (!Gate::allows('user_access')) {
             return abort(401);
         }
 
 
-                $users = User::all();
+        $users = User::all();
 
         return view('admin.users.index', compact('users'));
     }
@@ -35,10 +35,10 @@ class UsersController extends Controller
      */
     public function create()
     {
-        if (! Gate::allows('user_create')) {
+        if (!Gate::allows('user_create')) {
             return abort(401);
         }
-        
+
         $roles = \App\Role::get()->pluck('title', 'id')->prepend(trans('quickadmin.qa_please_select'), '');
         $clubs = \App\Club::get()->pluck('name', 'id');
 
@@ -49,17 +49,16 @@ class UsersController extends Controller
     /**
      * Store a newly created User in storage.
      *
-     * @param  \App\Http\Requests\StoreUsersRequest  $request
+     * @param  \App\Http\Requests\StoreUsersRequest $request
      * @return \Illuminate\Http\Response
      */
     public function store(StoreUsersRequest $request)
     {
-        if (! Gate::allows('user_create')) {
+        if (!Gate::allows('user_create')) {
             return abort(401);
         }
         $user = User::create($request->all());
         $user->clubs()->sync(array_filter((array)$request->input('clubs')));
-
 
 
         return redirect()->route('admin.users.index');
@@ -69,15 +68,15 @@ class UsersController extends Controller
     /**
      * Show the form for editing User.
      *
-     * @param  int  $id
+     * @param  int $id
      * @return \Illuminate\Http\Response
      */
     public function edit($id)
     {
-        if (! Gate::allows('user_edit')) {
+        if (!Gate::allows('user_edit')) {
             return abort(401);
         }
-        
+
         $roles = \App\Role::get()->pluck('title', 'id')->prepend(trans('quickadmin.qa_please_select'), '');
         $clubs = \App\Club::get()->pluck('name', 'id');
 
@@ -90,19 +89,18 @@ class UsersController extends Controller
     /**
      * Update User in storage.
      *
-     * @param  \App\Http\Requests\UpdateUsersRequest  $request
-     * @param  int  $id
+     * @param  \App\Http\Requests\UpdateUsersRequest $request
+     * @param  int $id
      * @return \Illuminate\Http\Response
      */
     public function update(UpdateUsersRequest $request, $id)
     {
-        if (! Gate::allows('user_edit')) {
+        if (!Gate::allows('user_edit')) {
             return abort(401);
         }
         $user = User::findOrFail($id);
         $user->update($request->all());
         $user->clubs()->sync(array_filter((array)$request->input('clubs')));
-
 
 
         return redirect()->route('admin.users.index');
@@ -112,18 +110,18 @@ class UsersController extends Controller
     /**
      * Display User.
      *
-     * @param  int  $id
+     * @param  int $id
      * @return \Illuminate\Http\Response
      */
     public function show($id)
     {
-        if (! Gate::allows('user_view')) {
+        if (!Gate::allows('user_view')) {
             return abort(401);
         }
-        
+
         $roles = \App\Role::get()->pluck('title', 'id')->prepend(trans('quickadmin.qa_please_select'), '');
         $clubs = \App\Club::get()->pluck('name', 'id');
-$user_actions = \App\UserAction::where('user_id', $id)->get();
+        $user_actions = \App\UserAction::where('user_id', $id)->get();
 
         $user = User::findOrFail($id);
 
@@ -134,12 +132,12 @@ $user_actions = \App\UserAction::where('user_id', $id)->get();
     /**
      * Remove User from storage.
      *
-     * @param  int  $id
+     * @param  int $id
      * @return \Illuminate\Http\Response
      */
     public function destroy($id)
     {
-        if (! Gate::allows('user_delete')) {
+        if (!Gate::allows('user_delete')) {
             return abort(401);
         }
         $user = User::findOrFail($id);
@@ -155,7 +153,7 @@ $user_actions = \App\UserAction::where('user_id', $id)->get();
      */
     public function massDestroy(Request $request)
     {
-        if (! Gate::allows('user_delete')) {
+        if (!Gate::allows('user_delete')) {
             return abort(401);
         }
         if ($request->input('ids')) {
