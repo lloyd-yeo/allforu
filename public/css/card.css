@@ -41,7 +41,7 @@
 .card{
     height: 400px;
     width: 300px;
-    margin: 0 auto;
+    /*margin: 0 auto;*/
     position: relative;
     z-index: 1;
     perspective: 600px;
