@@ -7,6 +7,7 @@ Route::get('/', function(){ return view('auth.social-login'); });
 $this->get('login', 'Auth\LoginController@showLoginForm')->name('login');
 $this->post('login', 'Auth\LoginController@login')->name('auth.login');
 $this->post('logout', 'Auth\LoginController@logout')->name('auth.logout');
+$this->post('/user/social/register', 'SocialLoginController@login')->name('social.login');
 
 // Change Password Routes...
 $this->get('change_password', 'Auth\ChangePasswordController@showChangePasswordForm')->name('auth.change_password');
