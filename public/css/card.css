@@ -6,7 +6,7 @@
 html, body {
     background-color: #220200;
     height: 100%;
-    overflow: hidden;
+    overflow: auto;
     font-family: helvetica neue,helvetica,arial,sans-serif;
 }
 html h1, body h1 {
@@ -21,22 +21,22 @@ html h2, body h2 {
     color: #6b0500;
 }
 
-#card-wrapper {
+.card-wrapper {
     opacity: 0;
     display: table;
     height: 100%;
     width: 100%;
 }
-#card-wrapper.loaded {
+.card-wrapper.loaded {
     opacity: 1;
     transition: 2.5s ease-in-out;
 }
-#card-wrapper #content-wrapper {
+.card-wrapper .content-wrapper {
     display: table-cell;
     vertical-align: middle;
 }
 
-#card {
+.card{
     height: 400px;
     width: 300px;
     margin: 0 auto;
@@ -44,7 +44,7 @@ html h2, body h2 {
     z-index: 1;
     perspective: 600px;
 }
-#card #front, #card #back {
+.card > .front, .card > .back {
     border-radius: 10px;
     height: 100%;
     width: 100%;
@@ -55,12 +55,12 @@ html h2, body h2 {
     backface-visibility: hidden;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
-#card #front {
+.card > .front {
     transform: rotateY(0deg);
     overflow: hidden;
     z-index: 1;
 }
-#card #front #arrow {
+.card > .front > .arrow {
     position: absolute;
     height: 50px;
     line-height: 50px;
@@ -71,13 +71,13 @@ html h2, body h2 {
     color: rgba(255, 255, 255, 0.5);
     animation: arrowWiggle 1s ease-in-out infinite;
 }
-#card #front #top-pic {
+.card > .front > .top-pic {
     height: 50%;
     width: 100%;
     background-image: url(https://unsplash.imgix.net/45/ZLSw0SXxThSrkXRIiCdT_DSC_0345.jpg?q=75&w=1080&h=1080&fit=max&fm=jpg&auto=format&s=857f07b76abac23a7fb7161cc7b12a46);
     background-size: cover;
 }
-#card #front #avatar {
+.card > .front > .avatar {
     width: 114px;
     height: 114px;
     top: 50%;
@@ -90,7 +90,7 @@ html h2, body h2 {
     position: absolute;
     z-index: 1;
 }
-#card #front #info-box {
+.card > .front > .info-box {
     height: 50%;
     width: 100%;
     position: absolute;
@@ -100,7 +100,7 @@ html h2, body h2 {
     background: rgba(200, 38, 29, 0.7);
     padding: 50px;
 }
-#card #front #social-bar {
+.card > .front > .social-bar {
     height: 50px;
     width: 100%;
     position: absolute;
@@ -110,7 +110,7 @@ html h2, body h2 {
     font-size: 18px;
     text-align: center;
 }
-#card #front #social-bar a {
+.card > .front > .social-bar > a {
     display: inline-block;
     color: #951009;
     text-decoration: none;
@@ -118,12 +118,12 @@ html h2, body h2 {
     line-height: 18px;
     border-radius: 5px;
 }
-#card #front #social-bar a:hover {
+.card > .front > .social-bar > a:hover {
     color: #450300;
     background: rgba(255, 255, 255, 0.3);
     transition: .25s ease-in-out;
 }
-#card #back {
+.card > .back {
     transform: rotateY(180deg);
     background-color: rgba(255, 255, 255, 0.6);
     display: table;
@@ -132,11 +132,11 @@ html h2, body h2 {
     line-height: 20px;
     padding: 50px;
 }
-#card #back .back-info {
+.card > .back > .back-info {
     text-align: justify;
     text-justify: inter-word;
 }
-#card #back #social-bar {
+.card > .back > .social-bar {
     height: 50px;
     width: 100%;
     position: absolute;
@@ -146,7 +146,7 @@ html h2, body h2 {
     font-size: 18px;
     text-align: center;
 }
-#card #back #social-bar a {
+.card > .back > .social-bar a {
     display: inline-block;
     line-height: 18px;
     color: #951009;
@@ -154,21 +154,21 @@ html h2, body h2 {
     padding: 5px;
     border-radius: 5px;
 }
-#card #back #social-bar a:hover {
+.card > .back > .social-bar a:hover {
     color: #450300;
     background: rgba(223, 74, 66, 0.5);
     transition: .25s ease-in-out;
 }
-#card .info {
+.card > .info {
     display: table-cell;
     height: 100%;
     vertical-align: middle;
     text-align: center;
 }
-#card.flip #front {
+.card > .flip > .front {
     transform: rotateY(180deg);
 }
-#card.flip #back {
+.card > .flip > .back {
     transform: rotateY(360deg);
 }
 

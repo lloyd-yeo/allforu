@@ -1,53 +1,70 @@
-<div class="iportfolio" style="display:none;">
-    <div class="portfolio-image">
-        <a href="canvas/portfolio-single.html">
-            <img src="{{ $image }}" alt="Open Imagination">
-        </a>
-        <div class="portfolio-overlay">
-            <a href="{{ $image }}" class="left-icon"
-               data-lightbox="image"><i class="icon-line-plus"></i></a>
-            <a href="canvas/portfolio-single.html" class="right-icon"><i
-                        class="icon-line-ellipsis"></i></a>
+<div class="card-wrapper">
+    <div class="content-wrapper">
+        <div class="card">
+            <div class="front">
+                <div class="arrow"><i class="fa fa-arrow-left"></i></div>
+                <div class="top-pic">
+                    <button style="margin-top:10px; margin-left: 20px; background-color:yellow; border-color: yellow; float:left;">FEATURED</button>
+                    <a style="float:right; margin-top: 10px; margin-right: 20px; color:white; font-weight:bold;" href="https://www.codepen.io/designcouch/public">
+                        <i class="fa fa-share"></i>
+                    </a>
+                    <a style="float:right; margin-top: 10px; margin-right: 20px; color:white; font-weight:bold;" href="https://www.codepen.io/designcouch/public">
+                        <i class="fa fa-heart-o"></i>
+                    </a>
+                </div>
+                <div class="avatar"></div>
+                <div class="info-box">
+                    <div class="info">
+                        <h1>Jesse Couch</h1>
+                        <h2>Digital Creative</h2>
+                    </div>
+                </div>
+                <div class="social-bar">
+                    <a href="https://www.facebook.com/designcouch" target="_blank">
+                        <i class="fa fa-facebook"></i>
+                    </a>
+                    <a href="https://www.twitter.com/designcouch" target="_blank">
+                        <i class="fa fa-twitter"></i>
+                    </a>
+                    <a href="https://www.dribbble.com/designcouch" target="_blank">
+                        <i class="fa fa-dribbble"></i>
+                    </a>
+                    <a href="https://www.codepen.io/designcouch/public">
+                        <i class="fa fa-codepen"></i>
+                    </a>
+
+                    <a href="javascript:void" class="more-info">
+                        <i class="fa fa-user"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="back">
+                <div class="back-info">
+                    <p>My name is Jesse Couch, and I am an award winning, intensely creative, coffee-fueled front-end web designer and developer. My style and approach are very straight-forward — I obsess about keeping things as simple as humanly possible. That's it. If you like bells and whistles for the sake of bells and whistles, look elsewhere - but if you want to remain laser-focused on the goals for your new website, it's time time to talk.</p>
+                </div>
+                <div class="social-bar">
+                    <a href="https://www.facebook.com/designcouch" target="_blank">
+                        <i class="fa fa-facebook"></i>
+                    </a>
+                    <a href="https://www.twitter.com/designcouch" target="_blank">
+                        <i class="fa fa-twitter"></i>
+                    </a>
+                    <a href="https://www.dribbble.com/designcouch" target="_blank">
+                        <i class="fa fa-dribbble"></i>
+                    </a>
+                    <a href="https://www.codepen.io/designcouch/public">
+                        <i class="fa fa-codepen"></i>
+                    </a>
+                    <a href="javascript:void" class="more-info">
+                        <i class="fa fa-undo"></i>
+                    </a>
+                </div>
+            </div>
         </div>
-    </div>
-    <div class="portfolio-desc testimonial">
 
-        {{--@if ($club->cover_img)--}}
-            {{--<a href="{{ asset(env('UPLOAD_PATH').'/'.$club->cover_img) }}" target="_blank"><img src="{{ asset(env('UPLOAD_PATH').'/thumb/'.$club->cover_img) }}"></a>--}}
-        {{--@endif--}}
-
-        <div class="fbox-desc center">
-            <img class="center" style="display: inline;
-            width:64px; height:64px; border-radius:64px; border-style:solid; border-width:1px; border-color:black;" src="http://206.189.42.39/thumb/1525030196-sbs-logo.jpeg" alt="">
-            <h3 style="margin-top:20px;">NTU Biological Science Club<span class="subtitle">Nanyang Technological University</span></h3>
-            <p style="margin-bottom:0;"><a href="#" class="button button-3d button-rounded button-blue" style="margin-top:20px;"><i class="icon-angle-right"></i>Find out</a></p>
+        <div id="background">
+            <div id="background-image"></div>
         </div>
-
-        {{--<div id="post-list-footer">--}}
-            {{--<div class="spost clearfix">--}}
-                    {{--<div class="entry-image">--}}
-                        {{--<a href="#" class="nobg">--}}
-                            {{--<img src="canvas/images/magazine/small/1.jpg"--}}
-                                                      {{--alt="">--}}
-                        {{--</a>--}}
-                    {{--</div>--}}
-                {{--<div class="entry-c">--}}
-                    {{--<div class="entry-title">--}}
-                        {{--<h3><a href="#">NTU Biological Science Club</a></h3>--}}
-                    {{--</div>--}}
-                    {{--<ul class="entry-meta">--}}
-                        {{--<li>Nanyang Technological University</li>--}}
-                    {{--</ul>--}}
-                    {{--<br/>--}}
-                    {{--<a href="#"--}}
-                       {{--class="button button-rounded button-reveal button-large button-blue tright"--}}
-                       {{--style="margin-left:0;">--}}
-                        {{--<i class="icon-angle-right"></i>--}}
-                        {{--<span style="color:white; margin-top:0;">Find out more</span>--}}
-                    {{--</a>--}}
-                {{--</div>--}}
-            {{--</div>--}}
-        {{--</div>--}}
     </div>
 </div>
-
