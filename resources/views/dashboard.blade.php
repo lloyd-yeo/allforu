@@ -16,7 +16,8 @@
     <link rel="stylesheet" href="canvas/css/animate.css" type="text/css"/>
     <link rel="stylesheet" href="canvas/css/magnific-popup.css" type="text/css"/>
     <link rel="stylesheet" href="canvas/css/responsive.css" type="text/css"/>
-    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.2.0/css/font-awesome.min.css" type="text/css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.2.0/css/font-awesome.min.css"
+          type="text/css">
     <link rel="stylesheet" href="{{ asset('canvas/css/colors.css') }}" type="text/css"/>
     <link rel="stylesheet" href="{{ asset('css/card.css') }}" type="text/css"/>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
@@ -981,7 +982,7 @@
                                 </ul>
                             </div>
                         </li>
-                        <li style="display:none;"  class="mega-menu">
+                        <li style="display:none;" class="mega-menu">
                             <a href="#">
                                 <div>Blog</div>
                             </a>
@@ -1128,7 +1129,7 @@
                                 </ul>
                             </div>
                         </li>
-                        <li style="display:none;" >
+                        <li style="display:none;">
                             <a href="canvas/shop.html">
                                 <div>Shop</div>
                             </a>
@@ -1431,31 +1432,33 @@
                 <div id="related-portfolio" class="owl-carousel portfolio-carousel carousel-widget"
                      data-margin="0" data-nav="true"
                      data-autoplay="5000"
-                     data-items-xxs="1" data-items-xs="2" data-items-sm="3" data-items-lg="3">
+                     data-items-xxs="1" data-items-xs="1" data-items-sm="1" data-items-lg="3">
 
-                    <div class="oc-item">
-                        @include('cards.club-carousel', ['image' => 'canvas/images/portfolio/4/1.jpg',
-                                                         'name' => 'Biological Science Club',
-                                                         'organisation' => 'Nanyang Technological University'])
-                    </div>
+                    @foreach ($clubs as $club)
+                        <div class="oc-item">
+                            @include('cards.club-carousel', [ 'club' => $club ])
+                        </div>
+                    @endforeach
 
-                    <div class="oc-item">
-                        @include('cards.club-carousel', ['image' => 'canvas/images/portfolio/4/2.jpg',
-                                                         'name' => 'Biological Science Club',
-                                                         'organisation' => 'Nanyang Technological University'])
-                    </div>
 
-                    <div class="oc-item">
-                        @include('cards.club-carousel', ['image' => 'canvas/images/portfolio/4/3.jpg',
-                                                         'name' => 'Biological Science Club',
-                                                         'organisation' => 'Nanyang Technological University'])
-                    </div>
 
-                    <div class="oc-item">
-                        @include('cards.club-carousel', ['image' => 'canvas/images/portfolio/4/4.jpg',
-                                                         'name' => 'Biological Science Club',
-                                                         'organisation' => 'Nanyang Technological University'])
-                    </div>
+                    {{--<div class="oc-item">--}}
+                        {{--@include('cards.club-carousel', ['image' => 'canvas/images/portfolio/4/2.jpg',--}}
+                                                         {{--'name' => 'Biological Science Club',--}}
+                                                         {{--'organisation' => 'Nanyang Technological University'])--}}
+                    {{--</div>--}}
+
+                    {{--<div class="oc-item">--}}
+                        {{--@include('cards.club-carousel', ['image' => 'canvas/images/portfolio/4/3.jpg',--}}
+                                                         {{--'name' => 'Biological Science Club',--}}
+                                                         {{--'organisation' => 'Nanyang Technological University'])--}}
+                    {{--</div>--}}
+
+                    {{--<div class="oc-item">--}}
+                    {{--@include('cards.club-carousel', ['image' => 'canvas/images/portfolio/4/4.jpg',--}}
+                    {{--'name' => 'Biological Science Club',--}}
+                    {{--'organisation' => 'Nanyang Technological University'])--}}
+                    {{--</div>--}}
                 </div><!-- .portfolio-carousel end -->
             </div>
         </div>
@@ -1463,7 +1466,7 @@
 
     <!-- Footer
     ============================================= -->
-    <footer style="display:none;"  id="footer" class="dark">
+    <footer style="display:none;" id="footer" class="dark">
 
         <div class="container">
 
@@ -1726,17 +1729,17 @@
 ============================================= -->
 <script type="text/javascript" src="canvas/js/functions.js"></script>
 <script>
-    $(window).load(function(){
+    $(window).load(function () {
         $('.card-wrapper').addClass('loaded');
     })
 
-    $('.more-info').click(function(){
+    $('.more-info').click(function () {
         $(".card").toggleClass('flip');
         $('.arrow').remove();
     });
-//    $('#background').click(function(){
-//        $('#card').removeClass('flip');
-//    })
+    //    $('#background').click(function(){
+    //        $('#card').removeClass('flip');
+    //    })
 </script>
 </body>
 </html>

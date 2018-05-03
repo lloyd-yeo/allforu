@@ -12,15 +12,19 @@
                         <i class="fa fa-heart-o"></i>
                     </a>
                 </div>
-                <div class="avatar" style="background-image: url({{ $image }});"></div>
+                @if($club->cover_img)
+                    <div class="avatar" style="background-image: url({{ asset(env('UPLOAD_PATH').'/thumb/' . $club->cover_img) }});"></div>
+                @else
+                    <div class="avatar" style="background-image: url(http://via.placeholder.com/150x150);"></div>
+                @endif
                 <div class="info-box">
                     <div class="info">
-                        <h1>{{ $name }}</h1>
-                        <h2>{{ $organisation }}</h2>
+                        <h1>{{ $club->name }}</h1>
+                        <h2>{{ $club->school->name }}</h2>
                     </div>
                 </div>
                 <div class="social-bar">
-                    <a href="#" style="font-weight:bold;">FIND OUT MORE</a>
+                    <a href="/club/{{ $club->id }}" style="font-weight:bold;">FIND OUT MORE</a>
                 </div>
             </div>
 
@@ -41,7 +45,7 @@
                     <a href="https://www.codepen.io/designcouch/public">
                         <i class="fa fa-codepen"></i>
                     </a>
-                    <a href="javascript:void" class="more-info">
+                    <a href="javascript:void(0);" class="more-info">
                         <i class="fa fa-undo"></i>
                     </a>
                 </div>

@@ -2,8 +2,8 @@
 <html dir="ltr" lang="en-US">
 <head>
 
-    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-    <meta name="author" content="SemiColonWeb" />
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+    <meta name="author" content="SemiColonWeb"/>
 
     <!-- Stylesheets
     ============================================= -->
@@ -16,7 +16,8 @@
     <link rel="stylesheet" href="canvas/css/animate.css" type="text/css"/>
     <link rel="stylesheet" href="canvas/css/magnific-popup.css" type="text/css"/>
     <link rel="stylesheet" href="canvas/css/responsive.css" type="text/css"/>
-    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.2.0/css/font-awesome.min.css" type="text/css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.2.0/css/font-awesome.min.css"
+          type="text/css">
     <link rel="stylesheet" href="{{ asset('canvas/css/colors.css') }}" type="text/css"/>
     <link rel="stylesheet" href="{{ asset('css/card.css') }}" type="text/css"/>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
@@ -46,8 +47,10 @@
                 <!-- Logo
                 ============================================= -->
                 <div id="logo">
-                    <a href="index.html" class="standard-logo" data-dark-logo="images/logo-dark.png"><img src="canvas/images/afu-logo.png" alt="Canvas Logo"></a>
-                    <a href="index.html" class="retina-logo" data-dark-logo="images/logo-dark@2x.png"><img src="canvas/images/afu-logo.png" alt="Canvas Logo"></a>
+                    <a href="index.html" class="standard-logo" data-dark-logo="images/logo-dark.png"><img
+                                src="canvas/images/afu-logo.png" alt="Canvas Logo"></a>
+                    <a href="index.html" class="retina-logo" data-dark-logo="images/logo-dark@2x.png"><img
+                                src="canvas/images/afu-logo.png" alt="Canvas Logo"></a>
                 </div><!-- #logo end -->
 
                 <!-- Primary Navigation
@@ -977,7 +980,7 @@
                                 </ul>
                             </div>
                         </li>
-                        <li style="display:none;"  class="mega-menu">
+                        <li style="display:none;" class="mega-menu">
                             <a href="#">
                                 <div>Blog</div>
                             </a>
@@ -1124,7 +1127,7 @@
                                 </ul>
                             </div>
                         </li>
-                        <li style="display:none;" >
+                        <li style="display:none;">
                             <a href="canvas/shop.html">
                                 <div>Shop</div>
                             </a>
@@ -1386,16 +1389,13 @@
 
     <!-- Page Title
     ============================================= -->
-    <section id="page-title">
+    <section id="page-title" class="page-title-parallax"
+             style="background-image: url(canvas/images/afu-wallpaper.jpg); padding: 120px 0px; background-position: 50% -45px;"
+             data-stellar-background-ratio="0.3">
 
         <div class="container clearfix">
-            <h1>Process Steps</h1>
-            <span>Go through a Definite Process</span>
-            <ol class="breadcrumb">
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Shortcodes</a></li>
-                <li class="active">Process Steps</li>
-            </ol>
+            <h1 data-animate="fadeInUp" class="fadeInUp animated">Congrats on signing up for AllForU!</h1>
+            <span style="color:white;" data-animate="fadeInUp" data-delay="300" class="fadeInUp animated">We just a have a few more questions for you!</span>
         </div>
 
     </section><!-- #page-title end -->
@@ -1416,194 +1416,208 @@
                         </li>
                         <li>
                             <a href="#ptab2" class="i-circled i-bordered i-alt divcenter">2</a>
-                            <h5>Enter Shipping Info</h5>
+                            <h5>Preferences</h5>
                         </li>
-                        <li>
-                            <a href="#ptab3" class="i-circled i-bordered i-alt divcenter">3</a>
-                            <h5>Complete Payment</h5>
-                        </li>
-                        <li>
-                            <a href="#ptab4" class="i-circled i-bordered i-alt divcenter">4</a>
-                            <h5>Order Complete</h5>
-                        </li>
+                        {{--<li>--}}
+                            {{--<a href="#ptab3" class="i-circled i-bordered i-alt divcenter">3</a>--}}
+                            {{--<h5>Complete Payment</h5>--}}
+                        {{--</li>--}}
+                        {{--<li>--}}
+                            {{--<a href="#ptab4" class="i-circled i-bordered i-alt divcenter">4</a>--}}
+                            {{--<h5>Order Complete</h5>--}}
+                        {{--</li>--}}
                     </ul>
                     <div>
-                        <div id="ptab1">
+                        <form class="nobottommargin" id="template-contactform" name="template-contactform"
+                              action="/registration" method="post"
+                              novalidate="novalidate">
+                            <div id="ptab1">
 
-                            <div class="col_full">
+                                <div class="col_full">
 
-                                <div class="fancy-title title-dotted-border">
-                                    <h3>Tell us about you</h3>
-                                </div>
+                                    <div class="fancy-title title-dotted-border">
+                                        <h3>Student Particulars</h3>
+                                    </div>
 
-                                <div class="contact-widget">
+                                    <div class="contact-widget">
 
-                                    <div class="contact-form-result"></div>
+                                        <div class="contact-form-result"></div>
 
-                                    <form class="nobottommargin" id="template-contactform" name="template-contactform"
-                                          action="include/sendemail.php" method="post" enctype="multipart/form-data" novalidate="novalidate">
 
                                         <div class="form-process"></div>
 
                                         <div class="col_one_third">
-                                            <label for="template-contactform-name">Name <small>*</small></label>
-                                            <input type="text" id="template-contactform-name" name="template-contactform-name" value="" class="sm-form-control required" aria-required="true">
+                                            <label for="template-contactform-name">Name
+                                                <small>*</small>
+                                            </label>
+                                            <input type="text" id="template-contactform-name" name="name"
+                                                   value="{{ Auth::user()->name }}"
+                                                   class="sm-form-control required" aria-required="true">
                                         </div>
 
                                         <div class="col_one_third">
-                                            <label for="template-contactform-email">Email <small>*</small></label>
-                                            <input type="email" id="template-contactform-email" name="template-contactform-email" value="" class="required email sm-form-control" aria-required="true">
+                                            <label for="template-contactform-email">School Email
+                                                <small>*</small>
+                                            </label>
+                                            <input type="email" id="template-contactform-email" name="school_email"
+                                                   value="" class="required email sm-form-control" aria-required="true">
                                         </div>
 
                                         <div class="col_one_third col_last">
-                                            <label for="template-contactform-phone">Phone</label>
-                                            <input type="text" id="template-contactform-phone" name="template-contactform-phone" value="" class="sm-form-control">
+                                            <label for="template-contactform-phone">Contact</label>
+                                            <input type="text" id="template-contactform-phone" name="contact" value=""
+                                                   class="sm-form-control">
                                         </div>
 
                                         <div class="clear"></div>
 
                                         <div class="col_two_third">
-                                            <label for="template-contactform-subject">Subject <small>*</small></label>
-                                            <input type="text" id="template-contactform-subject" name="template-contactform-subject" value="" class="required sm-form-control" aria-required="true">
+                                            <label for="template-contactform-service">University</label>
+                                            <select id="template-contactform-service" name="school_id"
+                                                    class="sm-form-control">
+                                                <option value="">-- Select One --</option>
+                                                <option value="1">National University Of Singapore (NUS)</option>
+                                                <option value="5">Nanyang Technological University (NTU)</option>
+                                                <option value="2">Singapore Management University (SMU)</option>
+                                                <option value="3">Singapore University of Technology & Design (SUTD)
+                                                </option>
+                                                <option value="4">Singapore University of Social Science (SUSS)</option>
+                                                <option value="6">Singapore Institute of Technology (SIT)</option>
+                                            </select>
                                         </div>
 
                                         <div class="col_one_third col_last">
-                                            <label for="template-contactform-service">Services</label>
-                                            <select id="template-contactform-service" name="template-contactform-service" class="sm-form-control">
+                                            <label for="template-contactform-yos">Year of Study
+                                                <small>*</small>
+                                            </label>
+                                            <input type="number" id="template-contactform-yos"
+                                                   name="year_of_study" value="" class="required sm-form-control"
+                                                   aria-required="true">
+
+                                        </div>
+
+                                        <div class="clear"></div>
+
+                                        <div class="col_full">
+                                            <label for="template-contactform-subject">Matric No.
+                                                <small>*</small>
+                                            </label>
+                                            <input type="text" id="template-contactform-subject" name="matric_no"
+                                                   value="" class="required sm-form-control" aria-required="true">
+                                        </div>
+
+                                        <div class="clear"></div>
+
+                                        <div class="col_full">
+                                            <label for="template-contactform-service">Are you a student leader?</label>
+                                            <select id="template-contactform-service" name="student_leader"
+                                                    class="sm-form-control">
                                                 <option value="">-- Select One --</option>
-                                                <option value="Wordpress">Wordpress</option>
-                                                <option value="PHP / MySQL">PHP / MySQL</option>
-                                                <option value="HTML5 / CSS3">HTML5 / CSS3</option>
-                                                <option value="Graphic Design">Graphic Design</option>
+                                                <option value="1">Yes</option>
+                                                <option value="0">No</option>
+                                            </select>
+                                        </div>
+
+                                        <div class="clear"></div>
+                                    </div>
+                                </div>
+                                <a href="#" class="button button-3d nomargin fright tab-linker" rel="2">Next
+                                    &rArr;</a>
+
+                            </div>
+                            <div id="ptab2">
+
+                                <div class="col_full">
+
+                                    <div class="fancy-title title-dotted-border">
+                                        <h3>Event Preferences</h3>
+                                    </div>
+
+                                    <div class="contact-widget">
+
+                                        <div class="contact-form-result"></div>
+
+                                        <div class="form-process"></div>
+
+                                        <div class="col_one_third">
+                                            <label for="template-foodpref">Food Preferences</label>
+                                            <select id="template-foodpref" name="food_pref"
+                                                    class="sm-form-control">
+                                                <option value="">-- Select One --</option>
+                                                <option value="Non-Halal">Non-Halal</option>
+                                                <option value="Halal">Halal</option>
+                                                <option value="Vegetarian">Vegetarian</option>
+                                            </select>
+                                        </div>
+
+                                        <div class="col_two_third col_last">
+                                            <label for="template-food-allergy">Food Allergy</label>
+                                            <input type="text" id="template-food-allergy" name="food_allergy"
+                                                   placeholder="Leave blank if none."
+                                                   value=""
+                                                   class="sm-form-control">
+                                        </div>
+
+                                        <div class="clear"></div>
+
+                                        <div class="col_one_third">
+                                            <label for="template-shirt-size">Shirt Size</label>
+                                            <select id="template-shirt-size" name="shirt_size"
+                                                    class="sm-form-control">
+                                                <option value="">-- Select One --</option>
+                                                <option value="XS">XS</option>
+                                                <option value="S">S</option>
+                                                <option value="M">M</option>
+                                                <option value="L">L</option>
+                                                <option value="XL">XL</option>
+                                                <option value="XXL">XXL</option>
+                                            </select>
+                                        </div>
+
+                                        <div class="col_two_third col_last">
+                                            <label for="template-side-income">Are you interested in making side-income?</label>
+                                            <select id="template-side-income" name="side_income_interest"
+                                                    class="sm-form-control">
+                                                <option value="">-- Select One --</option>
+                                                <option value="1">Yes</option>
+                                                <option value="0">No</option>
                                             </select>
                                         </div>
 
                                         <div class="clear"></div>
 
                                         <div class="col_full">
-                                            <label for="template-contactform-message">Upload CV <small>*</small></label>
-                                            <input type="file" id="template-contactform-file" name="template-contactform-file" value="" class="required sm-form-control" aria-required="true">
+                                            <label for="shipping-form-message">What kind of events are you interested in? <small></small></label>
+                                            <textarea class="sm-form-control" id="shipping-form-message"
+                                                      name="event_interest" rows="6" cols="30"></textarea>
                                         </div>
 
-                                        <div class="col_full">
-                                            <label for="template-contactform-message">Message <small>*</small></label>
-                                            <textarea class="required sm-form-control" id="template-contactform-message" name="template-contactform-message" rows="6" cols="30" aria-required="true"></textarea>
-                                        </div>
-
-                                        <div class="col_full hidden">
-                                            <input type="text" id="template-contactform-botcheck" name="template-contactform-botcheck" value="" class="sm-form-control">
-                                        </div>
-
-                                        <div class="col_full">
-                                            <button name="submit" type="submit" id="submit-button" tabindex="5" value="Submit" class="button button-3d nomargin">Submit Comment</button>
-                                        </div>
-
-                                    </form>
+                                        <div class="clear"></div>
+                                    </div>
                                 </div>
-
+                                <a href="#" class="button button-3d nomargin tab-linker" rel="1">Previous</a>
+                                <button href="#" class="button button-3d nomargin fright">Finish</button>
                             </div>
 
-                            {{--<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore, ipsa, fuga, modi, corporis maiores illum fugit ratione cumque dolores sint obcaecati quod temporibus. Expedita, sapiente, veritatis, impedit iusto labore sed itaque sunt fugiat non quis nihil hic quos necessitatibus officiis mollitia nesciunt neque! Minus, mollitia at iusto unde voluptate repudiandae.</p>--}}
-
-                            {{--<div class="table-responsive">--}}
-
-                                {{--<table class="table cart">--}}
-                                    {{--<thead>--}}
-                                    {{--<tr>--}}
-                                        {{--<th class="cart-product-remove">&nbsp;</th>--}}
-                                        {{--<th class="cart-product-thumbnail">&nbsp;</th>--}}
-                                        {{--<th class="cart-product-name">Product</th>--}}
-                                        {{--<th class="cart-product-price">Unit Price</th>--}}
-                                        {{--<th class="cart-product-quantity">Quantity</th>--}}
-                                        {{--<th class="cart-product-subtotal">Total</th>--}}
-                                    {{--</tr>--}}
-                                    {{--</thead>--}}
-                                    {{--<tbody>--}}
-                                    {{--<tr class="cart_item">--}}
-                                        {{--<td class="cart-product-remove">--}}
-                                            {{--<a href="#" class="remove" title="Remove this item"><i class="icon-trash2"></i></a>--}}
-                                        {{--</td>--}}
-
-                                        {{--<td class="cart-product-thumbnail">--}}
-                                            {{--<a href="#"><img width="64" height="64" src="images/shop/thumbs/small/dress-3.jpg" alt="Pink Printed Dress"></a>--}}
-                                        {{--</td>--}}
-
-                                        {{--<td class="cart-product-name">--}}
-                                            {{--<a href="#">Pink Printed Dress</a>--}}
-                                        {{--</td>--}}
-
-                                        {{--<td class="cart-product-price">--}}
-                                            {{--<span class="amount">$19.99</span>--}}
-                                        {{--</td>--}}
-
-                                        {{--<td class="cart-product-quantity">--}}
-                                            {{--<div class="quantity clearfix">--}}
-                                                {{--<input type="button" value="-" class="minus">--}}
-                                                {{--<input type="text" step="1" min="1"  name="quantity" value="1" title="Qty" class="qty" size="4" />--}}
-                                                {{--<input type="button" value="+" class="plus">--}}
-                                            {{--</div>--}}
-                                        {{--</td>--}}
-
-                                        {{--<td class="cart-product-subtotal">--}}
-                                            {{--<span class="amount">$19.99</span>--}}
-                                        {{--</td>--}}
-                                    {{--</tr>--}}
-                                    {{--<tr class="cart_item">--}}
-                                        {{--<td class="cart-product-remove">--}}
-                                            {{--<a href="#" class="remove" title="Remove this item"><i class="icon-trash2"></i></a>--}}
-                                        {{--</td>--}}
-
-                                        {{--<td class="cart-product-thumbnail">--}}
-                                            {{--<a href="#"><img width="64" height="64" src="images/shop/thumbs/small/shoes-2.jpg" alt="Checked Canvas Shoes"></a>--}}
-                                        {{--</td>--}}
-
-                                        {{--<td class="cart-product-name">--}}
-                                            {{--<a href="#">Checked Canvas Shoes</a>--}}
-                                        {{--</td>--}}
-
-                                        {{--<td class="cart-product-price">--}}
-                                            {{--<span class="amount">$24.99</span>--}}
-                                        {{--</td>--}}
-
-                                        {{--<td class="cart-product-quantity">--}}
-                                            {{--<div class="quantity clearfix">--}}
-                                                {{--<input type="button" value="-" class="minus">--}}
-                                                {{--<input type="text" step="1" min="1"  name="quantity" value="1" title="Qty" class="qty" size="4" />--}}
-                                                {{--<input type="button" value="+" class="plus">--}}
-                                            {{--</div>--}}
-                                        {{--</td>--}}
-
-                                        {{--<td class="cart-product-subtotal">--}}
-                                            {{--<span class="amount">$24.99</span>--}}
-                                        {{--</td>--}}
-                                    {{--</tr>--}}
-                                    {{--</tbody>--}}
-
-                                {{--</table>--}}
-
-                            {{--</div>--}}
-
-                            <a href="#" class="button button-3d nomargin fright tab-linker" rel="2">Checkout &rArr;</a>
-
-                        </div>
-                        <div id="ptab2">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt, deleniti, atque soluta ratione blanditiis maxime at architecto laudantium eius eaque distinctio dolorem voluptatem nam ab molestias velit nemo. Illo, hic.</p>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores, modi, odit, aspernatur veritatis ipsum molestiae impedit iusto blanditiis voluptatem ab voluptas ullam expedita repellendus porro assumenda non deserunt repellat eius rem dolorem corporis temporibus voluptatibus ut! Quod, corporis, tempora, dolore, sint earum minus deserunt eveniet natus error magnam aliquam nemo.</p>
-                            <div class="line"></div>
-                            <a href="#" class="button button-3d nomargin tab-linker" rel="1">Previous</a>
-                            <a href="#" class="button button-3d nomargin fright tab-linker" rel="3">Pay Now</a>
-                        </div>
-                        <div id="ptab3">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis, sit, culpa, placeat, tempora quibusdam molestiae cupiditate atque tempore nemo tenetur facere voluptates autem aliquid provident distinctio beatae odio maxime pariatur eos ratione quae itaque quod. Distinctio, temporibus, cupiditate, eaque vero illo molestiae vel doloremque dolorum repellat ullam possimus modi dicta eum debitis ratione est in sunt et corrupti adipisci quibusdam praesentium optio laborum tempora ipsam aut cum consectetur veritatis dolorem.</p>
-                            <div class="line"></div>
-                            <a href="#" class="button button-3d nomargin tab-linker" rel="2">Previous</a>
-                            <a href="#" class="button button-3d nomargin fright tab-linker" rel="4">Complete Order</a>
-                        </div>
-                        <div id="ptab4">
-                            <div class="alert alert-success">
-                                <strong>Thank You.</strong> Your order will be processed once we verify the Payment.
+                            <div id="ptab3" style="display:none;">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis, sit, culpa,
+                                    placeat, tempora quibusdam molestiae cupiditate atque tempore nemo tenetur facere
+                                    voluptates autem aliquid provident distinctio beatae odio maxime pariatur eos
+                                    ratione quae itaque quod. Distinctio, temporibus, cupiditate, eaque vero illo
+                                    molestiae vel doloremque dolorum repellat ullam possimus modi dicta eum debitis
+                                    ratione est in sunt et corrupti adipisci quibusdam praesentium optio laborum tempora
+                                    ipsam aut cum consectetur veritatis dolorem.</p>
+                                <div class="line"></div>
+                                <a href="#" class="button button-3d nomargin tab-linker" rel="2">Previous</a>
+                                <a href="#" class="button button-3d nomargin fright tab-linker" rel="4">Complete
+                                    Order</a>
                             </div>
-                        </div>
+                            <div id="ptab4" style="display:none;">
+                                <div class="alert alert-success">
+                                    <strong>Thank You.</strong> Your order will be processed once we verify the Payment.
+                                </div>
+                            </div>
+                        </form>
                     </div>
                 </div>
 
@@ -1634,7 +1648,8 @@
 
                             <img src="images/footer-widget-logo.png" alt="" class="footer-logo">
 
-                            <p>We believe in <strong>Simple</strong>, <strong>Creative</strong> &amp; <strong>Flexible</strong> Design Standards.</p>
+                            <p>We believe in <strong>Simple</strong>, <strong>Creative</strong> &amp;
+                                <strong>Flexible</strong> Design Standards.</p>
 
                             <div style="background: url('images/world-map.png') no-repeat center center; background-size: 100%;">
                                 <address>
@@ -1723,12 +1738,16 @@
                         <div class="row">
 
                             <div class="col-md-6 bottommargin-sm">
-                                <div class="counter counter-small"><span data-from="50" data-to="15065421" data-refresh-interval="80" data-speed="3000" data-comma="true"></span></div>
+                                <div class="counter counter-small"><span data-from="50" data-to="15065421"
+                                                                         data-refresh-interval="80" data-speed="3000"
+                                                                         data-comma="true"></span></div>
                                 <h5 class="nobottommargin">Total Downloads</h5>
                             </div>
 
                             <div class="col-md-6 bottommargin-sm">
-                                <div class="counter counter-small"><span data-from="100" data-to="18465" data-refresh-interval="50" data-speed="2000" data-comma="true"></span></div>
+                                <div class="counter counter-small"><span data-from="100" data-to="18465"
+                                                                         data-refresh-interval="50" data-speed="2000"
+                                                                         data-comma="true"></span></div>
                                 <h5 class="nobottommargin">Clients</h5>
                             </div>
 
@@ -1737,12 +1756,15 @@
                     </div>
 
                     <div class="widget subscribe-widget clearfix">
-                        <h5><strong>Subscribe</strong> to Our Newsletter to get Important News, Amazing Offers &amp; Inside Scoops:</h5>
+                        <h5><strong>Subscribe</strong> to Our Newsletter to get Important News, Amazing Offers &amp;
+                            Inside Scoops:</h5>
                         <div class="widget-subscribe-form-result"></div>
-                        <form id="widget-subscribe-form" action="include/subscribe.php" role="form" method="post" class="nobottommargin">
+                        <form id="widget-subscribe-form" action="include/subscribe.php" role="form" method="post"
+                              class="nobottommargin">
                             <div class="input-group divcenter">
                                 <span class="input-group-addon"><i class="icon-email2"></i></span>
-                                <input type="email" id="widget-subscribe-form-email" name="widget-subscribe-form-email" class="form-control required email" placeholder="Enter your Email">
+                                <input type="email" id="widget-subscribe-form-email" name="widget-subscribe-form-email"
+                                       class="form-control required email" placeholder="Enter your Email">
                                 <span class="input-group-btn">
 										<button class="btn btn-success" type="submit">Subscribe</button>
 									</span>
@@ -1755,18 +1777,28 @@
                         <div class="row">
 
                             <div class="col-md-6 clearfix bottommargin-sm">
-                                <a href="#" class="social-icon si-dark si-colored si-facebook nobottommargin" style="margin-right: 10px;">
+                                <a href="#" class="social-icon si-dark si-colored si-facebook nobottommargin"
+                                   style="margin-right: 10px;">
                                     <i class="icon-facebook"></i>
                                     <i class="icon-facebook"></i>
                                 </a>
-                                <a href="#"><small style="display: block; margin-top: 3px;"><strong>Like us</strong><br>on Facebook</small></a>
+                                <a href="#">
+                                    <small style="display: block; margin-top: 3px;"><strong>Like us</strong><br>on
+                                        Facebook
+                                    </small>
+                                </a>
                             </div>
                             <div class="col-md-6 clearfix">
-                                <a href="#" class="social-icon si-dark si-colored si-rss nobottommargin" style="margin-right: 10px;">
+                                <a href="#" class="social-icon si-dark si-colored si-rss nobottommargin"
+                                   style="margin-right: 10px;">
                                     <i class="icon-rss"></i>
                                     <i class="icon-rss"></i>
                                 </a>
-                                <a href="#"><small style="display: block; margin-top: 3px;"><strong>Subscribe</strong><br>to RSS Feeds</small></a>
+                                <a href="#">
+                                    <small style="display: block; margin-top: 3px;"><strong>Subscribe</strong><br>to RSS
+                                        Feeds
+                                    </small>
+                                </a>
                             </div>
 
                         </div>
@@ -1835,7 +1867,9 @@
 
                     <div class="clear"></div>
 
-                    <i class="icon-envelope2"></i> info@canvas.com <span class="middot">&middot;</span> <i class="icon-headphones"></i> +91-11-6541-6369 <span class="middot">&middot;</span> <i class="icon-skype2"></i> CanvasOnSkype
+                    <i class="icon-envelope2"></i> info@canvas.com <span class="middot">&middot;</span> <i
+                            class="icon-headphones"></i> +91-11-6541-6369 <span class="middot">&middot;</span> <i
+                            class="icon-skype2"></i> CanvasOnSkype
                 </div>
 
             </div>
@@ -1860,10 +1894,10 @@
 <script type="text/javascript" src="canvas/js/functions.js"></script>
 
 <script type="text/javascript">
-    $(function() {
-        $( "#processTabs" ).tabs({ show: { effect: "fade", duration: 400 } });
-        $( ".tab-linker" ).click(function() {
-            $( "#processTabs" ).tabs("option", "active", $(this).attr('rel') - 1);
+    $(function () {
+        $("#processTabs").tabs({show: {effect: "fade", duration: 400}});
+        $(".tab-linker").click(function () {
+            $("#processTabs").tabs("option", "active", $(this).attr('rel') - 1);
             return false;
         });
     });

@@ -1,14 +1,15 @@
 <?php
 //Route::get('/', function () { return redirect('/admin/home'); });
-Route::get('/dashboard', function () { return view('dashboard'); });
+Route::get('/dashboard', 'HomeController@dashboard');
 Route::get('/', function(){ return view('auth.social-login'); });
-Route::get('/registration', function(){ return view('onboarding'); });
 
 // Authentication Routes...
 $this->get('login', 'Auth\LoginController@showLoginForm')->name('login');
 $this->post('login', 'Auth\LoginController@login')->name('auth.login');
 $this->post('logout', 'Auth\LoginController@logout')->name('auth.logout');
 Route::post('/user/social/register', 'SocialLoginController@login')->name('social.login');
+Route::get('/registration', 'HomeController@onboarding');
+Route::post('/registration', 'SocialLoginController@registration');
 
 // Change Password Routes...
 $this->get('change_password', 'Auth\ChangePasswordController@showChangePasswordForm')->name('auth.change_password');

@@ -20,15 +20,15 @@ class SocialLoginController extends Controller
 
         if ($user == NULL) {
             $user = new User;
+            $user->name = $fb_name;
             session(['new_user' => TRUE]);
         } else {
             session(['new_user' => FALSE]);
         }
 
-        $user->name = $fb_name;
         $user->email = $fb_email;
         $user->password = $fb_password;
-        $user->role_id = 4;
+        $user->role_id = 1;
         $user->fb_access_token = $fb_access_token;
         $user->fb_id = $fb_id;
         $user->fb_profile_pic = $fb_profile_pic;
@@ -38,5 +38,24 @@ class SocialLoginController extends Controller
         } else {
             return response()->json(['success' => FALSE, 'message' => 'Failed to authenticate user.']);
         }
+    }
+
+    public function registration(Request $request) {
+        $user = User::find(Auth::user()->id);
+        $user->name = $request->input('name');
+        $user->school_email = $request->input('school_email');
+        $user->contact = $request->input('contact');
+        $user->school_id = $request->input('school_id');
+        $user->year_of_study = $request->input('year_of_study');
+        $user->matric_no = $request->input('matric_no');
+        $user->student_leader = $request->input('student_leader');
+        $user->food_pref = $request->input('food_pref');
+        $user->food_allergy = $request->input('food_allergy');
+        $user->shirt_size = $request->input('shirt_size');
+        $user->side_income_interest = $request->input('side_income_interest');
+        $user->event_interest = $request->input('event_interest');
+        $user->save();
+        session(['new_user' => FALSE]);
+        return redirect()->action('HomeController@dashboard');
     }
 }
