@@ -24,7 +24,7 @@
             </div>
             <div class="row">
                 <div class="col-xs-12 form-group">
-                    {!! Form::label('name', trans('quickadmin.clubs.fields.name').'', ['class' => 'control-label']) !!}
+                    {!! Form::label('name', 'Society\'s Full '.trans('quickadmin.clubs.fields.name').'', ['class' => 'control-label']) !!}
                     {!! Form::text('name', old('name'), ['class' => 'form-control', 'placeholder' => '']) !!}
                     <p class="help-block"></p>
                     @if($errors->has('name'))
@@ -36,7 +36,7 @@
             </div>
             <div class="row">
                 <div class="col-xs-12 form-group">
-                    {!! Form::label('club-acronym', trans('quickadmin.clubs.fields.club-acronym').'what is', ['class' => 'control-label']) !!}
+                    {!! Form::label('club-acronym', trans('quickadmin.clubs.fields.club-acronym').'', ['class' => 'control-label']) !!}
                     {!! Form::text('club-acronym', old('club-acronym'), ['class' => 'form-control', 'placeholder' => '']) !!}
                     <p class="help-block"></p>
                     @if($errors->has('club-acronym'))
@@ -48,12 +48,96 @@
             </div>
             <div class="row">
                 <div class="col-xs-12 form-group">
-                    {!! Form::label('description', trans('quickadmin.clubs.fields.description').'', ['class' => 'control-label']) !!}
+                    {!! Form::label('organisation', 'Main '.trans('quickadmin.clubs.fields.organisation').' you are serving', ['class' => 'control-label']) !!}
+                    {!! Form::text('organisation', old('organisation'), ['class' => 'form-control', 'placeholder' => '']) !!}
+                    <p class="help-block"></p>
+                    @if($errors->has('organisation'))
+                        <p class="help-block">
+                            {{ $errors->first('organisation') }}
+                        </p>
+                    @endif
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12 form-group">
+                    {!! Form::label('organisation-acronym', 'Acronym of organisation you are serving', ['class' => 'control-label']) !!}
+                    {!! Form::text('organisation-acronym', old('organisation-acronym'), ['class' => 'form-control', 'placeholder' => '']) !!}
+                    <p class="help-block"></p>
+                    @if($errors->has('organisation-acronym'))
+                        <p class="help-block">
+                            {{ $errors->first('organisation-acronym') }}
+                        </p>
+                    @endif
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12 form-group">
+                    {!! Form::label('referred-by', 'How do you first know about us?', ['class' => 'control-label']) !!}
+                    {!! Form::select('referred-by', $referred_by, old('referred-by'), ['class' => 'form-control select2']) !!}
+                    <p class="help-block"></p>
+                    @if($errors->has('referred-by'))
+                        <p class="help-block">
+                            {{ $errors->first('referred-by') }}
+                        </p>
+                    @endif
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12 form-group">
+                    {!! Form::label('classification', trans('quickadmin.clubs.fields.classification').' of Society', ['class' => 'control-label']) !!}
+                    {!! Form::select('classification', $society_classification, old('classification'), ['class' => 'form-control select2']) !!}
+                    <p class="help-block"></p>
+                    @if($errors->has('classification'))
+                        <p class="help-block">
+                            {{ $errors->first('classification') }}
+                        </p>
+                    @endif
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12 form-group">
+                    {!! Form::label('category-1', trans('quickadmin.clubs.fields.category-1').' of Society', ['class' => 'control-label']) !!}
+                    {!! Form::select('category-1', $society_category, old('category-1'), ['class' => 'form-control select2']) !!}
+                    <p class="help-block"></p>
+                    @if($errors->has('category-1'))
+                        <p class="help-block">
+                            {{ $errors->first('category-1') }}
+                        </p>
+                    @endif
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12 form-group">
+                    {!! Form::label('category-2', trans('quickadmin.clubs.fields.category-2').' of Society', ['class' => 'control-label']) !!}
+                    {!! Form::select('category-2', $society_category, old('category-2'), ['class' => 'form-control select2']) !!}
+                    <p class="help-block"></p>
+                    @if($errors->has('category-2'))
+                        <p class="help-block">
+                            {{ $errors->first('category-2') }}
+                        </p>
+                    @endif
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12 form-group">
+                    {!! Form::label('description', 'How will you describe your club profile to interest members to join', ['class' => 'control-label']) !!}
                     {!! Form::text('description', old('description'), ['class' => 'form-control', 'placeholder' => '']) !!}
                     <p class="help-block"></p>
                     @if($errors->has('description'))
                         <p class="help-block">
                             {{ $errors->first('description') }}
+                        </p>
+                    @endif
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12 form-group">
+                    {!! Form::label('usual-activity', 'What are the usual activity for your clubs?', ['class' => 'control-label']) !!}
+                    {!! Form::text('usual-activity', old('usual-activity'), ['class' => 'form-control', 'placeholder' => '']) !!}
+                    <p class="help-block"></p>
+                    @if($errors->has('usual-activity'))
+                        <p class="help-block">
+                            {{ $errors->first('usual-activity') }}
                         </p>
                     @endif
                 </div>
@@ -127,18 +211,6 @@
                     @if($errors->has('images'))
                         <p class="help-block">
                             {{ $errors->first('images') }}
-                        </p>
-                    @endif
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-xs-12 form-group">
-                    {!! Form::label('home', trans('quickadmin.clubs.fields.home').'', ['class' => 'control-label']) !!}
-                    {!! Form::select('home', $schools, old('home'), ['class' => 'form-control select2']) !!}
-                    <p class="help-block"></p>
-                    @if($errors->has('home'))
-                        <p class="help-block">
-                            {{ $errors->first('home') }}
                         </p>
                     @endif
                 </div>

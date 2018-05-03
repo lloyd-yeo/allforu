@@ -48,10 +48,15 @@ class ClubsController extends Controller
         if (! Gate::allows('club_create')) {
             return abort(401);
         }
-        
-        $schools = \App\School::get()->pluck('name', 'id')->prepend(trans('quickadmin.qa_please_select'), '');
 
-        return view('admin.clubs.create', compact('schools'));
+        $schools = \App\School::get()->pluck('name', 'id')->prepend(trans('quickadmin.qa_please_select'), '');
+        $referred_by = collect(['Facebook', 'Instagram', 'Linkedin', 'Friend’s referral', 'Referred by other clubs', 'Internet search',
+            'Flyers', 'Events']);
+        $society_classification = collect(['Club', 'CCA', 'Interest Group', 'Hall']);
+        $society_category = collect(['Sports', 'Hall of residence', 'Performing arts', 'Voluntary role','Student welfare',
+            'Academic']);
+
+        return view('admin.clubs.create', compact('schools','referred_by','society_classification','society_category'));
     }
 
     /**
@@ -91,7 +96,7 @@ class ClubsController extends Controller
         if (! Gate::allows('club_edit')) {
             return abort(401);
         }
-        
+
         $schools = \App\School::get()->pluck('name', 'id')->prepend(trans('quickadmin.qa_please_select'), '');
 
         $club = Club::findOrFail($id);
@@ -141,7 +146,7 @@ class ClubsController extends Controller
         if (! Gate::allows('club_view')) {
             return abort(401);
         }
-        
+
         $schools = \App\School::get()->pluck('name', 'id')->prepend(trans('quickadmin.qa_please_select'), '');$users = \App\User::whereHas('clubs',
                     function ($query) use ($id) {
                         $query->where('id', $id);
