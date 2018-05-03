@@ -152,7 +152,12 @@
                                     <button class="button button-3d button-black nomargin" id="login-form-submit"
                                             name="login-form-submit" value="login">Login
                                     </button>
-                                    <a href="#" class="fright">Forgot Password?</a>
+                                    @desktop
+                                        <a href="#" class="fright">Forgot Password?</a>
+                                    @elsedesktop
+                                        <br/>
+                                        <a href="#">Forgot Password?</a>
+                                    @enddesktop
                                 </div>
                             </form>
 
