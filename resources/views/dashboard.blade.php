@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="canvas/css/animate.css" type="text/css"/>
     <link rel="stylesheet" href="canvas/css/magnific-popup.css" type="text/css"/>
     <link rel="stylesheet" href="canvas/css/responsive.css" type="text/css"/>
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.2.0/css/font-awesome.min.css" type="text/css">
     <link rel="stylesheet" href="{{ asset('canvas/css/colors.css') }}" type="text/css"/>
     <link rel="stylesheet" href="{{ asset('css/card.css') }}" type="text/css"/>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>

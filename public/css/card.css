@@ -31,7 +31,7 @@ html h2, body h2 {
     opacity: 1;
     transition: 2.5s ease-in-out;
 }
-.card-wrapper .content-wrapper {
+.card-wrapper > .content-wrapper {
     display: table-cell;
     vertical-align: middle;
 }
@@ -100,7 +100,7 @@ html h2, body h2 {
     background: rgba(200, 38, 29, 0.7);
     padding: 50px;
 }
-.card > .front > .social-bar {
+.social-bar {
     height: 50px;
     width: 100%;
     position: absolute;
@@ -110,7 +110,7 @@ html h2, body h2 {
     font-size: 18px;
     text-align: center;
 }
-.card > .front > .social-bar > a {
+.social-bar > a {
     display: inline-block;
     color: #951009;
     text-decoration: none;
@@ -118,7 +118,7 @@ html h2, body h2 {
     line-height: 18px;
     border-radius: 5px;
 }
-.card > .front > .social-bar > a:hover {
+.social-bar > a:hover {
     color: #450300;
     background: rgba(255, 255, 255, 0.3);
     transition: .25s ease-in-out;
@@ -159,15 +159,18 @@ html h2, body h2 {
     background: rgba(223, 74, 66, 0.5);
     transition: .25s ease-in-out;
 }
-.card > .info {
+
+.info {
     display: table-cell;
     height: 100%;
     vertical-align: middle;
     text-align: center;
 }
+
 .card > .flip > .front {
     transform: rotateY(180deg);
 }
+
 .card > .flip > .back {
     transform: rotateY(360deg);
 }
