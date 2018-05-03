@@ -20,22 +20,23 @@
                     </div>
                 </div>
                 <div class="social-bar">
-                    <a href="https://www.facebook.com/designcouch" target="_blank">
-                        <i class="fa fa-facebook"></i>
-                    </a>
-                    <a href="https://www.twitter.com/designcouch" target="_blank">
-                        <i class="fa fa-twitter"></i>
-                    </a>
-                    <a href="https://www.dribbble.com/designcouch" target="_blank">
-                        <i class="fa fa-dribbble"></i>
-                    </a>
-                    <a href="https://www.codepen.io/designcouch/public">
-                        <i class="fa fa-codepen"></i>
-                    </a>
+                    <a href="#" style="font-weight:bold;">FIND OUT MORE</a>
+                    {{--<a href="https://www.facebook.com/designcouch" target="_blank">--}}
+                        {{--<i class="fa fa-facebook"></i>--}}
+                    {{--</a>--}}
+                    {{--<a href="https://www.twitter.com/designcouch" target="_blank">--}}
+                        {{--<i class="fa fa-twitter"></i>--}}
+                    {{--</a>--}}
+                    {{--<a href="https://www.dribbble.com/designcouch" target="_blank">--}}
+                        {{--<i class="fa fa-dribbble"></i>--}}
+                    {{--</a>--}}
+                    {{--<a href="https://www.codepen.io/designcouch/public">--}}
+                        {{--<i class="fa fa-codepen"></i>--}}
+                    {{--</a>--}}
 
-                    <a href="javascript:void" class="more-info">
-                        <i class="fa fa-user"></i>
-                    </a>
+                    {{--<a href="javascript:void(0);" class="more-info">--}}
+                        {{--<i class="fa fa-user"></i>--}}
+                    {{--</a>--}}
                 </div>
             </div>
 

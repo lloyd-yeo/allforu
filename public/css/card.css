@@ -13,14 +13,15 @@
 .info > h1 {
     font-size: 25px;
     font-weight: 200;
-    color: white;
+    color: black;
     line-height: 30px;
     margin-bottom: 10px;
 }
 
 .info > h2 {
     font-size: 15px;
-    color: #6b0500;
+    /*color: #6b0500;*/
+    color: black;
 }
 
 .card-wrapper {
@@ -41,11 +42,14 @@
 .card {
     height: 450px;
     width: 300px;
-    /*margin: 0 auto;*/
     position: relative;
     z-index: 1;
     perspective: 600px;
+    margin-bottom:20px;
+    margin-left:auto;
+    margin-right:auto;
 }
+
 .card > .front, .card > .back {
     border-radius: 10px;
     height: 100%;
@@ -57,11 +61,13 @@
     backface-visibility: hidden;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
+
 .card > .front {
     transform: rotateY(0deg);
     overflow: hidden;
     z-index: 1;
 }
+
 .card > .front > .arrow {
     position: absolute;
     height: 50px;
@@ -99,7 +105,7 @@
     display: table;
     left: 0;
     bottom: 0;
-    background: rgba(200, 38, 29, 0.7);
+    background: rgba(255, 255, 255, 0.7);
     padding: 50px;
 }
 .social-bar {
@@ -114,14 +120,16 @@
 }
 .social-bar > a {
     display: inline-block;
-    color: #951009;
+    /*color: #951009;*/
+    color: #4FA0E6;
     text-decoration: none;
     padding: 5px;
     line-height: 18px;
     border-radius: 5px;
 }
 .social-bar > a:hover {
-    color: #450300;
+    /*color: #450300;*/
+    color: #005A9E;
     background: rgba(255, 255, 255, 0.3);
     transition: .25s ease-in-out;
 }
