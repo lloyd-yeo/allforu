@@ -8,8 +8,20 @@
         <div class="panel-heading">
             @lang('quickadmin.qa_create')
         </div>
-        
+
         <div class="panel-body">
+            <div class="row">
+                <div class="col-xs-12 form-group">
+                    {!! Form::label('school_id', trans('quickadmin.clubs.fields.school').'', ['class' => 'control-label']) !!}
+                    {!! Form::select('school_id', $schools, old('school_id'), ['class' => 'form-control select2']) !!}
+                    <p class="help-block"></p>
+                    @if($errors->has('school_id'))
+                        <p class="help-block">
+                            {{ $errors->first('school_id') }}
+                        </p>
+                    @endif
+                </div>
+            </div>
             <div class="row">
                 <div class="col-xs-12 form-group">
                     {!! Form::label('name', trans('quickadmin.clubs.fields.name').'', ['class' => 'control-label']) !!}
@@ -18,6 +30,18 @@
                     @if($errors->has('name'))
                         <p class="help-block">
                             {{ $errors->first('name') }}
+                        </p>
+                    @endif
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12 form-group">
+                    {!! Form::label('club-acronym', trans('quickadmin.clubs.fields.club-acronym').'what is', ['class' => 'control-label']) !!}
+                    {!! Form::text('club-acronym', old('club-acronym'), ['class' => 'form-control', 'placeholder' => '']) !!}
+                    <p class="help-block"></p>
+                    @if($errors->has('club-acronym'))
+                        <p class="help-block">
+                            {{ $errors->first('club-acronym') }}
                         </p>
                     @endif
                 </div>
@@ -109,17 +133,17 @@
             </div>
             <div class="row">
                 <div class="col-xs-12 form-group">
-                    {!! Form::label('school_id', trans('quickadmin.clubs.fields.school').'', ['class' => 'control-label']) !!}
-                    {!! Form::select('school_id', $schools, old('school_id'), ['class' => 'form-control select2']) !!}
+                    {!! Form::label('home', trans('quickadmin.clubs.fields.home').'', ['class' => 'control-label']) !!}
+                    {!! Form::select('home', $schools, old('home'), ['class' => 'form-control select2']) !!}
                     <p class="help-block"></p>
-                    @if($errors->has('school_id'))
+                    @if($errors->has('home'))
                         <p class="help-block">
-                            {{ $errors->first('school_id') }}
+                            {{ $errors->first('home') }}
                         </p>
                     @endif
                 </div>
             </div>
-            
+
         </div>
     </div>
 

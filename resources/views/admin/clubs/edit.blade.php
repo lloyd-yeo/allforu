@@ -2,7 +2,7 @@
 
 @section('content')
     <h3 class="page-title">@lang('quickadmin.clubs.title')</h3>
-    
+
     {!! Form::model($club, ['method' => 'PUT', 'route' => ['admin.clubs.update', $club->id], 'files' => true,]) !!}
 
     <div class="panel panel-default">
@@ -131,7 +131,7 @@
                     @endif
                 </div>
             </div>
-            
+
         </div>
     </div>
 
