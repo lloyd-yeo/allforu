@@ -12,7 +12,7 @@
                         <i class="fa fa-heart-o"></i>
                     </a>
                 </div>
-                <div class="avatar"></div>
+                <div class="avatar" style="background-image: url({{ $image }});"></div>
                 <div class="info-box">
                     <div class="info">
                         <h1>Jesse Couch</h1>
