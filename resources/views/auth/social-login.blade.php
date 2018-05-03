@@ -168,7 +168,9 @@
                                     <div class="fb-login-button" data-max-rows="1"
                                          onlogin="checkLoginState();"
                                          data-scope="public_profile,email"
-                                         data-width="236"
+                                         @desktop
+                                            data-width="236"
+                                         @enddesktop
                                          data-size="large"
                                          data-button-type="login_with"
                                          data-show-faces="false"
