@@ -1,4 +1,4 @@
-<div class="iportfolio">
+<div class="iportfolio" style="display:none;">
     <div class="portfolio-image">
         <a href="canvas/portfolio-single.html">
             <img src="{{ $image }}" alt="Open Imagination">
@@ -50,3 +50,4 @@
         {{--</div>--}}
     </div>
 </div>
+

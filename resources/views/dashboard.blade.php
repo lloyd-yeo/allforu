@@ -17,6 +17,7 @@
     <link rel="stylesheet" href="canvas/css/magnific-popup.css" type="text/css"/>
     <link rel="stylesheet" href="canvas/css/responsive.css" type="text/css"/>
     <link rel="stylesheet" href="{{ asset('canvas/css/colors.css') }}" type="text/css"/>
+    <link rel="stylesheet" href="{{ asset('css/card.css') }}" type="text/css"/>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
 
     <!-- Document Title
@@ -1425,33 +1426,97 @@
                     <span></span>
                 </div>
 
+                <div>
+                    <div id="card-wrapper">
+                        <div id="card-content">
+                            <div id="card">
+                                <div id="front">
+                                    <div id="arrow"><i class="fa fa-arrow-left"></i></div>
+                                    <div id="top-pic">
+                                        <button style="margin-top:10px; margin-left: 20px; background-color:yellow; border-color: yellow; float:left;">FEATURED</button>
+                                        <a style="float:right; margin-top: 10px; margin-right: 20px; color:white; font-weight:bold;" href="https://www.codepen.io/designcouch/public">
+                                            <i class="fa fa-share"></i>
+                                        </a>
+                                        <a style="float:right; margin-top: 10px; margin-right: 20px; color:white; font-weight:bold;" href="https://www.codepen.io/designcouch/public">
+                                            <i class="fa fa-heart-o"></i>
+                                        </a>
+                                    </div>
+                                    <div id="avatar"></div>
+                                    <div id="info-box">
+                                        <div class="info">
+                                            <h1>Jesse Couch</h1>
+                                            <h2>Digital Creative</h2>
+                                        </div>
+                                    </div>
+                                    <div id="social-bar">
+                                        <a href="https://www.facebook.com/designcouch" target="_blank">
+                                            <i class="fa fa-facebook"></i>
+                                        </a>
+                                        <a href="https://www.twitter.com/designcouch" target="_blank">
+                                            <i class="fa fa-twitter"></i>
+                                        </a>
+                                        <a href="https://www.dribbble.com/designcouch" target="_blank">
+                                            <i class="fa fa-dribbble"></i>
+                                        </a>
+                                        <a href="https://www.codepen.io/designcouch/public">
+                                            <i class="fa fa-codepen"></i>
+                                        </a>
+
+                                        <a href="javascript:void" class="more-info">
+                                            <i class="fa fa-user"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div id="back">
+                                    <div class="back-info">
+                                        <p>My name is Jesse Couch, and I am an award winning, intensely creative, coffee-fueled front-end web designer and developer. My style and approach are very straight-forward — I obsess about keeping things as simple as humanly possible. That's it. If you like bells and whistles for the sake of bells and whistles, look elsewhere - but if you want to remain laser-focused on the goals for your new website, it's time time to talk.</p>
+                                    </div>
+                                    <div id="social-bar">
+                                        <a href="https://www.facebook.com/designcouch" target="_blank">
+                                            <i class="fa fa-facebook"></i>
+                                        </a>
+                                        <a href="https://www.twitter.com/designcouch" target="_blank">
+                                            <i class="fa fa-twitter"></i>
+                                        </a>
+                                        <a href="https://www.dribbble.com/designcouch" target="_blank">
+                                            <i class="fa fa-dribbble"></i>
+                                        </a>
+                                        <a href="https://www.codepen.io/designcouch/public">
+                                            <i class="fa fa-codepen"></i>
+                                        </a>
+                                        <a href="javascript:void" class="more-info">
+                                            <i class="fa fa-undo"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="background">
+                                <div id="background-image"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
                 <div id="related-portfolio" class="owl-carousel portfolio-carousel carousel-widget"
                      data-margin="30" data-nav="false"
                      data-autoplay="5000"
                      data-items-xxs="1" data-items-xs="2" data-items-sm="3" data-items-lg="3">
 
                     <div class="oc-item">
-                        @include('cards.club-carousel', ['image' => 'canvas/images/portfolio/4/1.jpg'])
-                    </div>
 
-                    <div class="oc-item">
-                        @include('cards.club-carousel', ['image' => 'canvas/images/portfolio/4/2.jpg'])
-                    </div>
-
-                    <div class="oc-item">
-                        @include('cards.club-carousel', ['image' => 'canvas/images/portfolio/4/3.jpg'])
-                    </div>
-
-                    <div class="oc-item">
-                        @include('cards.club-carousel', ['image' => 'canvas/images/portfolio/4/4.jpg'])
+                        {{--@include('cards.club-carousel', ['image' => 'canvas/images/portfolio/4/1.jpg'])--}}
                     </div>
 
                     {{--<div class="oc-item">--}}
-                        {{--@include('cards.club-carousel', ['image' => 'canvas/images/portfolio/4/5.jpg'])--}}
+{{--                        @include('cards.club-carousel', ['image' => 'canvas/images/portfolio/4/2.jpg'])--}}
                     {{--</div>--}}
 
                     {{--<div class="oc-item">--}}
-                        {{--@include('cards.club-carousel', ['image' => 'canvas/images/portfolio/4/6.jpg'])--}}
+{{--                        @include('cards.club-carousel', ['image' => 'canvas/images/portfolio/4/3.jpg'])--}}
+                    {{--</div>--}}
+
+                    {{--<div class="oc-item">--}}
+{{--                        @include('cards.club-carousel', ['image' => 'canvas/images/portfolio/4/4.jpg'])--}}
                     {{--</div>--}}
                 </div><!-- .portfolio-carousel end -->
             </div>
@@ -1722,6 +1787,18 @@
 <!-- Footer Scripts
 ============================================= -->
 <script type="text/javascript" src="canvas/js/functions.js"></script>
+<script>
+    $(window).load(function(){
+        $('#card-wrapper').addClass('loaded');
+    })
 
+    $('.more-info').click(function(){
+        $("#card").toggleClass('flip');
+        $('#arrow').remove();
+    });
+    $('#background').click(function(){
+        $('#card').removeClass('flip');
+    })
+</script>
 </body>
 </html>
