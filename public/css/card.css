@@ -3,20 +3,22 @@
     transition: .5s ease-in-out;
 }
 
-html, body {
-    background-color: #220200;
-    height: 100%;
-    overflow: auto;
-    font-family: helvetica neue,helvetica,arial,sans-serif;
-}
-html h1, body h1 {
+/*html, body {*/
+    /*background-color: #220200;*/
+    /*height: 100%;*/
+    /*overflow: auto;*/
+    /*font-family: helvetica neue,helvetica,arial,sans-serif;*/
+/*}*/
+
+.info > h1 {
     font-size: 25px;
     font-weight: 200;
     color: white;
     line-height: 30px;
     margin-bottom: 10px;
 }
-html h2, body h2 {
+
+.info > h2 {
     font-size: 15px;
     color: #6b0500;
 }
@@ -174,25 +176,6 @@ html h2, body h2 {
 .card > .flip > .back {
     transform: rotateY(360deg);
 }
-
-/*#background {*/
-    /*position: fixed;*/
-    /*background-color: black;*/
-    /*top: 0;*/
-    /*left: 0;*/
-    /*height: 100%;*/
-    /*width: 100%;*/
-/*}*/
-/*#background #background-image {*/
-    /*height: calc(100% + 60px);*/
-    /*width: calc(100% + 60px);*/
-    /*position: absolute;*/
-    /*top: -30px;*/
-    /*left: -30px;*/
-    /*-webkit-filter: blur(10px);*/
-    /*background-image: url(https://unsplash.imgix.net/45/ZLSw0SXxThSrkXRIiCdT_DSC_0345.jpg?q=75&w=1080&h=1080&fit=max&fm=jpg&auto=format&s=857f07b76abac23a7fb7161cc7b12a46);*/
-    /*background-size: cover;*/
-/*}*/
 
 @keyframes arrowWiggle {
     0% {
