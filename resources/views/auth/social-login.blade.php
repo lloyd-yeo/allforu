@@ -71,7 +71,9 @@
                 }
                 , function (data) {
                     if (data.success) {
-                        alert("Order comment saved!");
+                        window.location.href = "/dashboard";
+                    } else {
+                        alert(data.message);
                     }
                 }, "json");
 
