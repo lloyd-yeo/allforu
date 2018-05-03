@@ -1430,85 +1430,158 @@
                     <div>
                         <div id="ptab1">
 
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore, ipsa, fuga, modi, corporis maiores illum fugit ratione cumque dolores sint obcaecati quod temporibus. Expedita, sapiente, veritatis, impedit iusto labore sed itaque sunt fugiat non quis nihil hic quos necessitatibus officiis mollitia nesciunt neque! Minus, mollitia at iusto unde voluptate repudiandae.</p>
+                            <div class="col_full">
 
-                            <div class="table-responsive">
+                                <div class="fancy-title title-dotted-border">
+                                    <h3>Tell us about you</h3>
+                                </div>
 
-                                <table class="table cart">
-                                    <thead>
-                                    <tr>
-                                        <th class="cart-product-remove">&nbsp;</th>
-                                        <th class="cart-product-thumbnail">&nbsp;</th>
-                                        <th class="cart-product-name">Product</th>
-                                        <th class="cart-product-price">Unit Price</th>
-                                        <th class="cart-product-quantity">Quantity</th>
-                                        <th class="cart-product-subtotal">Total</th>
-                                    </tr>
-                                    </thead>
-                                    <tbody>
-                                    <tr class="cart_item">
-                                        <td class="cart-product-remove">
-                                            <a href="#" class="remove" title="Remove this item"><i class="icon-trash2"></i></a>
-                                        </td>
+                                <div class="contact-widget">
 
-                                        <td class="cart-product-thumbnail">
-                                            <a href="#"><img width="64" height="64" src="images/shop/thumbs/small/dress-3.jpg" alt="Pink Printed Dress"></a>
-                                        </td>
+                                    <div class="contact-form-result"></div>
 
-                                        <td class="cart-product-name">
-                                            <a href="#">Pink Printed Dress</a>
-                                        </td>
+                                    <form class="nobottommargin" id="template-contactform" name="template-contactform"
+                                          action="include/sendemail.php" method="post" enctype="multipart/form-data" novalidate="novalidate">
 
-                                        <td class="cart-product-price">
-                                            <span class="amount">$19.99</span>
-                                        </td>
+                                        <div class="form-process"></div>
 
-                                        <td class="cart-product-quantity">
-                                            <div class="quantity clearfix">
-                                                <input type="button" value="-" class="minus">
-                                                <input type="text" step="1" min="1"  name="quantity" value="1" title="Qty" class="qty" size="4" />
-                                                <input type="button" value="+" class="plus">
-                                            </div>
-                                        </td>
+                                        <div class="col_one_third">
+                                            <label for="template-contactform-name">Name <small>*</small></label>
+                                            <input type="text" id="template-contactform-name" name="template-contactform-name" value="" class="sm-form-control required" aria-required="true">
+                                        </div>
 
-                                        <td class="cart-product-subtotal">
-                                            <span class="amount">$19.99</span>
-                                        </td>
-                                    </tr>
-                                    <tr class="cart_item">
-                                        <td class="cart-product-remove">
-                                            <a href="#" class="remove" title="Remove this item"><i class="icon-trash2"></i></a>
-                                        </td>
+                                        <div class="col_one_third">
+                                            <label for="template-contactform-email">Email <small>*</small></label>
+                                            <input type="email" id="template-contactform-email" name="template-contactform-email" value="" class="required email sm-form-control" aria-required="true">
+                                        </div>
 
-                                        <td class="cart-product-thumbnail">
-                                            <a href="#"><img width="64" height="64" src="images/shop/thumbs/small/shoes-2.jpg" alt="Checked Canvas Shoes"></a>
-                                        </td>
+                                        <div class="col_one_third col_last">
+                                            <label for="template-contactform-phone">Phone</label>
+                                            <input type="text" id="template-contactform-phone" name="template-contactform-phone" value="" class="sm-form-control">
+                                        </div>
 
-                                        <td class="cart-product-name">
-                                            <a href="#">Checked Canvas Shoes</a>
-                                        </td>
+                                        <div class="clear"></div>
 
-                                        <td class="cart-product-price">
-                                            <span class="amount">$24.99</span>
-                                        </td>
+                                        <div class="col_two_third">
+                                            <label for="template-contactform-subject">Subject <small>*</small></label>
+                                            <input type="text" id="template-contactform-subject" name="template-contactform-subject" value="" class="required sm-form-control" aria-required="true">
+                                        </div>
 
-                                        <td class="cart-product-quantity">
-                                            <div class="quantity clearfix">
-                                                <input type="button" value="-" class="minus">
-                                                <input type="text" step="1" min="1"  name="quantity" value="1" title="Qty" class="qty" size="4" />
-                                                <input type="button" value="+" class="plus">
-                                            </div>
-                                        </td>
+                                        <div class="col_one_third col_last">
+                                            <label for="template-contactform-service">Services</label>
+                                            <select id="template-contactform-service" name="template-contactform-service" class="sm-form-control">
+                                                <option value="">-- Select One --</option>
+                                                <option value="Wordpress">Wordpress</option>
+                                                <option value="PHP / MySQL">PHP / MySQL</option>
+                                                <option value="HTML5 / CSS3">HTML5 / CSS3</option>
+                                                <option value="Graphic Design">Graphic Design</option>
+                                            </select>
+                                        </div>
 
-                                        <td class="cart-product-subtotal">
-                                            <span class="amount">$24.99</span>
-                                        </td>
-                                    </tr>
-                                    </tbody>
+                                        <div class="clear"></div>
 
-                                </table>
+                                        <div class="col_full">
+                                            <label for="template-contactform-message">Upload CV <small>*</small></label>
+                                            <input type="file" id="template-contactform-file" name="template-contactform-file" value="" class="required sm-form-control" aria-required="true">
+                                        </div>
+
+                                        <div class="col_full">
+                                            <label for="template-contactform-message">Message <small>*</small></label>
+                                            <textarea class="required sm-form-control" id="template-contactform-message" name="template-contactform-message" rows="6" cols="30" aria-required="true"></textarea>
+                                        </div>
+
+                                        <div class="col_full hidden">
+                                            <input type="text" id="template-contactform-botcheck" name="template-contactform-botcheck" value="" class="sm-form-control">
+                                        </div>
+
+                                        <div class="col_full">
+                                            <button name="submit" type="submit" id="submit-button" tabindex="5" value="Submit" class="button button-3d nomargin">Submit Comment</button>
+                                        </div>
+
+                                    </form>
+                                </div>
 
                             </div>
+
+                            {{--<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore, ipsa, fuga, modi, corporis maiores illum fugit ratione cumque dolores sint obcaecati quod temporibus. Expedita, sapiente, veritatis, impedit iusto labore sed itaque sunt fugiat non quis nihil hic quos necessitatibus officiis mollitia nesciunt neque! Minus, mollitia at iusto unde voluptate repudiandae.</p>--}}
+
+                            {{--<div class="table-responsive">--}}
+
+                                {{--<table class="table cart">--}}
+                                    {{--<thead>--}}
+                                    {{--<tr>--}}
+                                        {{--<th class="cart-product-remove">&nbsp;</th>--}}
+                                        {{--<th class="cart-product-thumbnail">&nbsp;</th>--}}
+                                        {{--<th class="cart-product-name">Product</th>--}}
+                                        {{--<th class="cart-product-price">Unit Price</th>--}}
+                                        {{--<th class="cart-product-quantity">Quantity</th>--}}
+                                        {{--<th class="cart-product-subtotal">Total</th>--}}
+                                    {{--</tr>--}}
+                                    {{--</thead>--}}
+                                    {{--<tbody>--}}
+                                    {{--<tr class="cart_item">--}}
+                                        {{--<td class="cart-product-remove">--}}
+                                            {{--<a href="#" class="remove" title="Remove this item"><i class="icon-trash2"></i></a>--}}
+                                        {{--</td>--}}
+
+                                        {{--<td class="cart-product-thumbnail">--}}
+                                            {{--<a href="#"><img width="64" height="64" src="images/shop/thumbs/small/dress-3.jpg" alt="Pink Printed Dress"></a>--}}
+                                        {{--</td>--}}
+
+                                        {{--<td class="cart-product-name">--}}
+                                            {{--<a href="#">Pink Printed Dress</a>--}}
+                                        {{--</td>--}}
+
+                                        {{--<td class="cart-product-price">--}}
+                                            {{--<span class="amount">$19.99</span>--}}
+                                        {{--</td>--}}
+
+                                        {{--<td class="cart-product-quantity">--}}
+                                            {{--<div class="quantity clearfix">--}}
+                                                {{--<input type="button" value="-" class="minus">--}}
+                                                {{--<input type="text" step="1" min="1"  name="quantity" value="1" title="Qty" class="qty" size="4" />--}}
+                                                {{--<input type="button" value="+" class="plus">--}}
+                                            {{--</div>--}}
+                                        {{--</td>--}}
+
+                                        {{--<td class="cart-product-subtotal">--}}
+                                            {{--<span class="amount">$19.99</span>--}}
+                                        {{--</td>--}}
+                                    {{--</tr>--}}
+                                    {{--<tr class="cart_item">--}}
+                                        {{--<td class="cart-product-remove">--}}
+                                            {{--<a href="#" class="remove" title="Remove this item"><i class="icon-trash2"></i></a>--}}
+                                        {{--</td>--}}
+
+                                        {{--<td class="cart-product-thumbnail">--}}
+                                            {{--<a href="#"><img width="64" height="64" src="images/shop/thumbs/small/shoes-2.jpg" alt="Checked Canvas Shoes"></a>--}}
+                                        {{--</td>--}}
+
+                                        {{--<td class="cart-product-name">--}}
+                                            {{--<a href="#">Checked Canvas Shoes</a>--}}
+                                        {{--</td>--}}
+
+                                        {{--<td class="cart-product-price">--}}
+                                            {{--<span class="amount">$24.99</span>--}}
+                                        {{--</td>--}}
+
+                                        {{--<td class="cart-product-quantity">--}}
+                                            {{--<div class="quantity clearfix">--}}
+                                                {{--<input type="button" value="-" class="minus">--}}
+                                                {{--<input type="text" step="1" min="1"  name="quantity" value="1" title="Qty" class="qty" size="4" />--}}
+                                                {{--<input type="button" value="+" class="plus">--}}
+                                            {{--</div>--}}
+                                        {{--</td>--}}
+
+                                        {{--<td class="cart-product-subtotal">--}}
+                                            {{--<span class="amount">$24.99</span>--}}
+                                        {{--</td>--}}
+                                    {{--</tr>--}}
+                                    {{--</tbody>--}}
+
+                                {{--</table>--}}
+
+                            {{--</div>--}}
 
                             <a href="#" class="button button-3d nomargin fright tab-linker" rel="2">Checkout &rArr;</a>
 
