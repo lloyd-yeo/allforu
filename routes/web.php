@@ -2,6 +2,7 @@
 //Route::get('/', function () { return redirect('/admin/home'); });
 Route::get('/dashboard', function () { return view('dashboard'); });
 Route::get('/', function(){ return view('auth.social-login'); });
+Route::get('/registration', function(){ return view('onboarding'); });
 
 // Authentication Routes...
 $this->get('login', 'Auth\LoginController@showLoginForm')->name('login');
