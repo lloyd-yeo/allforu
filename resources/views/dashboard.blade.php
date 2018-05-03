@@ -1429,24 +1429,32 @@
 
 
                 <div id="related-portfolio" class="owl-carousel portfolio-carousel carousel-widget"
-                     data-margin="30" data-nav="true"
+                     data-margin="0" data-nav="true"
                      data-autoplay="5000"
                      data-items-xxs="1" data-items-xs="2" data-items-sm="3" data-items-lg="3">
 
                     <div class="oc-item">
-                        @include('cards.club-carousel', ['image' => 'canvas/images/portfolio/4/1.jpg'])
+                        @include('cards.club-carousel', ['image' => 'canvas/images/portfolio/4/1.jpg',
+                                                         'name' => 'Biological Science Club',
+                                                         'organisation' => 'Nanyang Technological University'])
                     </div>
 
                     <div class="oc-item">
-                        @include('cards.club-carousel', ['image' => 'canvas/images/portfolio/4/2.jpg'])
+                        @include('cards.club-carousel', ['image' => 'canvas/images/portfolio/4/2.jpg',
+                                                         'name' => 'Biological Science Club',
+                                                         'organisation' => 'Nanyang Technological University'])
                     </div>
 
                     <div class="oc-item">
-                        @include('cards.club-carousel', ['image' => 'canvas/images/portfolio/4/3.jpg'])
+                        @include('cards.club-carousel', ['image' => 'canvas/images/portfolio/4/3.jpg',
+                                                         'name' => 'Biological Science Club',
+                                                         'organisation' => 'Nanyang Technological University'])
                     </div>
 
                     <div class="oc-item">
-                        @include('cards.club-carousel', ['image' => 'canvas/images/portfolio/4/4.jpg'])
+                        @include('cards.club-carousel', ['image' => 'canvas/images/portfolio/4/4.jpg',
+                                                         'name' => 'Biological Science Club',
+                                                         'organisation' => 'Nanyang Technological University'])
                     </div>
                 </div><!-- .portfolio-carousel end -->
             </div>

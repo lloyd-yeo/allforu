@@ -15,8 +15,8 @@
                 <div class="avatar" style="background-image: url({{ $image }});"></div>
                 <div class="info-box">
                     <div class="info">
-                        <h1>Jesse Couch</h1>
-                        <h2>Digital Creative</h2>
+                        <h1>{{ $name }}</h1>
+                        <h2>{{ $organisation }}</h2>
                     </div>
                 </div>
                 <div class="social-bar">

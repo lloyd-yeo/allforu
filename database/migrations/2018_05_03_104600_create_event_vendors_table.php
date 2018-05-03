@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateClubEventsTable extends Migration
+class CreateEventVendorsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,12 +13,12 @@ class CreateClubEventsTable extends Migration
      */
     public function up()
     {
-        Schema::create('club_events', function (Blueprint $table) {
+        Schema::create('event_vendors', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('club_id')->unsigned()->nullable();
-            $table->foreign('club_id')->references('id')->on('clubs')->onDelete('cascade');
             $table->integer('event_id')->unsigned()->nullable();
             $table->foreign('event_id')->references('id')->on('events')->onDelete('cascade');
+            $table->integer('vendor_id')->unsigned()->nullable();
+            $table->foreign('vendor_id')->references('id')->on('vendors')->onDelete('cascade');
         });
     }
 
@@ -29,6 +29,6 @@ class CreateClubEventsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('club_events');
+        Schema::dropIfExists('event_vendors');
     }
 }
