@@ -6,7 +6,7 @@
     @can('club_create')
     <p>
         <a href="{{ route('admin.clubs.create') }}" class="btn btn-success">@lang('quickadmin.qa_add_new')</a>
-        
+
     </p>
     @endcan
 
@@ -48,7 +48,7 @@
                         @endif
                     </tr>
                 </thead>
-                
+
                 <tbody>
                     @if (count($clubs) > 0)
                         @foreach ($clubs as $club)
@@ -122,7 +122,7 @@
     </div>
 @stop
 
-@section('javascript') 
+@section('javascript')
     <script>
         @can('club_delete')
             @if ( request('show_deleted') != 1 ) window.route_mass_crud_entries_destroy = '{{ route('admin.clubs.mass_destroy') }}'; @endif

@@ -1,13 +1,77 @@
 <?php
 
 return [
-		'system-management' => [		'title' => 'System management',		'fields' => [		],	],
-		'roles' => [		'title' => 'Roles',		'fields' => [			'title' => 'Title',		],	],
-		'users' => [		'title' => 'Students',		'fields' => [			'name' => 'Name',			'email' => 'Email',			'password' => 'Password',			'role' => 'Role',			'remember-token' => 'Remember token',			'clubs' => 'Clubs',		],	],
-		'user-actions' => [		'title' => 'User actions',		'created_at' => 'Time',		'fields' => [			'user' => 'User',			'action' => 'Action',			'action-model' => 'Action model',			'action-id' => 'Action id',		],	],
-		'club-management' => [		'title' => 'Club management',		'fields' => [		],	],
-		'clubs' => [		'title' => 'Clubs',		'fields' => [			'name' => 'Name',			'description' => 'Description',			'website' => 'Website',			'fb-page-url' => 'Facebook Page Url',			'ig-page-url' => 'Instagram Page Url',			'cover-img' => 'Cover Image',			'images' => 'Images',			'school' => 'School',		],	],
-		'schools' => [		'title' => 'Schools',		'fields' => [			'name' => 'Name',			'acronym' => 'Acronym',			'cover-img' => 'Cover Image',		],	],
+
+	'system-management' => [
+		'title' => 'System management',
+		'fields' => [
+		],
+	],
+
+	'roles' => [
+		'title' => 'Roles',
+		'fields' => [
+			'title' => 'Title',
+		],
+	],
+
+	'users' => [
+		'title' => 'Students',
+		'fields' => [
+			'name' => 'Name',
+			'email' => 'Email',
+			'password' => 'Password',
+			'role' => 'Role',
+			'remember-token' => 'Remember token',
+			'clubs' => 'Clubs',
+		],
+	],
+
+	'user-actions' => [
+		'title' => 'User actions',
+		'created_at' => 'Time',
+		'fields' => [
+			'user' => 'User',
+			'action' => 'Action',
+			'action-model' => 'Action model',
+			'action-id' => 'Action id',
+		],
+	],
+
+	'club-management' => [
+		'title' => 'Club management',
+		'fields' => [
+		],
+	],
+
+	'clubs' => [
+		'title' => 'Clubs',
+		'fields' => [
+			'name' => 'Name',
+			'description' => 'Description',
+			'website' => 'Website',
+			'fb-page-url' => 'Facebook Page Url',
+			'ig-page-url' => 'Instagram Page Url',
+			'cover-img' => 'Cover Image',
+			'images' => 'Images',
+			'school' => 'School',
+			'club-acronym' => 'Club Acronym',
+			'organisation' => 'Organisation',
+			'organisation-acronym' => 'Organisation Acronym',
+			'referred-by' => 'Referred By',
+			'classification' => 'Classification',
+			'category-1' => 'Referred By',
+		],
+	],
+
+	'schools' => [
+		'title' => 'Schools',
+		'fields' => [
+			'name' => 'Name',
+			'acronym' => 'Acronym',
+			'cover-img' => 'Cover Image',
+		],
+	],
 	'qa_create' => 'Create',
 	'qa_save' => 'Save',
 	'qa_edit' => 'Edit',
