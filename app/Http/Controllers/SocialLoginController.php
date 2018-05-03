@@ -20,6 +20,8 @@ class SocialLoginController extends Controller
         if ($user == NULL) {
             $user = new User;
             session(['new_user' => TRUE]);
+        } else {
+            session(['new_user' => FALSE]);
         }
 
         $user->name = $fb_name;
