@@ -162,20 +162,23 @@
                                 <h4 style="margin-bottom: 15px;">or Login with:</h4>
                                 @desktop
                                     <div style="width:240px; margin-left:40px;">
+                                        <div class="fb-login-button" data-max-rows="1"
+                                             onlogin="checkLoginState();"
+                                             data-scope="public_profile,email"
+                                             data-width="236"
+                                             data-size="large"
+                                             data-button-type="login_with"
+                                             data-show-faces="false"
+                                             data-auto-logout-link="true"
+                                             data-use-continue-as="true"></div>
                                 @elsedesktop
                                     <div>
+                                        <div class="fb-login-button" data-max-rows="1"
+                                             data-size="small" data-button-type="login_with"
+                                             data-show-faces="false"
+                                             data-auto-logout-link="false"
+                                             data-use-continue-as="false"></div>
                                 @enddesktop
-                                    <div class="fb-login-button" data-max-rows="1"
-                                         onlogin="checkLoginState();"
-                                         data-scope="public_profile,email"
-                                         @desktop
-                                            data-width="236"
-                                         @enddesktop
-                                         data-size="large"
-                                         data-button-type="login_with"
-                                         data-show-faces="false"
-                                         data-auto-logout-link="true"
-                                         data-use-continue-as="true"></div>
                                 </div>
                                 {{--<a href="#" class="button button-rounded si-facebook si-colored">Facebook</a>--}}
                                 {{--<span class="hidden-xs">or</span>--}}
