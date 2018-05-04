@@ -34,6 +34,7 @@
                         @endcan
 
                         <th>@lang('quickadmin.clubs.fields.name')</th>
+                        <th>@lang('quickadmin.clubs.fields.club-acronym')</th>
                         <th>@lang('quickadmin.clubs.fields.description')</th>
                         <th>@lang('quickadmin.clubs.fields.website')</th>
                         <th>@lang('quickadmin.clubs.fields.fb-page-url')</th>
@@ -41,6 +42,21 @@
                         <th>@lang('quickadmin.clubs.fields.cover-img')</th>
                         <th>@lang('quickadmin.clubs.fields.images')</th>
                         <th>@lang('quickadmin.clubs.fields.school')</th>
+                        <th>@lang('quickadmin.clubs.fields.organisation')</th>
+                        <th>@lang('quickadmin.clubs.fields.organisation-acronym')</th>
+                        <th>@lang('quickadmin.clubs.fields.referred-by')</th>
+                        <th>@lang('quickadmin.clubs.fields.classification')</th>
+                        <th>@lang('quickadmin.clubs.fields.category-1')</th>
+                        <th>@lang('quickadmin.clubs.fields.category-2')</th>
+                        <th>@lang('quickadmin.clubs.fields.usual-activity')</th>
+                        <th>@lang('quickadmin.clubs.fields.opportunity-1')</th>
+                        <th>@lang('quickadmin.clubs.fields.opportunity-2')</th>
+                        <th>@lang('quickadmin.clubs.fields.opportunity-3')</th>
+                        <th>@lang('quickadmin.clubs.fields.news-1')</th>
+                        <th>@lang('quickadmin.clubs.fields.news-2')</th>
+                        <th>@lang('quickadmin.clubs.fields.news-3')</th>
+                        <th>@lang('quickadmin.clubs.fields.catchphrase')</th>
+                        <th>@lang('quickadmin.clubs.fields.events-per-year')</th>
                         @if( request('show_deleted') == 1 )
                         <th>&nbsp;</th>
                         @else
@@ -58,6 +74,7 @@
                                 @endcan
 
                                 <td field-key='name'>{{ $club->name }}</td>
+                                <td field-key='club_acronym'>{{ $club->club_acronym or '' }}</td>
                                 <td field-key='description'>{{ $club->description }}</td>
                                 <td field-key='website'>{{ $club->website }}</td>
                                 <td field-key='fb_page_url'>{{ $club->fb_page_url }}</td>
@@ -69,6 +86,21 @@
                                 </p>
                             @endforeach</td>
                                 <td field-key='school'>{{ $club->school->name or '' }}</td>
+                                <td field-key='organisation'>{{ $club->organisation or '' }}</td>
+                                <td field-key='organisation_acronym'>{{ $club->organisation_acronym or '' }}</td>
+                                <td field-key='referred_by'>{{ $club->referred_by or '' }}</td>
+                                <td field-key='classification'>{{ $club->classification or '' }}</td>
+                                <td field-key='category_1'>{{ $club->category_1 or '' }}</td>
+                                <td field-key='category_2'>{{ $club->category_2 or '' }}</td>
+                                <td field-key='usual_activity'>{{ $club->usual_activity or '' }}</td>
+                                <td field-key='opportunity_1'>{{ $club->opportunity_1 or '' }}</td>
+                                <td field-key='opportunity_2'>{{ $club->opportunity_2 or '' }}</td>
+                                <td field-key='opportunity_3'>{{ $club->opportunity_3 or '' }}</td>
+                                <td field-key='news_1'>{{ $club->news()->orderBy('order','1')->first()->description or '' }}</td>
+                                <td field-key='news_2'>{{ $club->news()->orderBy('order','2')->first()->description or '' }}</td>
+                                <td field-key='news_3'>{{ $club->news()->orderBy('order','3')->first()->description or '' }}</td>
+                                <td field-key='catchphrase'>{{ $club->catchphrase or '' }}</td>
+                                <td field-key='events_per_year'>{{ $club->events_per_year or '' }}</td>
                                 @if( request('show_deleted') == 1 )
                                 <td>
                                     @can('club_delete')

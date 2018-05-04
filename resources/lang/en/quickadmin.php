@@ -66,7 +66,11 @@ return [
 			'opportunity-1' => 'Top Opportunity',
 			'opportunity-2' => '2nd Opportunity',
 			'opportunity-3' => '3rd Opportunity',
+			'news-1' => 'Top News',
+			'news-2' => '2nd News',
+			'news-3' => '3rd News',
 			'catchphrase' => 'Catch-phrase',
+			'events-per-year' => 'Events per year',
 		],
 	],
 

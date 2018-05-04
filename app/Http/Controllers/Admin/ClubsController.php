@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Club;
+use App\News;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Gate;
 use App\Http\Controllers\Controller;
@@ -72,7 +73,6 @@ class ClubsController extends Controller
         }
         $request = $this->saveFiles($request);
         $club = Club::create($request->all());
-
 
         foreach ($request->input('images_id', []) as $index => $id) {
             $model          = config('laravel-medialibrary.media_model');
