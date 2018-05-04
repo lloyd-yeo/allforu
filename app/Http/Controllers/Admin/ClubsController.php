@@ -38,10 +38,10 @@ class ClubsController extends Controller
             $clubs = Club::all();
         }
 
-        $referred_by = collect(['Facebook', 'Instagram', 'Linkedin', 'Friend’s referral', 'Referred by other clubs', 'Internet search',
+        $referred_by = array(['Facebook', 'Instagram', 'Linkedin', 'Friend’s referral', 'Referred by other clubs', 'Internet search',
             'Flyers', 'Events']);
-        $society_classification = collect(['Club', 'CCA', 'Interest Group', 'Hall']);
-        $society_category = collect(['Sports', 'Hall of residence', 'Performing arts', 'Voluntary role','Student welfare',
+        $society_classification = array(['Club', 'CCA', 'Interest Group', 'Hall']);
+        $society_category = array(['Sports', 'Hall of residence', 'Performing arts', 'Voluntary role','Student welfare',
             'Academic']);
 
         return view('admin.clubs.index', compact('clubs','referred_by','society_classification','society_category'));
