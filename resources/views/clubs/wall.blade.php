@@ -1410,16 +1410,16 @@
                     <div class="col_two_fifth topmargin nobottommargin" style="min-height: 350px;">
                         @desktop
                             @if($club->cover_img)
-                                <img style="margin-left: 15px; height:400px; width:400px; border-radius: 400px;"
-                                     src="{{ asset(env('UPLOAD_PATH').'/thumb/' . $club->cover_img) }}"/>
+                                <img style="margin-left: 15px; border-radius: 400px;"
+                                     src="{{ asset(env('UPLOAD_PATH').'/' . $club->cover_img) }}"/>
                             @else
                                 <img style="margin-left: 15px; border-radius: 400px;"
                                      src="https://via.placeholder.com/400x400"/>
                             @endif
                         @elsedesktop
                             @if($club->cover_img)
-                                <img style="margin-left: 15px; height:400px; width:400px; border-radius: 400px;"
-                                     src="{{ asset(env('UPLOAD_PATH').'/thumb/' . $club->cover_img) }}"/>
+                                <img style="margin-left: 15px; border-radius: 400px;"
+                                     src="{{ asset(env('UPLOAD_PATH').'/' . $club->cover_img) }}"/>
                             @else
                                 <img style="margin-left: 15px; border-radius: 400px;"
                                      src="https://via.placeholder.com/400x400"/>
