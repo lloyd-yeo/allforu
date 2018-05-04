@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Club;
 
 class ClubController extends Controller
 {
@@ -10,7 +11,11 @@ class ClubController extends Controller
         return view('clubs.profile');
     }
 
-    public function showWall(Request $request) {
-        return view('clubs.wall');
+    public function showWall(Request $request, $club_id) {
+        $club = Club::find($club_id);
+        if ($club == NULL) {
+            return redirect()->back();
+        }
+        return view('clubs.wall', [ 'club' => $club ]);
     }
 }

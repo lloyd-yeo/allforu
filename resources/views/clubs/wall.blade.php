@@ -1392,7 +1392,7 @@
     <section id="page-title" class="page-title-mini">
 
         <div class="container clearfix">
-            <h1>Viewing Club-Name</h1>
+            <h1>{{ $club->name }}</h1>
             <span>A Short Page Title Tagline</span>
         </div>
 
@@ -1409,10 +1409,22 @@
                 <div class="col_full testimonial" style="background-color:white; overflow:auto; margin-bottom: 10px;">
                     <div class="col_two_fifth topmargin nobottommargin" style="min-height: 350px;">
                         @desktop
-                        <img style="margin-left: 15px; border-radius: 400px;"
-                             src="https://via.placeholder.com/400x400"/>
+                            @if($club->cover_img)
+                                <img style="margin-left: 15px; height:400px; width:400px; border-radius: 400px;"
+                                     src="{{ asset(env('UPLOAD_PATH').'/thumb/' . $club->cover_img) }}"/>
+                            @else
+                                <img style="margin-left: 15px; border-radius: 400px;"
+                                     src="https://via.placeholder.com/400x400"/>
+                            @endif
                         @elsedesktop
-                        <img style="border-radius: 400px;" src="https://via.placeholder.com/400x400"/>
+                            @if($club->cover_img)
+                                <img style="margin-left: 15px; height:400px; width:400px; border-radius: 400px;"
+                                     src="{{ asset(env('UPLOAD_PATH').'/thumb/' . $club->cover_img) }}"/>
+                            @else
+                                <img style="margin-left: 15px; border-radius: 400px;"
+                                     src="https://via.placeholder.com/400x400"/>
+                            @endif
+                            {{--<img style="border-radius: 400px;" src="https://via.placeholder.com/400x400"/>--}}
                         @enddesktop
                     </div>
 
@@ -1420,9 +1432,9 @@
 
                         <div class="heading-block">
                             <span><span class="label label-warning">Featured</span></span>
-                            <h3>Biological Science Club</h3>
-                            <span>Nanyang Technological University</span><br/>
-                            <span><i>2 years ago</i> <span class="label label-primary">Official</span></span>
+                            <h3>{{ $club->name }}</h3>
+                            <span>{{ $club->school->name }}</span><br/>
+                            <span><i>{{ \Carbon\Carbon::parse($club->created_at)->diffForHumans() }}</i> <span class="label label-primary">Official</span></span>
                         </div>
 
                         <div class="col_full" style="margin-bottom:0;">
@@ -1433,8 +1445,7 @@
                         <div class="line" style="margin:15px 0;"></div>
 
                         <p>
-                            "Life is business itself, we value building people in their soft-skills and their knowledge
-                            in biology"
+                            "{{ $club->description }}"
                         </p>
                     </div>
                 </div>
@@ -1443,15 +1454,15 @@
 
                 <div class="col_full center testimonial" style="background-color:white; margin-bottom: 10px;">
                     <div class="col_one_third" style="margin-bottom:0px;">
-                        <h3 style="margin-bottom:0px;"><i class="fa fa-users"></i> 330 users</h3>
+                        <h3 style="margin-bottom:0;"><i class="fa fa-users"></i> 330 users</h3>
                     </div>
 
                     <div class="col_one_third" style="margin-bottom:0px;">
-                        <h3 style="margin-bottom:0px;"><i class="fa fa-heart" style="color:red;"></i> 546 followers</h3>
+                        <h3 style="margin-bottom:0;"><i class="fa fa-heart" style="color:red;"></i> 546 followers</h3>
                     </div>
 
-                    <div class="col_one_third col_last" style="margin-bottom:0px;">
-                        <h3 style="margin-bottom:0px;"><i class="fa fa-star-o" style="color:orange;"></i> 33 reviews
+                    <div class="col_one_third col_last" style="margin-bottom:0 !important;">
+                        <h3 style="margin-bottom:0 !important;"><i class="fa fa-star-o" style="color:orange;"></i> 33 reviews
                         </h3>
                     </div>
 
@@ -1461,10 +1472,10 @@
                 <ul class="nav nav-pills nav-justified" style="margin-bottom:20px;">
                     <li class="active" id="highlights-list"
                         style="border-radius:5px; border-color:black; border-width:1px; border-style:solid;">
-                        <a href="#!" id="highlights-btn" style="background-color:orange; font-weight:bold;">Highlights (5)</a>
+                        <a href="#!" id="highlights-btn" style="margin-bottom: 0; background-color:orange; font-weight:bold;">Highlights (5)</a>
                     </li>
                     <li id="group-info-list" style="border-radius:5px; border-color:black; border-width:1px; border-style:solid;">
-                        <a href="#!" id="group-info-btn" style="font-weight:bold;">Group Info</a>
+                        <a href="#!" id="group-info-btn" style="margin-bottom: 0; font-weight:bold;">Group Info</a>
                     </li>
                 </ul>
 
@@ -1487,32 +1498,40 @@
                     <h1>Top 3 News Highlight</h1>
 
                     <div class="col_full testimonial" style="background-color:white;">
-                        @include('clubs.news')
-                        @include('clubs.news')
-                        @include('clubs.news')
+                        @foreach ($club->news as $news)
+                            @include('clubs.news', [ 'news' => $news ])
+                        @endforeach
                     </div>
                 </div>
 
                 <div id="group-info" style="display:none;">
                     <div class="col_full testimonial" style="background-color:white;">
                         <h3><u>Our Club Profile</u></h3>
-                        <p>At BSclub, we envision to be an all-inclusive society for students each students to be friends with everyone in the faculty. Hence, we built events that surrounds this core vision so that no one is left out</p>
+                        <p>{{ $club->description }}</p>
                     </div>
 
                     <div class="col_full testimonial" style="background-color:white;">
                         <h3><u>Top 3 Opportunities That Benefits You</u></h3>
-                        <p>
-                            <span style="color:orange; font-weight: bold; font-size: 20px;">Opportunity 1:</span>
-                            Network with high profile future biologist
-                        </p>
-                        <p>
-                            <span style="color:orange; font-weight: bold; font-size: 20px;">Opportunity 2:</span>
-                            Have a hand in managing and enhancing student life
-                        </p>
-                        <p>
-                            <span style="color:orange; font-weight: bold; font-size: 20px;">Opportunity 3:</span>
-                            Try out how the corporate feel is like
-                        </p>
+                        @if ($club->opportunity_1 != NULL)
+                            <p>
+                                <span style="color:orange; font-weight: bold; font-size: 20px;">Opportunity 1:</span>
+                                {{ $club->opportunity_1 }}
+                            </p>
+                        @endif
+
+                        @if ($club->opportunity_2 != NULL)
+                            <p>
+                                <span style="color:orange; font-weight: bold; font-size: 20px;">Opportunity 2:</span>
+                                {{ $club->opportunity_2 }}
+                            </p>
+                        @endif
+
+                        @if ($club->opportunity_3 != NULL)
+                            <p>
+                                <span style="color:orange; font-weight: bold; font-size: 20px;">Opportunity 3:</span>
+                                {{ $club->opportunity_3 }}
+                            </p>
+                        @endif
                     </div>
                 </div>
 
