@@ -1407,7 +1407,7 @@
             <div class="container clearfix">
 
                 <div class="col_two_fifth topmargin nobottommargin" style="min-height: 350px;">
-                    <img src="https://via.placeholder.com/150x150" />
+                    <img src="https://via.placeholder.com/400x400" />
                 </div>
 
                 <div class="col_three_fifth notopmargin nobottommargin col_last">
@@ -1454,7 +1454,7 @@
                 </div>
 
                 <div class="clear"></div><div class="line"></div>
-                
+
             </div>
 
         </div>
