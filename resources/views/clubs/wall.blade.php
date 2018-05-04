@@ -1406,47 +1406,50 @@
 
             <div class="container clearfix">
 
-                <div class="col_two_fifth topmargin nobottommargin" style="min-height: 350px;">
-                    <img src="https://via.placeholder.com/400x400"/>
+                <div class="col_full testimonial" style="background-color:white; overflow:auto; margin-bottom: 10px;">
+                    <div class="col_two_fifth topmargin nobottommargin" style="min-height: 350px;">
+                        <img style="margin-left: 15px; border-radius: 400px;" src="https://via.placeholder.com/400x400"/>
+                    </div>
+
+                    <div class="col_three_fifth notopmargin nobottommargin col_last">
+
+                        <div class="heading-block">
+                            <span><span class="label label-warning">Featured</span></span>
+                            <h3>Biological Science Club</h3>
+                            <span>Nanyang Technological University</span><br/>
+                            <span><i>2 years ago</i> <span class="label label-primary">Official</span></span>
+                        </div>
+
+                        <div class="col_full" style="margin-bottom:0;">
+                            <h3 style="margin-bottom:0;">Overview</h3>
+                        </div>
+
+                        <div class="clear"></div>
+                        <div class="line" style="margin:15px 0;"></div>
+
+                        <div class="col_one_fourth center" style="margin-bottom: 0; margin-right: 0; border-right: 1px #e4e4e4 solid;">
+                            <h4 style="margin-bottom:0px; margin-top:30px;">$10,000</h4>
+                            <p>Dollars Saved</p>
+                        </div>
+                        <div class="col_one_fourth center" style="margin-right: 0; border-right: 1px #e4e4e4 solid;">
+                            <h4 style="margin-bottom:0px; margin-top:30px;">$9,000</h4>
+                            <p>Cash Sponsored</p>
+                        </div>
+                        <div class="col_one_fourth center" style="margin-right: 0; border-right: 1px #e4e4e4 solid;">
+                            <h4 style="margin-bottom:0px; margin-top:30px;">120,000</h4>
+                            <p>Product Sponsored</p>
+                        </div>
+                        <div class="col_one_fourth col_last center"
+                             style="margin-right: 0; border-right: 1px #e4e4e4 solid;">
+                            <h4 style="margin-bottom:0px; margin-top:30px;">2000</h4>
+                            <p>Students Impacted</p>
+                        </div>
+                    </div>
                 </div>
 
-                <div class="col_three_fifth notopmargin nobottommargin col_last">
-
-                    <div class="heading-block">
-                        <span><span class="label label-warning">Featured</span></span>
-                        <h3>Biological Science Club</h3>
-                        <span>Nanyang Technological University</span><br/>
-                        <span><i>2 years ago</i> <span class="label label-primary">Official</span></span>
-                    </div>
-
-                    <div class="col_full" style="margin-bottom:0;">
-                        <h3 style="margin-bottom:0;">Overview</h3>
-                    </div>
-
-                    <div class="clear"></div>
-                    <div class="line" style="margin:15px 0;"></div>
-
-                    <div class="col_one_fourth center" style="margin-bottom: 0; margin-right: 0; border-right: 1px #e4e4e4 solid;">
-                        <h4 style="margin-bottom:0px; margin-top:30px;">$10,000</h4>
-                        <p>Dollars Saved</p>
-                    </div>
-                    <div class="col_one_fourth center" style="margin-right: 0; border-right: 1px #e4e4e4 solid;">
-                        <h4 style="margin-bottom:0px; margin-top:30px;">$9,000</h4>
-                        <p>Cash Sponsored</p>
-                    </div>
-                    <div class="col_one_fourth center" style="margin-right: 0; border-right: 1px #e4e4e4 solid;">
-                        <h4 style="margin-bottom:0px; margin-top:30px;">120,000</h4>
-                        <p>Product Sponsored</p>
-                    </div>
-                    <div class="col_one_fourth col_last center"
-                         style="margin-right: 0; border-right: 1px #e4e4e4 solid;">
-                        <h4 style="margin-bottom:0px; margin-top:30px;">2000</h4>
-                        <p>Students Impacted</p>
-                    </div>
-                </div>
                 <div class="clear"></div>
 
-                <div class="col_full center" style="background-color:white; border-radius: 10px; ">
+                <div class="col_full center testimonial" style="background-color:white; margin-bottom: 10px;">
                     <div class="col_one_third" style="margin-bottom:0px;">
                         <h3 style="margin-bottom:0px;"><i class="fa fa-users"></i> 330 users</h3>
                     </div>
@@ -1463,6 +1466,11 @@
                 </div>
 
                 <div class="line"></div>
+
+                <ul class="nav nav-pills nav-justified">
+                    <li class="active" style="border-radius:5px; border-color:black; border-width:1px; border-style:solid;"><a href="#" style="font-weight:bold;">Highlights (5)</a></li>
+                    <li style="border-radius:5px; border-color:black; border-width:1px; border-style:solid;"><a href="#" style="font-weight:bold;">Group Info</a></li>
+                </ul>
 
                 <h1>Explore Your Club</h1>
 
