@@ -2,8 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\Club;
 use App\Http\Requests;
 use Illuminate\Http\Request;
+use App\User;
+use Auth;
 
 class HomeController extends Controller
 {
@@ -14,7 +17,7 @@ class HomeController extends Controller
      */
     public function __construct()
     {
-        $this->middleware('auth');
+//        $this->middleware('auth');
     }
 
     /**
@@ -26,4 +29,25 @@ class HomeController extends Controller
     {
         return view('home');
     }
+
+    public function dashboard() {
+        
+        if (!Auth::user()) {
+            redirect('/');
+        }
+
+        if (session()->exists('new_user')) {
+            if (session('new_user') == TRUE || Auth::user()->school_email == NULL) {
+                return redirect()->action('HomeController@onboarding');
+            } else {
+                $clubs = Club::all();
+                return view('dashboard', ['clubs' => $clubs]);
+            }
+        }
+    }
+
+    public function onboarding() {
+        return view('onboarding');
+    }
+
 }

@@ -24,7 +24,7 @@
 
     <!-- Document Title
     ============================================= -->
-    <title>AllForU</title>
+    <title>Onboarding | AllForU</title>
 
 </head>
 
@@ -47,12 +47,10 @@
                 <!-- Logo
                 ============================================= -->
                 <div id="logo">
-                    <a href="/" class="standard-logo" data-dark-logo="canvas/images/logo-dark.png"><img
+                    <a href="index.html" class="standard-logo" data-dark-logo="images/logo-dark.png"><img
                                 src="canvas/images/afu-logo.png" alt="Canvas Logo"></a>
-                    <a href="/" class="retina-logo" data-dark-logo="canvas/images/logo-dark@2x.png"><img
-                                src="canvas/images/afu-logo.png"
-                                {{--src="canvas/images/logo@2x.png" --}}
-                                alt="Canvas Logo"></a>
+                    <a href="index.html" class="retina-logo" data-dark-logo="images/logo-dark@2x.png"><img
+                                src="canvas/images/afu-logo.png" alt="Canvas Logo"></a>
                 </div><!-- #logo end -->
 
                 <!-- Primary Navigation
@@ -1391,61 +1389,250 @@
 
     <!-- Page Title
     ============================================= -->
-    <section id="page-title" style="display:none;">
+    <section id="page-title" class="page-title-parallax"
+             style="background-image: url(canvas/images/afu-wallpaper.jpg); padding: 120px 0px; background-position: 50% -45px;"
+             data-stellar-background-ratio="0.3">
 
         <div class="container clearfix">
-            <h1>AllForU</h1>
-            {{--<div id="portfolio-navigation">--}}
-            {{--<a href="#"><i class="icon-angle-left"></i></a>--}}
-            {{--<a href="#"><i class="icon-line-grid"></i></a>--}}
-            {{--<a href="#"><i class="icon-angle-right"></i></a>--}}
-            {{--</div>--}}
+            <h1 data-animate="fadeInUp" class="fadeInUp animated">Congrats on signing up for AllForU!</h1>
+            <span style="color:white;" data-animate="fadeInUp" data-delay="300" class="fadeInUp animated">We just a have a few more questions for you!</span>
         </div>
 
     </section><!-- #page-title end -->
 
     <!-- Content
     ============================================= -->
-    <section id="content" style="background-color:#E7EAF5;">
+    <section id="content">
 
-        <div class="content-wrap" style="padding-top:45px;">
+        <div class="content-wrap">
 
             <div class="container clearfix">
 
-                <div class="title-block">
-                    <h1>Events</h1>
-                    <span></span>
-                </div>
+                <div id="processTabs">
+                    <ul class="process-steps bottommargin clearfix">
+                        <li>
+                            <a href="#ptab1" class="i-circled i-bordered i-alt divcenter">1</a>
+                            <h5>Student Particulars</h5>
+                        </li>
+                        <li>
+                            <a href="#ptab2" class="i-circled i-bordered i-alt divcenter">2</a>
+                            <h5>Preferences</h5>
+                        </li>
+                        {{--<li>--}}
+                            {{--<a href="#ptab3" class="i-circled i-bordered i-alt divcenter">3</a>--}}
+                            {{--<h5>Complete Payment</h5>--}}
+                        {{--</li>--}}
+                        {{--<li>--}}
+                            {{--<a href="#ptab4" class="i-circled i-bordered i-alt divcenter">4</a>--}}
+                            {{--<h5>Order Complete</h5>--}}
+                        {{--</li>--}}
+                    </ul>
+                    <div>
+                        <form class="nobottommargin" id="template-contactform" name="template-contactform"
+                              action="/registration" method="post"
+                              novalidate="novalidate">
+                            <div id="ptab1">
 
-                @include('cards.event')
+                                <div class="col_full">
+
+                                    <div class="fancy-title title-dotted-border">
+                                        <h3>Student Particulars</h3>
+                                    </div>
+
+                                    <div class="contact-widget">
+
+                                        <div class="contact-form-result"></div>
+
+
+                                        <div class="form-process"></div>
+
+                                        <div class="col_one_third">
+                                            <label for="template-contactform-name">Name
+                                                <small>*</small>
+                                            </label>
+                                            <input type="text" id="template-contactform-name" name="name"
+                                                   value="{{ Auth::user()->name }}"
+                                                   class="sm-form-control required" aria-required="true">
+                                        </div>
+
+                                        <div class="col_one_third">
+                                            <label for="template-contactform-email">School Email
+                                                <small>*</small>
+                                            </label>
+                                            <input type="email" id="template-contactform-email" name="school_email"
+                                                   value="" class="required email sm-form-control" aria-required="true">
+                                        </div>
+
+                                        <div class="col_one_third col_last">
+                                            <label for="template-contactform-phone">Contact</label>
+                                            <input type="text" id="template-contactform-phone" name="contact" value=""
+                                                   class="sm-form-control">
+                                        </div>
+
+                                        <div class="clear"></div>
+
+                                        <div class="col_two_third">
+                                            <label for="template-contactform-service">University</label>
+                                            <select id="template-contactform-service" name="school_id"
+                                                    class="sm-form-control">
+                                                <option value="">-- Select One --</option>
+                                                <option value="1">National University Of Singapore (NUS)</option>
+                                                <option value="5">Nanyang Technological University (NTU)</option>
+                                                <option value="2">Singapore Management University (SMU)</option>
+                                                <option value="3">Singapore University of Technology & Design (SUTD)
+                                                </option>
+                                                <option value="4">Singapore University of Social Science (SUSS)</option>
+                                                <option value="6">Singapore Institute of Technology (SIT)</option>
+                                            </select>
+                                        </div>
+
+                                        <div class="col_one_third col_last">
+                                            <label for="template-contactform-yos">Year of Study
+                                                <small>*</small>
+                                            </label>
+                                            <input type="number" id="template-contactform-yos"
+                                                   name="year_of_study" value="" class="required sm-form-control"
+                                                   aria-required="true">
+
+                                        </div>
+
+                                        <div class="clear"></div>
+
+                                        <div class="col_full">
+                                            <label for="template-contactform-subject">Matric No.
+                                                <small>*</small>
+                                            </label>
+                                            <input type="text" id="template-contactform-subject" name="matric_no"
+                                                   value="" class="required sm-form-control" aria-required="true">
+                                        </div>
+
+                                        <div class="clear"></div>
+
+                                        <div class="col_full">
+                                            <label for="template-contactform-service">Are you a student leader?</label>
+                                            <select id="template-contactform-service" name="student_leader"
+                                                    class="sm-form-control">
+                                                <option value="">-- Select One --</option>
+                                                <option value="1">Yes</option>
+                                                <option value="0">No</option>
+                                            </select>
+                                        </div>
+
+                                        <div class="clear"></div>
+                                    </div>
+                                </div>
+                                <a href="#" class="button button-3d nomargin fright tab-linker" rel="2">Next
+                                    &rArr;</a>
+
+                            </div>
+                            <div id="ptab2">
+
+                                <div class="col_full">
+
+                                    <div class="fancy-title title-dotted-border">
+                                        <h3>Event Preferences</h3>
+                                    </div>
+
+                                    <div class="contact-widget">
+
+                                        <div class="contact-form-result"></div>
+
+                                        <div class="form-process"></div>
+
+                                        <div class="col_one_third">
+                                            <label for="template-foodpref">Food Preferences</label>
+                                            <select id="template-foodpref" name="food_pref"
+                                                    class="sm-form-control">
+                                                <option value="">-- Select One --</option>
+                                                <option value="Non-Halal">Non-Halal</option>
+                                                <option value="Halal">Halal</option>
+                                                <option value="Vegetarian">Vegetarian</option>
+                                            </select>
+                                        </div>
+
+                                        <div class="col_two_third col_last">
+                                            <label for="template-food-allergy">Food Allergy</label>
+                                            <input type="text" id="template-food-allergy" name="food_allergy"
+                                                   placeholder="Leave blank if none."
+                                                   value=""
+                                                   class="sm-form-control">
+                                        </div>
+
+                                        <div class="clear"></div>
+
+                                        <div class="col_one_third">
+                                            <label for="template-shirt-size">Shirt Size</label>
+                                            <select id="template-shirt-size" name="shirt_size"
+                                                    class="sm-form-control">
+                                                <option value="">-- Select One --</option>
+                                                <option value="XS">XS</option>
+                                                <option value="S">S</option>
+                                                <option value="M">M</option>
+                                                <option value="L">L</option>
+                                                <option value="XL">XL</option>
+                                                <option value="XXL">XXL</option>
+                                            </select>
+                                        </div>
+
+                                        <div class="col_two_third col_last">
+                                            <label for="template-side-income">Are you interested in making side-income?</label>
+                                            <select id="template-side-income" name="side_income_interest"
+                                                    class="sm-form-control">
+                                                <option value="">-- Select One --</option>
+                                                <option value="1">Yes</option>
+                                                <option value="0">No</option>
+                                            </select>
+                                        </div>
+
+                                        <div class="clear"></div>
+
+                                        <div class="col_full">
+                                            <label for="shipping-form-message">What kind of events are you interested in? <small></small></label>
+                                            <textarea class="sm-form-control" id="shipping-form-message"
+                                                      name="event_interest" rows="6" cols="30"></textarea>
+                                        </div>
+
+                                        <div class="clear"></div>
+                                    </div>
+                                </div>
+                                <a href="#" class="button button-3d nomargin tab-linker" rel="1">Previous</a>
+                                <button href="#" class="button button-3d nomargin fright">Finish</button>
+                            </div>
+
+                            <div id="ptab3" style="display:none;">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis, sit, culpa,
+                                    placeat, tempora quibusdam molestiae cupiditate atque tempore nemo tenetur facere
+                                    voluptates autem aliquid provident distinctio beatae odio maxime pariatur eos
+                                    ratione quae itaque quod. Distinctio, temporibus, cupiditate, eaque vero illo
+                                    molestiae vel doloremque dolorum repellat ullam possimus modi dicta eum debitis
+                                    ratione est in sunt et corrupti adipisci quibusdam praesentium optio laborum tempora
+                                    ipsam aut cum consectetur veritatis dolorem.</p>
+                                <div class="line"></div>
+                                <a href="#" class="button button-3d nomargin tab-linker" rel="2">Previous</a>
+                                <a href="#" class="button button-3d nomargin fright tab-linker" rel="4">Complete
+                                    Order</a>
+                            </div>
+                            <div id="ptab4" style="display:none;">
+                                <div class="alert alert-success">
+                                    <strong>Thank You.</strong> Your order will be processed once we verify the Payment.
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
 
                 <div class="clear"></div>
 
-                <!-- Related Portfolio Items
-                ============================================= -->
-                <div class="title-block">
-                    <h1>Societies</h1>
-                    <span></span>
-                </div>
-
-
-                <div id="related-portfolio" class="owl-carousel portfolio-carousel carousel-widget"
-                     data-margin="0" data-nav="true"
-                     data-autoplay="5000"
-                     data-items-xxs="1" data-items-xs="1" data-items-sm="1" data-items-lg="3">
-                    @foreach ($clubs as $club)
-                        <div class="oc-item">
-                            @include('cards.club-carousel', [ 'club' => $club ])
-                        </div>
-                    @endforeach
-                </div><!-- .portfolio-carousel end -->
+                <div class="divider divider-center"><i class="icon-circle"></i></div>
             </div>
+
         </div>
+
     </section><!-- #content end -->
 
     <!-- Footer
     ============================================= -->
-    <footer style="display:none;" id="footer" class="dark">
+    <footer id="footer" class="dark" style="display:none;">
 
         <div class="container">
 
@@ -1459,7 +1646,7 @@
 
                         <div class="widget clearfix">
 
-                            <img src="canvas/images/footer-widget-logo.png" alt="" class="footer-logo">
+                            <img src="images/footer-widget-logo.png" alt="" class="footer-logo">
 
                             <p>We believe in <strong>Simple</strong>, <strong>Creative</strong> &amp;
                                 <strong>Flexible</strong> Design Standards.</p>
@@ -1486,15 +1673,13 @@
                             <h4>Blogroll</h4>
 
                             <ul>
-                                <li><a href="canvas/http://codex.wordpress.org/">Documentation</a></li>
-                                <li>
-                                    <a href="canvas/http://wordpress.org/support/forum/requests-and-feedback">Feedback</a>
-                                </li>
-                                <li><a href="canvas/http://wordpress.org/extend/plugins/">Plugins</a></li>
-                                <li><a href="canvas/http://wordpress.org/support/">Support Forums</a></li>
-                                <li><a href="canvas/http://wordpress.org/extend/themes/">Themes</a></li>
-                                <li><a href="canvas/http://wordpress.org/news/">WordPress Blog</a></li>
-                                <li><a href="canvas/http://planet.wordpress.org/">WordPress Planet</a></li>
+                                <li><a href="http://codex.wordpress.org/">Documentation</a></li>
+                                <li><a href="http://wordpress.org/support/forum/requests-and-feedback">Feedback</a></li>
+                                <li><a href="http://wordpress.org/extend/plugins/">Plugins</a></li>
+                                <li><a href="http://wordpress.org/support/">Support Forums</a></li>
+                                <li><a href="http://wordpress.org/extend/themes/">Themes</a></li>
+                                <li><a href="http://wordpress.org/news/">WordPress Blog</a></li>
+                                <li><a href="http://planet.wordpress.org/">WordPress Planet</a></li>
                             </ul>
 
                         </div>
@@ -1707,18 +1892,16 @@
 <!-- Footer Scripts
 ============================================= -->
 <script type="text/javascript" src="canvas/js/functions.js"></script>
-<script>
-    $(window).load(function () {
-        $('.card-wrapper').addClass('loaded');
-    })
 
-    $('.more-info').click(function () {
-        $(".card").toggleClass('flip');
-        $('.arrow').remove();
+<script type="text/javascript">
+    $(function () {
+        $("#processTabs").tabs({show: {effect: "fade", duration: 400}});
+        $(".tab-linker").click(function () {
+            $("#processTabs").tabs("option", "active", $(this).attr('rel') - 1);
+            return false;
+        });
     });
-    //    $('#background').click(function(){
-    //        $('#card').removeClass('flip');
-    //    })
 </script>
+
 </body>
 </html>

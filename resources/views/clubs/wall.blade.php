@@ -9,22 +9,22 @@
     ============================================= -->
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400,400italic,600,700|Raleway:300,400,500,600,700|Crete+Round:400italic"
           rel="stylesheet" type="text/css"/>
-    <link rel="stylesheet" href="canvas/css/bootstrap.css" type="text/css"/>
-    <link rel="stylesheet" href="canvas/style.css" type="text/css"/>
-    <link rel="stylesheet" href="canvas/css/dark.css" type="text/css"/>
-    <link rel="stylesheet" href="canvas/css/font-icons.css" type="text/css"/>
-    <link rel="stylesheet" href="canvas/css/animate.css" type="text/css"/>
-    <link rel="stylesheet" href="canvas/css/magnific-popup.css" type="text/css"/>
-    <link rel="stylesheet" href="canvas/css/responsive.css" type="text/css"/>
+    <link rel="stylesheet" href="../canvas/css/bootstrap.css" type="text/css"/>
+    <link rel="stylesheet" href="../canvas/style.css" type="text/css"/>
+    <link rel="stylesheet" href="../canvas/css/dark.css" type="text/css"/>
+    <link rel="stylesheet" href="../canvas/css/font-icons.css" type="text/css"/>
+    <link rel="stylesheet" href="../canvas/css/animate.css" type="text/css"/>
+    <link rel="stylesheet" href="../canvas/css/magnific-popup.css" type="text/css"/>
+    <link rel="stylesheet" href="../canvas/css/responsive.css" type="text/css"/>
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.2.0/css/font-awesome.min.css"
           type="text/css">
-    <link rel="stylesheet" href="{{ asset('canvas/css/colors.css') }}" type="text/css"/>
-    <link rel="stylesheet" href="{{ asset('css/card.css') }}" type="text/css"/>
+    <link rel="stylesheet" href="{{ asset('../canvas/css/colors.css') }}" type="text/css"/>
+    <link rel="stylesheet" href="{{ asset('../css/card.css') }}" type="text/css"/>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
 
     <!-- Document Title
     ============================================= -->
-    <title>AllForU</title>
+    <title>Club Profile | AllForU</title>
 
 </head>
 
@@ -47,12 +47,10 @@
                 <!-- Logo
                 ============================================= -->
                 <div id="logo">
-                    <a href="/" class="standard-logo" data-dark-logo="canvas/images/logo-dark.png"><img
-                                src="canvas/images/afu-logo.png" alt="Canvas Logo"></a>
-                    <a href="/" class="retina-logo" data-dark-logo="canvas/images/logo-dark@2x.png"><img
-                                src="canvas/images/afu-logo.png"
-                                {{--src="canvas/images/logo@2x.png" --}}
-                                alt="Canvas Logo"></a>
+                    <a href="index.html" class="standard-logo" data-dark-logo="images/logo-dark.png"><img
+                                src="../canvas/images/afu-logo.png" alt="Canvas Logo"></a>
+                    <a href="index.html" class="retina-logo" data-dark-logo="images/logo-dark@2x.png"><img
+                                src="../canvas/images/afu-logo.png" alt="Canvas Logo"></a>
                 </div><!-- #logo end -->
 
                 <!-- Primary Navigation
@@ -1391,15 +1389,11 @@
 
     <!-- Page Title
     ============================================= -->
-    <section id="page-title" style="display:none;">
+    <section id="page-title" class="page-title-mini">
 
         <div class="container clearfix">
-            <h1>AllForU</h1>
-            {{--<div id="portfolio-navigation">--}}
-            {{--<a href="#"><i class="icon-angle-left"></i></a>--}}
-            {{--<a href="#"><i class="icon-line-grid"></i></a>--}}
-            {{--<a href="#"><i class="icon-angle-right"></i></a>--}}
-            {{--</div>--}}
+            <h1>Viewing Club-Name</h1>
+            <span>A Short Page Title Tagline</span>
         </div>
 
     </section><!-- #page-title end -->
@@ -1408,44 +1402,147 @@
     ============================================= -->
     <section id="content" style="background-color:#E7EAF5;">
 
-        <div class="content-wrap" style="padding-top:45px;">
+        <div class="content-wrap">
 
             <div class="container clearfix">
 
-                <div class="title-block">
-                    <h1>Events</h1>
-                    <span></span>
+                <div class="col_two_fifth topmargin nobottommargin" style="min-height: 350px;">
+                    <img src="https://via.placeholder.com/400x400"/>
                 </div>
 
-                @include('cards.event')
+                <div class="col_three_fifth notopmargin nobottommargin col_last">
 
+                    <div class="heading-block">
+                        <span><span class="label label-warning">Featured</span></span>
+                        <h3>Biological Science Club</h3>
+                        <span>Nanyang Technological University</span><br/>
+                        <span><i>2 years ago</i> <span class="label label-primary">Official</span></span>
+                    </div>
+
+                    <div class="col_full" style="margin-bottom:0;">
+                        <h3 style="margin-bottom:0;">Overview</h3>
+                    </div>
+
+                    <div class="clear"></div>
+                    <div class="line" style="margin:15px 0;"></div>
+
+                    <div class="col_one_fourth center" style="margin-bottom: 0; margin-right: 0; border-right: 1px #e4e4e4 solid;">
+                        <h4 style="margin-bottom:0px; margin-top:30px;">$10,000</h4>
+                        <p>Dollars Saved</p>
+                    </div>
+                    <div class="col_one_fourth center" style="margin-right: 0; border-right: 1px #e4e4e4 solid;">
+                        <h4 style="margin-bottom:0px; margin-top:30px;">$9,000</h4>
+                        <p>Cash Sponsored</p>
+                    </div>
+                    <div class="col_one_fourth center" style="margin-right: 0; border-right: 1px #e4e4e4 solid;">
+                        <h4 style="margin-bottom:0px; margin-top:30px;">120,000</h4>
+                        <p>Product Sponsored</p>
+                    </div>
+                    <div class="col_one_fourth col_last center"
+                         style="margin-right: 0; border-right: 1px #e4e4e4 solid;">
+                        <h4 style="margin-bottom:0px; margin-top:30px;">2000</h4>
+                        <p>Students Impacted</p>
+                    </div>
+                </div>
                 <div class="clear"></div>
 
-                <!-- Related Portfolio Items
-                ============================================= -->
-                <div class="title-block">
-                    <h1>Societies</h1>
-                    <span></span>
+                <div class="col_full center" style="background-color:white; border-radius: 10px; ">
+                    <div class="col_one_third" style="margin-bottom:0px;">
+                        <h3 style="margin-bottom:0px;"><i class="fa fa-users"></i> 330 users</h3>
+                    </div>
+
+                    <div class="col_one_third" style="margin-bottom:0px;">
+                        <h3 style="margin-bottom:0px;"><i class="fa fa-heart" style="color:red;"></i> 546 followers</h3>
+                    </div>
+
+                    <div class="col_one_third col_last" style="margin-bottom:0px;">
+                        <h3 style="margin-bottom:0px;"><i class="fa fa-star-o" style="color:orange;"></i> 33 reviews</h3>
+                    </div>
+
+                    <div class="clear"></div>
                 </div>
 
+                <div class="line"></div>
+
+                <h1>Explore Your Club</h1>
 
                 <div id="related-portfolio" class="owl-carousel portfolio-carousel carousel-widget"
                      data-margin="0" data-nav="true"
                      data-autoplay="5000"
                      data-items-xxs="1" data-items-xs="1" data-items-sm="1" data-items-lg="3">
-                    @foreach ($clubs as $club)
-                        <div class="oc-item">
-                            @include('cards.club-carousel', [ 'club' => $club ])
+                    <div class="col-xs-12" style="margin-bottom:20px;">
+                        <div class="feature-box center media-box fbox-bg">
+                            <div class="fbox-media">
+                                <a href="#"><img class="image_fade" src="../canvas/images/portfolio/3/2.jpg"
+                                                 alt="Featured Box Image" style="opacity: 1;"></a>
+                            </div>
+                            <div class="fbox-desc">
+                                <h3>Manage Members<p><a href="#" class="btn btn-default">Manage</a></p></h3>
+                            </div>
                         </div>
-                    @endforeach
-                </div><!-- .portfolio-carousel end -->
+                    </div>
+
+                    <div class="col-xs-12" style="margin-bottom:20px;">
+                        <div class="feature-box center media-box fbox-bg">
+                            <div class="fbox-media">
+                                <a href="#"><img class="image_fade" src="../canvas/images/portfolio/3/2.jpg"
+                                                 alt="Featured Box Image" style="opacity: 1;"></a>
+                            </div>
+                            <div class="fbox-desc">
+                                <h3>Create Events<p><a href="#" class="btn btn-default">Create</a></p></h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="clear"></div>
+                <div class="line"></div>
+
+                <h1>Initiatives in the spotlight</h1>
+
+                <div id="related-portfolio" class="owl-carousel portfolio-carousel carousel-widget"
+                     data-margin="0" data-nav="true"
+                     data-autoplay="5000"
+                     data-items-xxs="1" data-items-xs="1" data-items-sm="1" data-items-lg="1">
+                    <div class="entry clearfix">
+
+                        <!-- Entry Title
+                        ============================================= -->
+                        <div class="entry-title">
+                            <h2>Freshman Orientation</h2>
+                        </div><!-- .entry-title end -->
+
+                        <!-- Entry Meta
+                        ============================================= -->
+                        <ul class="entry-meta clearfix">
+                            <li><i class="icon-calendar3"></i> 4th May 2018</li>
+                            <li><a href="#"><i class="icon-user"></i> Biological Sciences Club</a></li>
+                        </ul><!-- .entry-meta end -->
+
+                        <!-- Entry Image
+                        ============================================= -->
+                        <div class="entry-image bottommargin">
+                            <a href="#"><img src="../canvas/images/blog/full/10.jpg" alt="Blog Single"></a>
+                        </div><!-- .entry-image end -->
+
+                        <!-- Entry Content
+                        ============================================= -->
+                        <div class="entry-content notopmargin">
+
+                            <p>Discover a new way to maximise benefit while saving cost. Match your orientation event to
+                                pre-qualified sponsors and vendors within 36 hours.</p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
+
     </section><!-- #content end -->
 
     <!-- Footer
     ============================================= -->
-    <footer style="display:none;" id="footer" class="dark">
+    <footer id="footer" class="dark" style="display:none;">
 
         <div class="container">
 
@@ -1459,7 +1556,7 @@
 
                         <div class="widget clearfix">
 
-                            <img src="canvas/images/footer-widget-logo.png" alt="" class="footer-logo">
+                            <img src="images/footer-widget-logo.png" alt="" class="footer-logo">
 
                             <p>We believe in <strong>Simple</strong>, <strong>Creative</strong> &amp;
                                 <strong>Flexible</strong> Design Standards.</p>
@@ -1486,15 +1583,13 @@
                             <h4>Blogroll</h4>
 
                             <ul>
-                                <li><a href="canvas/http://codex.wordpress.org/">Documentation</a></li>
-                                <li>
-                                    <a href="canvas/http://wordpress.org/support/forum/requests-and-feedback">Feedback</a>
-                                </li>
-                                <li><a href="canvas/http://wordpress.org/extend/plugins/">Plugins</a></li>
-                                <li><a href="canvas/http://wordpress.org/support/">Support Forums</a></li>
-                                <li><a href="canvas/http://wordpress.org/extend/themes/">Themes</a></li>
-                                <li><a href="canvas/http://wordpress.org/news/">WordPress Blog</a></li>
-                                <li><a href="canvas/http://planet.wordpress.org/">WordPress Planet</a></li>
+                                <li><a href="http://codex.wordpress.org/">Documentation</a></li>
+                                <li><a href="http://wordpress.org/support/forum/requests-and-feedback">Feedback</a></li>
+                                <li><a href="http://wordpress.org/extend/plugins/">Plugins</a></li>
+                                <li><a href="http://wordpress.org/support/">Support Forums</a></li>
+                                <li><a href="http://wordpress.org/extend/themes/">Themes</a></li>
+                                <li><a href="http://wordpress.org/news/">WordPress Blog</a></li>
+                                <li><a href="http://planet.wordpress.org/">WordPress Planet</a></li>
                             </ul>
 
                         </div>
@@ -1541,9 +1636,7 @@
                                 </div>
                             </div>
                         </div>
-
                     </div>
-
                 </div>
 
                 <div class="col_one_third col_last">
@@ -1701,24 +1794,11 @@
 
 <!-- External JavaScripts
 ============================================= -->
-<script type="text/javascript" src="canvas/js/jquery.js"></script>
-<script type="text/javascript" src="canvas/js/plugins.js"></script>
+<script type="text/javascript" src="../canvas/js/jquery.js"></script>
+<script type="text/javascript" src="../canvas/js/plugins.js"></script>
 
 <!-- Footer Scripts
 ============================================= -->
-<script type="text/javascript" src="canvas/js/functions.js"></script>
-<script>
-    $(window).load(function () {
-        $('.card-wrapper').addClass('loaded');
-    })
-
-    $('.more-info').click(function () {
-        $(".card").toggleClass('flip');
-        $('.arrow').remove();
-    });
-    //    $('#background').click(function(){
-    //        $('#card').removeClass('flip');
-    //    })
-</script>
+<script type="text/javascript" src="../canvas/js/functions.js"></script>
 </body>
 </html>
