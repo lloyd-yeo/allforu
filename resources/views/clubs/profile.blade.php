@@ -1453,7 +1453,7 @@
                 </div>
                 <div class="clear"></div><div class="line"></div>
 
-                <h3>Explore Your Club</h3>
+                <h1>Explore Your Club</h1>
 
                 <div class="col-xs-12 col-lg-4">
                     <div class="feature-box center media-box fbox-bg">
@@ -1479,7 +1479,7 @@
 
                 <div class="clear"></div><div class="line"></div>
 
-                <h3>Initiatives in the spotlight</h3>
+                <h1>Initiatives in the spotlight</h1>
 
                 <div class="entry clearfix">
 
