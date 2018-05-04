@@ -1455,7 +1455,7 @@
 
                 <h1>Explore Your Club</h1>
 
-                <div class="col-xs-12 col-lg-4">
+                <div class="col-xs-12 col-lg-4" style="margin-bottom:20px;">
                     <div class="feature-box center media-box fbox-bg">
                         <div class="fbox-media">
                             <a href="#"><img class="image_fade" src="../canvas/images/portfolio/3/2.jpg" alt="Featured Box Image" style="opacity: 1;"></a>
@@ -1466,7 +1466,7 @@
                     </div>
                 </div>
 
-                <div class="col-xs-12 col-lg-4">
+                <div class="col-xs-12 col-lg-4" style="margin-bottom:20px;">
                     <div class="feature-box center media-box fbox-bg">
                         <div class="fbox-media">
                             <a href="#"><img class="image_fade" src="../canvas/images/portfolio/3/2.jpg" alt="Featured Box Image" style="opacity: 1;"></a>
