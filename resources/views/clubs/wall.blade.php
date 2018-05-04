@@ -1400,7 +1400,7 @@
 
     <!-- Content
     ============================================= -->
-    <section id="content">
+    <section id="content" style="background-color:#E7EAF5;">
 
         <div class="content-wrap">
 
@@ -1419,17 +1419,6 @@
                         <span><i>2 years ago</i> <span class="label label-primary">Official</span></span>
                     </div>
 
-
-                    <div class="col_half">
-                        <h3><i class="fa fa-users"></i> 330 users</h3>
-                    </div>
-
-                    <div class="col_half col_last">
-                        <h3><i class="fa fa-heart" style="color:red;"></i> 546 followers</h3>
-                    </div>
-
-                    <div class="clear"></div>
-
                     <div class="col_full" style="margin-bottom:0;">
                         <h3 style="margin-bottom:0;">Overview</h3>
                     </div>
@@ -1437,7 +1426,7 @@
                     <div class="clear"></div>
                     <div class="line" style="margin:15px 0;"></div>
 
-                    <div class="col_one_fourth center" style="margin-right: 0; border-right: 1px #e4e4e4 solid;">
+                    <div class="col_one_fourth center" style="margin-bottom: 0; margin-right: 0; border-right: 1px #e4e4e4 solid;">
                         <h4 style="margin-bottom:0px; margin-top:30px;">$10,000</h4>
                         <p>Dollars Saved</p>
                     </div>
@@ -1456,6 +1445,23 @@
                     </div>
                 </div>
                 <div class="clear"></div>
+
+                <div class="col_full center" style="background-color:white; border-radius: 10px; ">
+                    <div class="col_one_third" style="margin-bottom:0px;">
+                        <h3 style="margin-bottom:0px;"><i class="fa fa-users"></i> 330 users</h3>
+                    </div>
+
+                    <div class="col_one_third" style="margin-bottom:0px;">
+                        <h3 style="margin-bottom:0px;"><i class="fa fa-heart" style="color:red;"></i> 546 followers</h3>
+                    </div>
+
+                    <div class="col_one_third col_last" style="margin-bottom:0px;">
+                        <h3 style="margin-bottom:0px;"><i class="fa fa-star-o" style="color:orange;"></i> 33 reviews</h3>
+                    </div>
+
+                    <div class="clear"></div>
+                </div>
+
                 <div class="line"></div>
 
                 <h1>Explore Your Club</h1>
