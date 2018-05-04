@@ -24,7 +24,7 @@
                     </div>
                 </div>
                 <div class="social-bar">
-                    <a href="/club/{{ $club->id }}" style="font-weight:bold;">FIND OUT MORE</a>
+                    <a href="/club-wall/{{ $club->id }}" style="font-weight:bold;">FIND OUT MORE</a>
                 </div>
             </div>
 
