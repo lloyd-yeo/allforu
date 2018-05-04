@@ -9,22 +9,22 @@
     ============================================= -->
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400,400italic,600,700|Raleway:300,400,500,600,700|Crete+Round:400italic"
           rel="stylesheet" type="text/css"/>
-    <link rel="stylesheet" href="canvas/css/bootstrap.css" type="text/css"/>
-    <link rel="stylesheet" href="canvas/style.css" type="text/css"/>
-    <link rel="stylesheet" href="canvas/css/dark.css" type="text/css"/>
-    <link rel="stylesheet" href="canvas/css/font-icons.css" type="text/css"/>
-    <link rel="stylesheet" href="canvas/css/animate.css" type="text/css"/>
-    <link rel="stylesheet" href="canvas/css/magnific-popup.css" type="text/css"/>
-    <link rel="stylesheet" href="canvas/css/responsive.css" type="text/css"/>
+    <link rel="stylesheet" href="../canvas/css/bootstrap.css" type="text/css"/>
+    <link rel="stylesheet" href="../canvas/style.css" type="text/css"/>
+    <link rel="stylesheet" href="../canvas/css/dark.css" type="text/css"/>
+    <link rel="stylesheet" href="../canvas/css/font-icons.css" type="text/css"/>
+    <link rel="stylesheet" href="../canvas/css/animate.css" type="text/css"/>
+    <link rel="stylesheet" href="../canvas/css/magnific-popup.css" type="text/css"/>
+    <link rel="stylesheet" href="../canvas/css/responsive.css" type="text/css"/>
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.2.0/css/font-awesome.min.css"
           type="text/css">
-    <link rel="stylesheet" href="{{ asset('canvas/css/colors.css') }}" type="text/css"/>
-    <link rel="stylesheet" href="{{ asset('css/card.css') }}" type="text/css"/>
+    <link rel="stylesheet" href="{{ asset('../canvas/css/colors.css') }}" type="text/css"/>
+    <link rel="stylesheet" href="{{ asset('../css/card.css') }}" type="text/css"/>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
 
     <!-- Document Title
     ============================================= -->
-    <title>AllForU</title>
+    <title>Club Profile | AllForU</title>
 
 </head>
 
@@ -47,12 +47,10 @@
                 <!-- Logo
                 ============================================= -->
                 <div id="logo">
-                    <a href="/" class="standard-logo" data-dark-logo="canvas/images/logo-dark.png"><img
-                                src="canvas/images/afu-logo.png" alt="Canvas Logo"></a>
-                    <a href="/" class="retina-logo" data-dark-logo="canvas/images/logo-dark@2x.png"><img
-                                src="canvas/images/afu-logo.png"
-                                {{--src="canvas/images/logo@2x.png" --}}
-                                alt="Canvas Logo"></a>
+                    <a href="index.html" class="standard-logo" data-dark-logo="images/logo-dark.png"><img
+                                src="../canvas/images/afu-logo.png" alt="Canvas Logo"></a>
+                    <a href="index.html" class="retina-logo" data-dark-logo="images/logo-dark@2x.png"><img
+                                src="../canvas/images/afu-logo.png" alt="Canvas Logo"></a>
                 </div><!-- #logo end -->
 
                 <!-- Primary Navigation
@@ -1391,61 +1389,100 @@
 
     <!-- Page Title
     ============================================= -->
-    <section id="page-title" style="display:none;">
+    <section id="page-title" class="page-title-mini">
 
         <div class="container clearfix">
-            <h1>AllForU</h1>
-            {{--<div id="portfolio-navigation">--}}
-            {{--<a href="#"><i class="icon-angle-left"></i></a>--}}
-            {{--<a href="#"><i class="icon-line-grid"></i></a>--}}
-            {{--<a href="#"><i class="icon-angle-right"></i></a>--}}
-            {{--</div>--}}
+            <h1>Viewing Club-Name</h1>
+            <span>A Short Page Title Tagline</span>
         </div>
 
     </section><!-- #page-title end -->
 
     <!-- Content
     ============================================= -->
-    <section id="content" style="background-color:#E7EAF5;">
+    <section id="content">
 
-        <div class="content-wrap" style="padding-top:45px;">
+        <div class="content-wrap">
 
             <div class="container clearfix">
 
-                <div class="title-block">
-                    <h1>Events</h1>
-                    <span></span>
+                <div class="col_two_fifth topmargin nobottommargin" style="min-height: 350px;">
+                    <img src="https://via.placeholder.com/150x150" />
                 </div>
 
-                @include('cards.event')
+                <div class="col_three_fifth notopmargin nobottommargin col_last">
 
-                <div class="clear"></div>
+                    <div class="heading-block">
+                        <h3>Biological Science Club</h3>
+                        <span>Nanyang Technological University</span>
+                    </div>
 
-                <!-- Related Portfolio Items
-                ============================================= -->
-                <div class="title-block">
-                    <h1>Societies</h1>
-                    <span></span>
+
+                    <div class="col_half">
+                        <h3><i class="fa fa-users"></i> 330 users</h3>
+                    </div>
+
+                    <div class="col_half col_last">
+                        <h3><i class="fa fa-heart" style="color:red;"></i> 546 followers</h3>
+                    </div>
+
+                    <div class="clear"></div>
+
+                    <div class="col_full" style="margin-bottom:0;">
+                        <h3 style="margin-bottom:0;">Overview</h3>
+                    </div>
+
+                    <div class="clear"></div><div class="line" style="margin:15px 0;"></div>
+
+                    <div class="col_one_fourth center" style="margin-right: 0; border-right: 1px #e4e4e4 solid;">
+                        <h4 style="margin-bottom:0px; margin-top:30px;">$10,000</h4>
+                        <p>Dollars Saved</p>
+                    </div>
+                    <div class="col_one_fourth center" style="margin-right: 0; border-right: 1px #e4e4e4 solid;">
+                        <h4 style="margin-bottom:0px; margin-top:30px;">$9,000</h4>
+                        <p>Cash Sponsored</p>
+                    </div>
+                    <div class="col_one_fourth center" style="margin-right: 0; border-right: 1px #e4e4e4 solid;">
+                        <h4 style="margin-bottom:0px; margin-top:30px;">120,000</h4>
+                        <p>Product Sponsored</p>
+                    </div>
+                    <div class="col_one_fourth col_last center" style="margin-right: 0; border-right: 1px #e4e4e4 solid;">
+                        <h4 style="margin-bottom:0px; margin-top:30px;">2000</h4>
+                        <p>Students Impacted</p>
+                    </div>
+
                 </div>
 
+                <div class="clear"></div><div class="line"></div>
 
-                <div id="related-portfolio" class="owl-carousel portfolio-carousel carousel-widget"
-                     data-margin="0" data-nav="true"
-                     data-autoplay="5000"
-                     data-items-xxs="1" data-items-xs="1" data-items-sm="1" data-items-lg="3">
-                    @foreach ($clubs as $club)
-                        <div class="oc-item">
-                            @include('cards.club-carousel', [ 'club' => $club ])
-                        </div>
-                    @endforeach
-                </div><!-- .portfolio-carousel end -->
+                <div class="col_three_fifth">
+
+                    <div class="heading-block">
+                        <h3>Advanced store statistics.</h3>
+                        <span>Benchmarking your website's performance helps you make great choices for your business.</span>
+                    </div>
+
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero quod consequuntur quibusdam, enim expedita sed quia nesciunt incidunt accusamus necessitatibus modi adipisci officia libero accusantium esse hic, obcaecati, ullam, laboriosam!</p>
+
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti vero, animi suscipit id facere officia. Aspernatur, quo, quos nisi dolorum aperiam fugiat deserunt velit rerum laudantium cum magnam excepturi quod, fuga architecto provident, cupiditate delectus voluptate eaque! Sit neque ut eum, voluptatibus odit cum dolorum ipsa voluptates inventore cumque a.</p>
+
+                    <a href="#">Learn more →</a>
+
+                </div>
+
+                <div class="col_two_fifth topmargin col_last" style="min-height: 350px"><iframe class="chartjs-hidden-iframe" tabindex="-1" style="display: block; overflow: hidden; border: 0px; margin: 0px; top: 0px; left: 0px; bottom: 0px; right: 0px; height: 100%; width: 100%; position: absolute; pointer-events: none; z-index: -1;"></iframe>
+                    <canvas id="chart-radar" width="706" height="706" style="display: block; height: 353px; width: 353px;"></canvas>
+                </div>
+
             </div>
+
         </div>
+
     </section><!-- #content end -->
 
     <!-- Footer
     ============================================= -->
-    <footer style="display:none;" id="footer" class="dark">
+    <footer id="footer" class="dark" style="display:none;">
 
         <div class="container">
 
@@ -1459,7 +1496,7 @@
 
                         <div class="widget clearfix">
 
-                            <img src="canvas/images/footer-widget-logo.png" alt="" class="footer-logo">
+                            <img src="images/footer-widget-logo.png" alt="" class="footer-logo">
 
                             <p>We believe in <strong>Simple</strong>, <strong>Creative</strong> &amp;
                                 <strong>Flexible</strong> Design Standards.</p>
@@ -1486,15 +1523,13 @@
                             <h4>Blogroll</h4>
 
                             <ul>
-                                <li><a href="canvas/http://codex.wordpress.org/">Documentation</a></li>
-                                <li>
-                                    <a href="canvas/http://wordpress.org/support/forum/requests-and-feedback">Feedback</a>
-                                </li>
-                                <li><a href="canvas/http://wordpress.org/extend/plugins/">Plugins</a></li>
-                                <li><a href="canvas/http://wordpress.org/support/">Support Forums</a></li>
-                                <li><a href="canvas/http://wordpress.org/extend/themes/">Themes</a></li>
-                                <li><a href="canvas/http://wordpress.org/news/">WordPress Blog</a></li>
-                                <li><a href="canvas/http://planet.wordpress.org/">WordPress Planet</a></li>
+                                <li><a href="http://codex.wordpress.org/">Documentation</a></li>
+                                <li><a href="http://wordpress.org/support/forum/requests-and-feedback">Feedback</a></li>
+                                <li><a href="http://wordpress.org/extend/plugins/">Plugins</a></li>
+                                <li><a href="http://wordpress.org/support/">Support Forums</a></li>
+                                <li><a href="http://wordpress.org/extend/themes/">Themes</a></li>
+                                <li><a href="http://wordpress.org/news/">WordPress Blog</a></li>
+                                <li><a href="http://planet.wordpress.org/">WordPress Planet</a></li>
                             </ul>
 
                         </div>
@@ -1701,24 +1736,11 @@
 
 <!-- External JavaScripts
 ============================================= -->
-<script type="text/javascript" src="canvas/js/jquery.js"></script>
-<script type="text/javascript" src="canvas/js/plugins.js"></script>
+<script type="text/javascript" src="../canvas/js/jquery.js"></script>
+<script type="text/javascript" src="../canvas/js/plugins.js"></script>
 
 <!-- Footer Scripts
 ============================================= -->
-<script type="text/javascript" src="canvas/js/functions.js"></script>
-<script>
-    $(window).load(function () {
-        $('.card-wrapper').addClass('loaded');
-    })
-
-    $('.more-info').click(function () {
-        $(".card").toggleClass('flip');
-        $('.arrow').remove();
-    });
-    //    $('#background').click(function(){
-    //        $('#card').removeClass('flip');
-    //    })
-</script>
+<script type="text/javascript" src="../canvas/js/functions.js"></script>
 </body>
 </html>

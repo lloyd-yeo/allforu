@@ -15,7 +15,7 @@
                 @if($club->cover_img)
                     <div class="avatar" style="background-image: url({{ asset(env('UPLOAD_PATH').'/thumb/' . $club->cover_img) }});"></div>
                 @else
-                    <div class="avatar" style="background-image: url(http://via.placeholder.com/150x150);"></div>
+                    <div class="avatar" style="background-image: url(https://via.placeholder.com/150x150);"></div>
                 @endif
                 <div class="info-box">
                     <div class="info">

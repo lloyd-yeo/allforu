@@ -10,6 +10,7 @@ $this->post('logout', 'Auth\LoginController@logout')->name('auth.logout');
 Route::post('/user/social/register', 'SocialLoginController@login')->name('social.login');
 Route::get('/registration', 'HomeController@onboarding');
 Route::post('/registration', 'SocialLoginController@registration');
+Route::get('/club/show', 'ClubController@show');
 
 // Change Password Routes...
 $this->get('change_password', 'Auth\ChangePasswordController@showChangePasswordForm')->name('auth.change_password');
