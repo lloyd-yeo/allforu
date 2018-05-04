@@ -36,12 +36,12 @@
             </div>
             <div class="row">
                 <div class="col-xs-12 form-group">
-                    {!! Form::label('club-acronym', trans('quickadmin.clubs.fields.club-acronym').'', ['class' => 'control-label']) !!}
-                    {!! Form::text('club-acronym', old('club-acronym'), ['class' => 'form-control', 'placeholder' => '']) !!}
+                    {!! Form::label('club_acronym', trans('quickadmin.clubs.fields.club-acronym').'', ['class' => 'control-label']) !!}
+                    {!! Form::text('club_acronym', old('club_acronym'), ['class' => 'form-control', 'placeholder' => '']) !!}
                     <p class="help-block"></p>
-                    @if($errors->has('club-acronym'))
+                    @if($errors->has('club_acronym'))
                         <p class="help-block">
-                            {{ $errors->first('club-acronym') }}
+                            {{ $errors->first('club_acronym') }}
                         </p>
                     @endif
                 </div>
@@ -60,24 +60,24 @@
             </div>
             <div class="row">
                 <div class="col-xs-12 form-group">
-                    {!! Form::label('organisation-acronym', 'Acronym of organisation you are serving', ['class' => 'control-label']) !!}
-                    {!! Form::text('organisation-acronym', old('organisation-acronym'), ['class' => 'form-control', 'placeholder' => '']) !!}
+                    {!! Form::label('organisation_acronym', 'Acronym of organisation you are serving', ['class' => 'control-label']) !!}
+                    {!! Form::text('organisation_acronym', old('organisation_acronym'), ['class' => 'form-control', 'placeholder' => '']) !!}
                     <p class="help-block"></p>
-                    @if($errors->has('organisation-acronym'))
+                    @if($errors->has('organisation_acronym'))
                         <p class="help-block">
-                            {{ $errors->first('organisation-acronym') }}
+                            {{ $errors->first('organisation_acronym') }}
                         </p>
                     @endif
                 </div>
             </div>
             <div class="row">
                 <div class="col-xs-12 form-group">
-                    {!! Form::label('referred-by', 'How do you first know about us?', ['class' => 'control-label']) !!}
-                    {!! Form::select('referred-by', $referred_by, old('referred-by'), ['class' => 'form-control select2']) !!}
+                    {!! Form::label('referred_by', 'How do you first know about us?', ['class' => 'control-label']) !!}
+                    {!! Form::select('referred_by', $referred_by, old('referred_by'), ['class' => 'form-control select2']) !!}
                     <p class="help-block"></p>
-                    @if($errors->has('referred-by'))
+                    @if($errors->has('referred_by'))
                         <p class="help-block">
-                            {{ $errors->first('referred-by') }}
+                            {{ $errors->first('referred_by') }}
                         </p>
                     @endif
                 </div>
@@ -96,24 +96,24 @@
             </div>
             <div class="row">
                 <div class="col-xs-12 form-group">
-                    {!! Form::label('category-1', trans('quickadmin.clubs.fields.category-1').' of Society', ['class' => 'control-label']) !!}
-                    {!! Form::select('category-1', $society_category, old('category-1'), ['class' => 'form-control select2']) !!}
+                    {!! Form::label('category_1', trans('quickadmin.clubs.fields.category-1').' of Society', ['class' => 'control-label']) !!}
+                    {!! Form::select('category_1', $society_category, old('category_1'), ['class' => 'form-control select2']) !!}
                     <p class="help-block"></p>
-                    @if($errors->has('category-1'))
+                    @if($errors->has('category_1'))
                         <p class="help-block">
-                            {{ $errors->first('category-1') }}
+                            {{ $errors->first('category_1') }}
                         </p>
                     @endif
                 </div>
             </div>
             <div class="row">
                 <div class="col-xs-12 form-group">
-                    {!! Form::label('category-2', trans('quickadmin.clubs.fields.category-2').' of Society', ['class' => 'control-label']) !!}
-                    {!! Form::select('category-2', $society_category, old('category-2'), ['class' => 'form-control select2']) !!}
+                    {!! Form::label('category_2', trans('quickadmin.clubs.fields.category-2').' of Society', ['class' => 'control-label']) !!}
+                    {!! Form::select('category_2', $society_category, old('category_2'), ['class' => 'form-control select2']) !!}
                     <p class="help-block"></p>
-                    @if($errors->has('category-2'))
+                    @if($errors->has('category_2'))
                         <p class="help-block">
-                            {{ $errors->first('category-2') }}
+                            {{ $errors->first('category_2') }}
                         </p>
                     @endif
                 </div>
@@ -132,12 +132,96 @@
             </div>
             <div class="row">
                 <div class="col-xs-12 form-group">
-                    {!! Form::label('usual-activity', 'What are the usual activity for your clubs?', ['class' => 'control-label']) !!}
-                    {!! Form::text('usual-activity', old('usual-activity'), ['class' => 'form-control', 'placeholder' => '']) !!}
+                    {!! Form::label('usual_activity', 'What are the usual activity for your clubs?', ['class' => 'control-label']) !!}
+                    {!! Form::text('usual_activity', old('usual_activity'), ['class' => 'form-control', 'placeholder' => '']) !!}
                     <p class="help-block"></p>
-                    @if($errors->has('usual-activity'))
+                    @if($errors->has('usual_activity'))
                         <p class="help-block">
-                            {{ $errors->first('usual-activity') }}
+                            {{ $errors->first('usual_activity') }}
+                        </p>
+                    @endif
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12 form-group">
+                    {!! Form::label('opportunity_1', 'What is the TOP opportunity that will benefit the student should they join up with your club', ['class' => 'control-label']) !!}
+                    {!! Form::text('opportunity_1', old('opportunity_1'), ['class' => 'form-control', 'placeholder' => '']) !!}
+                    <p class="help-block"></p>
+                    @if($errors->has('opportunity_1'))
+                        <p class="help-block">
+                            {{ $errors->first('opportunity_1') }}
+                        </p>
+                    @endif
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12 form-group">
+                    {!! Form::label('opportunity_2', 'What is the 2nd opportunity that will benefit the student should they join up with your club', ['class' => 'control-label']) !!}
+                    {!! Form::text('opportunity_2', old('opportunity_2'), ['class' => 'form-control', 'placeholder' => '']) !!}
+                    <p class="help-block"></p>
+                    @if($errors->has('opportunity_2'))
+                        <p class="help-block">
+                            {{ $errors->first('opportunity_2') }}
+                        </p>
+                    @endif
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12 form-group">
+                    {!! Form::label('opportunity_3', 'What is the 3rd opportunity that will benefit the student should they join up with your club', ['class' => 'control-label']) !!}
+                    {!! Form::text('opportunity_3', old('opportunity_3'), ['class' => 'form-control', 'placeholder' => '']) !!}
+                    <p class="help-block"></p>
+                    @if($errors->has('opportunity_3'))
+                        <p class="help-block">
+                            {{ $errors->first('opportunity_3') }}
+                        </p>
+                    @endif
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12 form-group">
+                    {!! Form::label('news_1', 'What is the TOP news highlight that you will want to share with your members when they first join your club?', ['class' => 'control-label']) !!}
+                    {!! Form::text('news_1', old('news_1'), ['class' => 'form-control', 'placeholder' => '']) !!}
+                    <p class="help-block"></p>
+                    @if($errors->has('news_1'))
+                        <p class="help-block">
+                            {{ $errors->first('news_1') }}
+                        </p>
+                    @endif
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12 form-group">
+                    {!! Form::label('news_2', 'What is the 2nd top news highlight that you will want to share with your members when they first join your club?', ['class' => 'control-label']) !!}
+                    {!! Form::text('news_2', old('news_2'), ['class' => 'form-control', 'placeholder' => '']) !!}
+                    <p class="help-block"></p>
+                    @if($errors->has('news_2'))
+                        <p class="help-block">
+                            {{ $errors->first('news_2') }}
+                        </p>
+                    @endif
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12 form-group">
+                    {!! Form::label('news_3', 'What is the 3rd top news highlight that you will want to share with your members when they first join your club?', ['class' => 'control-label']) !!}
+                    {!! Form::text('news_3', old('news_3'), ['class' => 'form-control', 'placeholder' => '']) !!}
+                    <p class="help-block"></p>
+                    @if($errors->has('news-3'))
+                        <p class="help-block">
+                            {{ $errors->first('news_3') }}
+                        </p>
+                    @endif
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12 form-group">
+                    {!! Form::label('catchphrase', 'Write a one liner attention seeking catch-phrase for your club', ['class' => 'control-label']) !!}
+                    {!! Form::text('catchphrase', old('catchphrase'), ['class' => 'form-control', 'placeholder' => '']) !!}
+                    <p class="help-block"></p>
+                    @if($errors->has('catchphrase'))
+                        <p class="help-block">
+                            {{ $errors->first('catchphrase') }}
                         </p>
                     @endif
                 </div>
@@ -215,8 +299,20 @@
                     @endif
                 </div>
             </div>
-
+            <div class="row">
+                <div class="col-xs-12 form-group">
+                    {!! Form::label('events_per_year', 'What are the number of events you have in a year?', ['class' => 'control-label']) !!}
+                    {!! Form::text('events_per_year', old('events_per_year'), ['class' => 'form-control', 'placeholder' => '']) !!}
+                    <p class="help-block"></p>
+                    @if($errors->has('events_per_year'))
+                        <p class="help-block">
+                            {{ $errors->first('events_per_year') }}
+                        </p>
+                    @endif
+                </div>
+            </div>
         </div>
+
     </div>
 
     {!! Form::submit(trans('quickadmin.qa_save'), ['class' => 'btn btn-danger']) !!}

@@ -63,6 +63,10 @@ return [
 			'category-1' => 'Main Category',
 			'category-2' => '2nd Category',
 			'usual-activity' => 'Activity',
+			'opportunity-1' => 'Top Opportunity',
+			'opportunity-2' => '2nd Opportunity',
+			'opportunity-3' => '3rd Opportunity',
+			'catchphrase' => 'Catch-phrase',
 		],
 	],
 
