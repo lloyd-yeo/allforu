@@ -1443,15 +1443,15 @@
 
                 <div class="col_full center testimonial" style="background-color:white; margin-bottom: 10px;">
                     <div class="col_one_third" style="margin-bottom:0px;">
-                        <h3 style="margin-bottom:0px;"><i class="fa fa-users"></i> 330 users</h3>
+                        <h3 style="margin-bottom:0;"><i class="fa fa-users"></i> 330 users</h3>
                     </div>
 
                     <div class="col_one_third" style="margin-bottom:0px;">
-                        <h3 style="margin-bottom:0px;"><i class="fa fa-heart" style="color:red;"></i> 546 followers</h3>
+                        <h3 style="margin-bottom:0;"><i class="fa fa-heart" style="color:red;"></i> 546 followers</h3>
                     </div>
 
-                    <div class="col_one_third col_last" style="margin-bottom:0px;">
-                        <h3 style="margin-bottom:0px;"><i class="fa fa-star-o" style="color:orange;"></i> 33 reviews
+                    <div class="col_one_third col_last" style="margin-bottom:0 !important;">
+                        <h3 style="margin-bottom:0 !important;"><i class="fa fa-star-o" style="color:orange;"></i> 33 reviews
                         </h3>
                     </div>
 
@@ -1461,10 +1461,10 @@
                 <ul class="nav nav-pills nav-justified" style="margin-bottom:20px;">
                     <li class="active" id="highlights-list"
                         style="border-radius:5px; border-color:black; border-width:1px; border-style:solid;">
-                        <a href="#!" id="highlights-btn" style="background-color:orange; font-weight:bold;">Highlights (5)</a>
+                        <a href="#!" id="highlights-btn" style="margin-bottom: 0; background-color:orange; font-weight:bold;">Highlights (5)</a>
                     </li>
                     <li id="group-info-list" style="border-radius:5px; border-color:black; border-width:1px; border-style:solid;">
-                        <a href="#!" id="group-info-btn" style="font-weight:bold;">Group Info</a>
+                        <a href="#!" id="group-info-btn" style="margin-bottom: 0; font-weight:bold;">Group Info</a>
                     </li>
                 </ul>
 
