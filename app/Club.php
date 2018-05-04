@@ -24,7 +24,8 @@ class Club extends Model implements HasMedia
 {
     use SoftDeletes, HasMediaTrait, CanBeLiked, CanBeFollowed;
 
-    protected $fillable = ['name', 'description', 'website', 'fb_page_url', 'ig_page_url', 'cover_img', 'school_id'];
+    protected $fillable = ['name', 'description', 'website', 'fb_page_url', 'ig_page_url', 'cover_img', 'school_id','club_acronym','organisation','organisation_acronym','referred_by',
+        'classification','category_1','category_2','usual_activity','opportunity_1','opportunity_2', 'opportunity_3', 'catchphrase', 'events_per_year' ];
     protected $hidden = [];
 
 
