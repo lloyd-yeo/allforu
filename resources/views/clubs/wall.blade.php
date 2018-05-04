@@ -1408,7 +1408,11 @@
 
                 <div class="col_full testimonial" style="background-color:white; overflow:auto; margin-bottom: 10px;">
                     <div class="col_two_fifth topmargin nobottommargin" style="min-height: 350px;">
+                        @desktop
                         <img style="margin-left: 15px; border-radius: 400px;" src="https://via.placeholder.com/400x400"/>
+                        @elsedesktop
+                        <img style="border-radius: 400px;" src="https://via.placeholder.com/400x400"/>
+                        @enddesktop
                     </div>
 
                     <div class="col_three_fifth notopmargin nobottommargin col_last">
