@@ -74,6 +74,24 @@ class ClubsController extends Controller
         $request = $this->saveFiles($request);
         $club = Club::create($request->all());
 
+        $news_1 = new News;
+        $news_1->order = 1;
+        $news_1->description = $request->input('news_1');
+        $news_1->club_id = $club->id;
+        $news_1->save();
+
+        $news_2 = new News;
+        $news_2->order = 2;
+        $news_2->description = $request->input('news_2');
+        $news_2->club_id = $club->id;
+        $news_2->save();
+
+        $news_3 = new News;
+        $news_3->order = 3;
+        $news_3->description = $request->input('news_3');
+        $news_3->club_id = $club->id;
+        $news_3->save();
+
         foreach ($request->input('images_id', []) as $index => $id) {
             $model          = config('laravel-medialibrary.media_model');
             $file           = $model::find($id);

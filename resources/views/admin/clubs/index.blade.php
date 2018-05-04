@@ -96,9 +96,9 @@
                                 <td field-key='opportunity_1'>{{ $club->opportunity_1 or '' }}</td>
                                 <td field-key='opportunity_2'>{{ $club->opportunity_2 or '' }}</td>
                                 <td field-key='opportunity_3'>{{ $club->opportunity_3 or '' }}</td>
-                                <td field-key='news_1'>{{ $club->news()->orderBy('order','1')->first()->description or '' }}</td>
-                                <td field-key='news_2'>{{ $club->news()->orderBy('order','2')->first()->description or '' }}</td>
-                                <td field-key='news_3'>{{ $club->news()->orderBy('order','3')->first()->description or '' }}</td>
+                                <td field-key='news_1'>{{ $club->news()->where('order','1')->first()->description or '' }}</td>
+                                <td field-key='news_2'>{{ $club->news()->where('order','2')->first()->description or '' }}</td>
+                                <td field-key='news_3'>{{ $club->news()->where('order','3')->first()->description or '' }}</td>
                                 <td field-key='catchphrase'>{{ $club->catchphrase or '' }}</td>
                                 <td field-key='events_per_year'>{{ $club->events_per_year or '' }}</td>
                                 @if( request('show_deleted') == 1 )
