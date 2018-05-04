@@ -1454,26 +1454,7 @@
                 </div>
 
                 <div class="clear"></div><div class="line"></div>
-
-                <div class="col_three_fifth">
-
-                    <div class="heading-block">
-                        <h3>Advanced store statistics.</h3>
-                        <span>Benchmarking your website's performance helps you make great choices for your business.</span>
-                    </div>
-
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero quod consequuntur quibusdam, enim expedita sed quia nesciunt incidunt accusamus necessitatibus modi adipisci officia libero accusantium esse hic, obcaecati, ullam, laboriosam!</p>
-
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti vero, animi suscipit id facere officia. Aspernatur, quo, quos nisi dolorum aperiam fugiat deserunt velit rerum laudantium cum magnam excepturi quod, fuga architecto provident, cupiditate delectus voluptate eaque! Sit neque ut eum, voluptatibus odit cum dolorum ipsa voluptates inventore cumque a.</p>
-
-                    <a href="#">Learn more →</a>
-
-                </div>
-
-                <div class="col_two_fifth topmargin col_last" style="min-height: 350px"><iframe class="chartjs-hidden-iframe" tabindex="-1" style="display: block; overflow: hidden; border: 0px; margin: 0px; top: 0px; left: 0px; bottom: 0px; right: 0px; height: 100%; width: 100%; position: absolute; pointer-events: none; z-index: -1;"></iframe>
-                    <canvas id="chart-radar" width="706" height="706" style="display: block; height: 353px; width: 353px;"></canvas>
-                </div>
-
+                
             </div>
 
         </div>
