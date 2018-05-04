@@ -1413,8 +1413,10 @@
                 <div class="col_three_fifth notopmargin nobottommargin col_last">
 
                     <div class="heading-block">
+                        <span><span class="label label-warning">Featured</span></span>
                         <h3>Biological Science Club</h3>
-                        <span>Nanyang Technological University</span>
+                        <span>Nanyang Technological University</span><br/>
+                        <span><i>2 years ago</i> <span class="label label-primary">Official</span></span>
                     </div>
 
 
@@ -1628,9 +1630,7 @@
                                 </div>
                             </div>
                         </div>
-
                     </div>
-
                 </div>
 
                 <div class="col_one_third col_last">
