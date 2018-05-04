@@ -1409,7 +1409,8 @@
                 <div class="col_full testimonial" style="background-color:white; overflow:auto; margin-bottom: 10px;">
                     <div class="col_two_fifth topmargin nobottommargin" style="min-height: 350px;">
                         @desktop
-                        <img style="margin-left: 15px; border-radius: 400px;" src="https://via.placeholder.com/400x400"/>
+                        <img style="margin-left: 15px; border-radius: 400px;"
+                             src="https://via.placeholder.com/400x400"/>
                         @elsedesktop
                         <img style="border-radius: 400px;" src="https://via.placeholder.com/400x400"/>
                         @enddesktop
@@ -1432,7 +1433,8 @@
                         <div class="line" style="margin:15px 0;"></div>
 
                         <p>
-                            "Life is business itself, we value building people in their soft-skills and their knowledge in biology"
+                            "Life is business itself, we value building people in their soft-skills and their knowledge
+                            in biology"
                         </p>
                     </div>
                 </div>
@@ -1449,14 +1451,16 @@
                     </div>
 
                     <div class="col_one_third col_last" style="margin-bottom:0px;">
-                        <h3 style="margin-bottom:0px;"><i class="fa fa-star-o" style="color:orange;"></i> 33 reviews</h3>
+                        <h3 style="margin-bottom:0px;"><i class="fa fa-star-o" style="color:orange;"></i> 33 reviews
+                        </h3>
                     </div>
 
                     <div class="clear"></div>
                 </div>
 
                 <ul class="nav nav-pills nav-justified" style="margin-bottom:20px;">
-                    <li class="active" style="border-radius:5px; border-color:black; border-width:1px; border-style:solid;">
+                    <li class="active"
+                        style="border-radius:5px; border-color:black; border-width:1px; border-style:solid;">
                         <a href="#" style="background-color:orange; font-weight:bold;">Highlights (5)</a>
                     </li>
                     <li style="border-radius:5px; border-color:black; border-width:1px; border-style:solid;">
@@ -1464,37 +1468,17 @@
                     </li>
                 </ul>
 
-                <h1>Upcoming Events</h1>
-
-                <div id="related-portfolio" class="owl-carousel portfolio-carousel carousel-widget"
-                     data-margin="0" data-nav="true"
-                     data-autoplay="5000"
-                     data-items-xxs="1" data-items-xs="1" data-items-sm="1" data-items-lg="3">
-                    <div class="col-xs-12" style="margin-bottom:20px;">
-                        <div class="feature-box center media-box fbox-bg">
-                            <div class="fbox-media">
-                                <a href="#"><img class="image_fade" src="../canvas/images/portfolio/3/2.jpg"
-                                                 alt="Featured Box Image" style="opacity: 1;"></a>
-                            </div>
-                            <div class="fbox-desc">
-                                <h3>Manage Members<p><a href="#" class="btn btn-default">Manage</a></p></h3>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-xs-12" style="margin-bottom:20px;">
-                        <div class="feature-box center media-box fbox-bg">
-                            <div class="fbox-media">
-                                <a href="#"><img class="image_fade" src="../canvas/images/portfolio/3/2.jpg"
-                                                 alt="Featured Box Image" style="opacity: 1;"></a>
-                            </div>
-                            <div class="fbox-desc">
-                                <h3>Create Events<p><a href="#" class="btn btn-default">Create</a></p></h3>
-                            </div>
-                        </div>
+                <div class="col_full testimonial" style="background-color:white;">
+                    <h1>Upcoming Events</h1>
+                    <div id="related-portfolio" class="owl-carousel portfolio-carousel carousel-widget"
+                         data-margin="30" data-nav="true"
+                         data-autoplay="5000"
+                         data-items-xxs="1" data-items-xs="1" data-items-sm="1" data-items-lg="3">
+                        @include('cards.event')
+                        @include('cards.event')
+                        @include('cards.event')
                     </div>
                 </div>
-
 
                 <div class="clear"></div>
                 <div class="line"></div>

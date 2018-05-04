@@ -79,8 +79,8 @@
                 </div><!-- .portfolio-carousel end -->
                 {{--visible-lg-block--}}
                 {{--visible-md-block visible-sm-block visible-xs-block--}}
-                <center>
 
+                <center>
                     <a href="#" class="button button-3d button-rounded button-reveal button-large button-red tright">
                         <i class="icon-heart"></i><span>LIKE</span>
                     </a>
