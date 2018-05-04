@@ -87,6 +87,8 @@ class ClubsController extends Controller
                 $user = User::find(Auth::user()->id);
                 $user->club_id = $club->id;
                 $user->save();
+                $club->president_id = $user->id;
+                $club->save();
             }
         }
 
