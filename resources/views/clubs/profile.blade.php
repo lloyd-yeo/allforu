@@ -1450,12 +1450,69 @@
                         <h4 style="margin-bottom:0px; margin-top:30px;">2000</h4>
                         <p>Students Impacted</p>
                     </div>
+                </div>
+                <div class="clear"></div><div class="line"></div>
 
+                <h3>Explore Your Club</h3>
+
+                <div class="col-xs-12 col-lg-4">
+                    <div class="feature-box center media-box fbox-bg">
+                        <div class="fbox-media">
+                            <a href="#"><img class="image_fade" src="../canvas/images/portfolio/3/2.jpg" alt="Featured Box Image" style="opacity: 1;"></a>
+                        </div>
+                        <div class="fbox-desc">
+                            <h3>Manage Members<p><a href="#" class="btn btn-default">Manage</a></p></h3>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-xs-12 col-lg-4">
+                    <div class="feature-box center media-box fbox-bg">
+                        <div class="fbox-media">
+                            <a href="#"><img class="image_fade" src="../canvas/images/portfolio/3/2.jpg" alt="Featured Box Image" style="opacity: 1;"></a>
+                        </div>
+                        <div class="fbox-desc">
+                            <h3>Create Events<p><a href="#" class="btn btn-default">Create</a></p></h3>
+                        </div>
+                    </div>
                 </div>
 
                 <div class="clear"></div><div class="line"></div>
 
+                <h3>Initiatives in the spotlight</h3>
+
+                <div class="entry clearfix">
+
+                    <!-- Entry Title
+                    ============================================= -->
+                    <div class="entry-title">
+                        <h2>Freshman Orientation</h2>
+                    </div><!-- .entry-title end -->
+
+                    <!-- Entry Meta
+                    ============================================= -->
+                    <ul class="entry-meta clearfix">
+                        <li><i class="icon-calendar3"></i> 4th May 2018</li>
+                        <li><a href="#"><i class="icon-user"></i> Biological Sciences Club</a></li>
+                    </ul><!-- .entry-meta end -->
+
+                    <!-- Entry Image
+                    ============================================= -->
+                    <div class="entry-image bottommargin">
+                        <a href="#"><img src="../canvas/images/blog/full/10.jpg" alt="Blog Single"></a>
+                    </div><!-- .entry-image end -->
+
+                    <!-- Entry Content
+                    ============================================= -->
+                    <div class="entry-content notopmargin">
+
+                        <p>Discover a new way to maximise benefit while saving cost. Match your orientation event to pre-qualified sponsors and vendors within 36 hours.</p>
+                    </div>
+                </div>
+
             </div>
+
+
 
         </div>
 
