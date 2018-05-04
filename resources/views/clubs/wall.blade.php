@@ -1459,65 +1459,63 @@
                 </div>
 
                 <ul class="nav nav-pills nav-justified" style="margin-bottom:20px;">
-                    <li class="active"
+                    <li class="active" id="highlights-list"
                         style="border-radius:5px; border-color:black; border-width:1px; border-style:solid;">
-                        <a href="#" style="background-color:orange; font-weight:bold;">Highlights (5)</a>
+                        <a href="#!" id="highlights-btn" style="background-color:orange; font-weight:bold;">Highlights (5)</a>
                     </li>
-                    <li style="border-radius:5px; border-color:black; border-width:1px; border-style:solid;">
-                        <a href="#" style="font-weight:bold;">Group Info</a>
+                    <li id="group-info-list" style="border-radius:5px; border-color:black; border-width:1px; border-style:solid;">
+                        <a href="#!" id="group-info-btn" style="font-weight:bold;">Group Info</a>
                     </li>
                 </ul>
 
-                <div class="col_full testimonial" style="background-color:white;">
+                <div id="highlights">
                     <h1>Upcoming Events</h1>
-                    <div id="related-portfolio" class="owl-carousel portfolio-carousel carousel-widget"
-                         data-margin="30" data-nav="true"
-                         data-autoplay="5000"
-                         data-items-xxs="1" data-items-xs="1" data-items-sm="1" data-items-lg="3">
-                        @include('cards.event')
-                        @include('cards.event')
-                        @include('cards.event')
-                    </div>
-                </div>
+                    <div class="col_full testimonial" style="background-color:white;">
 
-                <div class="clear"></div>
-                <div class="line"></div>
-
-                <h1>Initiatives in the spotlight</h1>
-
-                <div id="related-portfolio" class="owl-carousel portfolio-carousel carousel-widget"
-                     data-margin="0" data-nav="true"
-                     data-autoplay="5000"
-                     data-items-xxs="1" data-items-xs="1" data-items-sm="1" data-items-lg="1">
-                    <div class="entry clearfix">
-
-                        <!-- Entry Title
-                        ============================================= -->
-                        <div class="entry-title">
-                            <h2>Freshman Orientation</h2>
-                        </div><!-- .entry-title end -->
-
-                        <!-- Entry Meta
-                        ============================================= -->
-                        <ul class="entry-meta clearfix">
-                            <li><i class="icon-calendar3"></i> 4th May 2018</li>
-                            <li><a href="#"><i class="icon-user"></i> Biological Sciences Club</a></li>
-                        </ul><!-- .entry-meta end -->
-
-                        <!-- Entry Image
-                        ============================================= -->
-                        <div class="entry-image bottommargin">
-                            <a href="#"><img src="../canvas/images/blog/full/10.jpg" alt="Blog Single"></a>
-                        </div><!-- .entry-image end -->
-
-                        <!-- Entry Content
-                        ============================================= -->
-                        <div class="entry-content notopmargin">
-                            <p>Discover a new way to maximise benefit while saving cost. Match your orientation event to
-                                pre-qualified sponsors and vendors within 36 hours.</p>
+                        <div id="related-portfolio" class="owl-carousel portfolio-carousel carousel-widget"
+                             data-margin="30" data-nav="true"
+                             data-autoplay="5000"
+                             data-items-xxs="1" data-items-xs="1" data-items-sm="1" data-items-lg="3">
+                            @include('cards.event')
+                            @include('cards.event')
+                            @include('cards.event')
                         </div>
                     </div>
+
+                    <div class="clear"></div>
+
+                    <h1>Top 3 News Highlight</h1>
+
+                    <div class="col_full testimonial" style="background-color:white;">
+                        @include('clubs.news')
+                        @include('clubs.news')
+                        @include('clubs.news')
+                    </div>
                 </div>
+
+                <div id="group-info" style="display:none;">
+                    <div class="col_full testimonial" style="background-color:white;">
+                        <h3><u>Our Club Profile</u></h3>
+                        <p>At BSclub, we envision to be an all-inclusive society for students each students to be friends with everyone in the faculty. Hence, we built events that surrounds this core vision so that no one is left out</p>
+                    </div>
+
+                    <div class="col_full testimonial" style="background-color:white;">
+                        <h3><u>Top 3 Opportunities That Benefits You</u></h3>
+                        <p>
+                            <span style="color:orange; font-weight: bold; font-size: 20px;">Opportunity 1:</span>
+                            Network with high profile future biologist
+                        </p>
+                        <p>
+                            <span style="color:orange; font-weight: bold; font-size: 20px;">Opportunity 2:</span>
+                            Have a hand in managing and enhancing student life
+                        </p>
+                        <p>
+                            <span style="color:orange; font-weight: bold; font-size: 20px;">Opportunity 3:</span>
+                            Try out how the corporate feel is like
+                        </p>
+                    </div>
+                </div>
+
             </div>
         </div>
 
@@ -1783,5 +1781,27 @@
 <!-- Footer Scripts
 ============================================= -->
 <script type="text/javascript" src="../canvas/js/functions.js"></script>
+
+<script>
+    $("#group-info-btn").on("click", function(){
+        $("#highlights").hide();
+        $("#group-info").show();
+        $("#highlights-list").removeClass('active');
+        $("#highlights-btn").css('background-color', '#E3E7F3');
+        $("#group-info-btn").css('background-color', 'orange');
+        $("#group-info-list").addClass('active');
+    });
+
+    $("#highlights-btn").on("click", function(){
+        $("#group-info").hide();
+        $("#highlights").show()
+
+        $("#highlights-list").addClass('active');
+        $("#highlights-btn").css('background-color', 'orange');
+
+        $("#group-info-btn").css('background-color', '#E3E7F3');
+        $("#group-info-list").removeClass('active');
+    });
+</script>
 </body>
 </html>
