@@ -88,10 +88,10 @@
                                 <td field-key='school'>{{ $club->school->name or '' }}</td>
                                 <td field-key='organisation'>{{ $club->organisation or '' }}</td>
                                 <td field-key='organisation_acronym'>{{ $club->organisation_acronym or '' }}</td>
-                                <td field-key='referred_by'>{{ $club->referred_by or '' }}</td>
-                                <td field-key='classification'>{{ $club->classification or '' }}</td>
-                                <td field-key='category_1'>{{ $club->category_1 or '' }}</td>
-                                <td field-key='category_2'>{{ $club->category_2 or '' }}</td>
+                                <td field-key='referred_by'>{{ $referred_by[$club->referred_by] or '' }}</td>
+                                <td field-key='classification'>{{ $society_classification[$club->classification] or '' }}</td>
+                                <td field-key='category_1'>{{ $society_category[$club->category_1] or '' }}</td>
+                                <td field-key='category_2'>{{ $society_category[$club->category_2] or '' }}</td>
                                 <td field-key='usual_activity'>{{ $club->usual_activity or '' }}</td>
                                 <td field-key='opportunity_1'>{{ $club->opportunity_1 or '' }}</td>
                                 <td field-key='opportunity_2'>{{ $club->opportunity_2 or '' }}</td>
