@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers\Admin;
 
+use Auth;
+use App\User;
 use App\Club;
 use App\News;
 use Illuminate\Http\Request;
@@ -79,6 +81,14 @@ class ClubsController extends Controller
         }
         $request = $this->saveFiles($request);
         $club = Club::create($request->all());
+
+        if (Auth::user()) {
+            if (Auth::user()->club_id == NULL && Auth::user()->student_leader == 1) {
+                $user = User::find(Auth::user()->id);
+                $user->club_id = $club->id;
+                $user->save();
+            }
+        }
 
         $news_1 = new News;
         $news_1->order = 1;

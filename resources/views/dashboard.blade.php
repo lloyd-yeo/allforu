@@ -1410,6 +1410,25 @@
 
         <div class="content-wrap" style="padding-top:45px;">
 
+            @if (Auth::user()->student_leader == 1 && Auth::user()->club_id == NULL)
+                <div class="modal-on-load" data-target="#myModal1"></div>
+
+                <!-- Modal -->
+                <div class="modal1 mfp-hide" id="myModal1">
+                    <div class="block divcenter" style="background-color: #FFF; max-width: 500px;">
+                        <div class="center" style="padding: 50px;">
+                            <h3>Hey, we noticed you are a student leader!</h3>
+                            <p class="nobottommargin">Your club/organization doesn't seem to be listed on our platform yet, click the button below to add it in!</p>
+
+                        </div>
+                        <div class="section center nomargin" style="padding: 30px;">
+                            <a href="/admin/clubs/create" class="button" >Let's go!</a>
+                            {{--onClick="$.magnificPopup.close();return false;"--}}
+                        </div>
+                    </div>
+                </div>
+            @endif
+
             <div class="container clearfix">
 
                 <div class="title-block">
