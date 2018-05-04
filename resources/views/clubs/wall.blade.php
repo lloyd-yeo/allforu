@@ -1431,23 +1431,9 @@
                         <div class="clear"></div>
                         <div class="line" style="margin:15px 0;"></div>
 
-                        <div class="col_one_fourth center" style="margin-bottom: 0; margin-right: 0; border-right: 1px #e4e4e4 solid;">
-                            <h4 style="margin-bottom:0px; margin-top:30px;">$10,000</h4>
-                            <p>Dollars Saved</p>
-                        </div>
-                        <div class="col_one_fourth center" style="margin-right: 0; border-right: 1px #e4e4e4 solid;">
-                            <h4 style="margin-bottom:0px; margin-top:30px;">$9,000</h4>
-                            <p>Cash Sponsored</p>
-                        </div>
-                        <div class="col_one_fourth center" style="margin-right: 0; border-right: 1px #e4e4e4 solid;">
-                            <h4 style="margin-bottom:0px; margin-top:30px;">120,000</h4>
-                            <p>Product Sponsored</p>
-                        </div>
-                        <div class="col_one_fourth col_last center"
-                             style="margin-right: 0; border-right: 1px #e4e4e4 solid;">
-                            <h4 style="margin-bottom:0px; margin-top:30px;">2000</h4>
-                            <p>Students Impacted</p>
-                        </div>
+                        <p>
+                            "Life is business itself, we value building people in their soft-skills and their knowledge in biology"
+                        </p>
                     </div>
                 </div>
 
@@ -1469,14 +1455,16 @@
                     <div class="clear"></div>
                 </div>
 
-                <div class="line"></div>
-
-                <ul class="nav nav-pills nav-justified">
-                    <li class="active" style="border-radius:5px; border-color:black; border-width:1px; border-style:solid;"><a href="#" style="font-weight:bold;">Highlights (5)</a></li>
-                    <li style="border-radius:5px; border-color:black; border-width:1px; border-style:solid;"><a href="#" style="font-weight:bold;">Group Info</a></li>
+                <ul class="nav nav-pills nav-justified" style="margin-bottom:20px;">
+                    <li class="active" style="border-radius:5px; border-color:black; border-width:1px; border-style:solid;">
+                        <a href="#" style="background-color:orange; font-weight:bold;">Highlights (5)</a>
+                    </li>
+                    <li style="border-radius:5px; border-color:black; border-width:1px; border-style:solid;">
+                        <a href="#" style="font-weight:bold;">Group Info</a>
+                    </li>
                 </ul>
 
-                <h1>Explore Your Club</h1>
+                <h1>Upcoming Events</h1>
 
                 <div id="related-portfolio" class="owl-carousel portfolio-carousel carousel-widget"
                      data-margin="0" data-nav="true"
@@ -1541,7 +1529,6 @@
                         <!-- Entry Content
                         ============================================= -->
                         <div class="entry-content notopmargin">
-
                             <p>Discover a new way to maximise benefit while saving cost. Match your orientation event to
                                 pre-qualified sponsors and vendors within 36 hours.</p>
                         </div>
