@@ -49,4 +49,8 @@ class Club extends Model implements HasMedia
         return $this->belongsTo(School::class, 'school_id')->withTrashed();
     }
 
+    public function news() {
+        return $this->hasMany(news::class, 'club_id');
+    }
+
 }

@@ -11,7 +11,7 @@ Route::post('/user/social/register', 'SocialLoginController@login')->name('socia
 Route::get('/registration', 'HomeController@onboarding');
 Route::post('/registration', 'SocialLoginController@registration');
 Route::get('/club/show', 'ClubController@showProfile');
-Route::get('/club-wall/show', 'ClubController@showWall');
+Route::get('/club-wall/{club_id}', 'ClubController@showWall');
 
 // Change Password Routes...
 $this->get('change_password', 'Auth\ChangePasswordController@showChangePasswordForm')->name('auth.change_password');
