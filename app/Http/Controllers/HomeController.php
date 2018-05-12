@@ -45,6 +45,10 @@ class HomeController extends Controller
                 $events = Event::all();
                 return view('dashboard', ['clubs' => $clubs, 'events' => $events]);
             }
+        } else {
+            $clubs = Club::all();
+            $events = Event::all();
+            return view('dashboard', ['clubs' => $clubs, 'events' => $events]);
         }
     }
 
