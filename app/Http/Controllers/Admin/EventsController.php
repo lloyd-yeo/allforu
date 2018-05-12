@@ -1,0 +1,235 @@
+<?php
+
+namespace App\Http\Controllers\Admin;
+
+use Auth;
+use App\User;
+use App\Club;
+use App\News;
+use App\Event;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Gate;
+use App\Http\Controllers\Controller;
+use App\Http\Requests\Admin\StoreEventsRequest;
+use App\Http\Requests\Admin\UpdateEventsRequest;
+use App\Http\Controllers\Traits\FileUploadTrait;
+use Carbon\Carbon;
+
+class EventsController extends Controller
+{
+    use FileUploadTrait;
+
+    /**
+     * Display a listing of Club.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function index()
+    {
+        if (request('show_deleted') == 1) {
+            if (! Gate::allows('club_delete')) {
+                return abort(401);
+            }
+            $events = Event::onlyTrashed()->get();
+        } else {
+            $events = Event::all();
+        }
+
+        $referred_by = array(['Facebook', 'Instagram', 'Linkedin', 'Friend’s referral', 'Referred by other clubs', 'Internet search',
+            'Flyers', 'Events']);
+        $society_classification = array(['Club', 'CCA', 'Interest Group', 'Hall']);
+        $society_category = array(['Sports', 'Hall of residence', 'Performing arts', 'Voluntary role','Student welfare',
+            'Academic']);
+
+        return view('admin.events.index', compact('events','referred_by','society_classification','society_category'));
+    }
+
+    /**
+     * Show the form for creating new Club.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function create()
+    {
+        $clubs = \App\Club::get()->pluck('name', 'id')->prepend(trans('quickadmin.qa_please_select'), '');
+
+        $referred_by = collect(['Facebook', 'Instagram', 'Linkedin', 'Friend’s referral', 'Referred by other clubs', 'Internet search',
+            'Flyers', 'Events']);
+        $society_classification = collect(['Club', 'CCA', 'Interest Group', 'Hall']);
+        $society_category = collect(['Sports', 'Hall of residence', 'Performing arts', 'Voluntary role','Student welfare',
+            'Academic']);
+        $public = collect([ 1 => "Yes", 0 => "No"]);
+
+        return view('admin.events.create', compact('clubs','referred_by','society_classification','society_category','public'));
+    }
+
+    /**
+     * Store a newly created Event in storage.
+     *
+     * @param  \App\Http\Requests\StoreEventsRequest  $request
+     * @return \Illuminate\Http\Response
+     */
+    public function store(StoreEventsRequest $request)
+    {
+//        if (! Gate::allows('club_create')) {
+//            return abort(401);
+//        }
+
+        $request = $this->saveFiles($request);
+        $event = Event::create($request->all());
+
+        foreach ($request->input('images_id', []) as $index => $id) {
+            $model          = config('laravel-medialibrary.media_model');
+            $file           = $model::find($id);
+            $file->model_id = $event->id;
+            $file->save();
+        }
+
+        return redirect()->route('admin.events.index');
+    }
+
+
+    /**
+     * Show the form for editing Club.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function edit($id)
+    {
+//        if (! Gate::allows('club_edit')) {
+//            return abort(401);
+//        }
+
+        $clubs = \App\Club::get()->pluck('name', 'id')->prepend(trans('quickadmin.qa_please_select'), '');
+
+        $event = Event::findOrFail($id);
+
+        return view('admin.events.edit', compact('event', 'clubs'));
+    }
+
+    /**
+     * Update Club in storage.
+     *
+     * @param  \App\Http\Requests\UpdateEventsRequest  $request
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function update(UpdateEventsRequest $request, $id)
+    {
+        if (! Gate::allows('club_edit')) {
+            return abort(401);
+        }
+        $request = $this->saveFiles($request);
+        $club = Event::findOrFail($id);
+        $club->update($request->all());
+
+
+        $media = [];
+        foreach ($request->input('images_id', []) as $index => $id) {
+            $model          = config('laravel-medialibrary.media_model');
+            $file           = $model::find($id);
+            $file->model_id = $club->id;
+            $file->save();
+            $media[] = $file->toArray();
+        }
+        $club->updateMedia($media, 'images');
+
+        return redirect()->route('admin.clubs.index');
+    }
+
+
+    /**
+     * Display Club.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function show($id)
+    {
+        if (! Gate::allows('club_view')) {
+            return abort(401);
+        }
+
+        $schools = \App\School::get()->pluck('name', 'id')->prepend(trans('quickadmin.qa_please_select'), '');$users = \App\User::whereHas('clubs',
+                    function ($query) use ($id) {
+                        $query->where('id', $id);
+                    })->get();
+
+        $club = Club::findOrFail($id);
+
+        return view('admin.clubs.show', compact('club', 'users'));
+    }
+
+
+    /**
+     * Remove Club from storage.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function destroy($id)
+    {
+        if (! Gate::allows('club_delete')) {
+            return abort(401);
+        }
+        $club = Club::findOrFail($id);
+        $club->deletePreservingMedia();
+
+        return redirect()->route('admin.clubs.index');
+    }
+
+    /**
+     * Delete all selected Club at once.
+     *
+     * @param Request $request
+     */
+    public function massDestroy(Request $request)
+    {
+        if (! Gate::allows('club_delete')) {
+            return abort(401);
+        }
+        if ($request->input('ids')) {
+            $entries = Club::whereIn('id', $request->input('ids'))->get();
+
+            foreach ($entries as $entry) {
+                $entry->deletePreservingMedia();
+            }
+        }
+    }
+
+
+    /**
+     * Restore Club from storage.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function restore($id)
+    {
+        if (! Gate::allows('club_delete')) {
+            return abort(401);
+        }
+        $club = Club::onlyTrashed()->findOrFail($id);
+        $club->restore();
+
+        return redirect()->route('admin.clubs.index');
+    }
+
+    /**
+     * Permanently delete Club from storage.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function perma_del($id)
+    {
+        if (! Gate::allows('club_delete')) {
+            return abort(401);
+        }
+        $club = Club::onlyTrashed()->findOrFail($id);
+        $club->forceDelete();
+
+        return redirect()->route('admin.clubs.index');
+    }
+}

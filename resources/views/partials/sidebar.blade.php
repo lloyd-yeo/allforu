@@ -89,6 +89,14 @@
                             </span>
                         </a>
                     </li>
+                <li class="{{ $request->segment(2) == 'events' ? 'active active-sub' : '' }}">
+                    <a href="{{ route('admin.events.index') }}">
+                        <i class="fa fa-database"></i>
+                        <span class="title">
+                        @lang('quickadmin.events.title')
+                    </span>
+                    </a>
+                </li>
                 @endcan
                 </ul>
             </li>

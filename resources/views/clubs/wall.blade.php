@@ -1487,9 +1487,9 @@
                              data-margin="30" data-nav="true"
                              data-autoplay="5000"
                              data-items-xxs="1" data-items-xs="1" data-items-sm="1" data-items-lg="3">
-                            @include('cards.event')
-                            @include('cards.event')
-                            @include('cards.event')
+                            @foreach ($events as $event)
+                                @include('cards.event', ['event' => $event, 'club' => $club])
+                            @endforeach
                         </div>
                     </div>
 

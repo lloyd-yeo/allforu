@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Club;
+use App\Event;
 use App\Http\Requests;
 use Illuminate\Http\Request;
 use App\User;
@@ -41,7 +42,8 @@ class HomeController extends Controller
                 return redirect()->action('HomeController@onboarding');
             } else {
                 $clubs = Club::all();
-                return view('dashboard', ['clubs' => $clubs]);
+                $events = Event::all();
+                return view('dashboard', ['clubs' => $clubs, 'events' => $events]);
             }
         }
     }

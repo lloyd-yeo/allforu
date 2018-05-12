@@ -133,18 +133,24 @@
                     <div class="panel panel-default divcenter noradius noborder"
                          style="max-width: 400px; background-color: rgba(255,255,255,0.93);">
                         <div class="panel-body" style="padding: 40px;">
-                            <form id="login-form" name="login-form" class="nobottommargin" action="#" method="post">
+                            <form id="login-form" role="form"
+                                  method="POST"
+                                  action="{{ url('login') }}">
                                 <h3>Login - Existing Users</h3>
 
+                                <input type="hidden"
+                                       name="_token"
+                                       value="{{ csrf_token() }}">
+
                                 <div class="col_full">
-                                    <label for="login-form-username">Username:</label>
-                                    <input type="text" id="login-form-username" name="login-form-username" value=""
+                                    <label for="login-form-username">Email:</label>
+                                    <input type="text" id="login-form-username" name="email" value=""
                                            class="form-control not-dark"/>
                                 </div>
 
                                 <div class="col_full">
                                     <label for="login-form-password">Password:</label>
-                                    <input type="password" id="login-form-password" name="login-form-password" value=""
+                                    <input type="password" id="login-form-password" name="password" value=""
                                            class="form-control not-dark"/>
                                 </div>
 

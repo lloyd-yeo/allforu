@@ -63,9 +63,6 @@ class User extends Authenticatable
         return $this->belongsToMany(Club::class, 'club_user')->withTrashed();
     }
 
-
-
-
     public function sendPasswordResetNotification($token)
     {
        $this->notify(new ResetPassword($token));

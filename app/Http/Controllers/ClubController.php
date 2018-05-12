@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Event;
 use Illuminate\Http\Request;
 use App\Club;
 
@@ -16,6 +17,7 @@ class ClubController extends Controller
         if ($club == NULL) {
             return redirect()->back();
         }
-        return view('clubs.wall', [ 'club' => $club ]);
+        $events = Event::where('club_id', $club_id);
+        return view('clubs.wall', [ 'club' => $club, 'events' => $events ]);
     }
 }

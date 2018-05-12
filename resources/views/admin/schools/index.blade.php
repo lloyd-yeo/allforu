@@ -32,7 +32,6 @@
                         @can('school_delete')
                             @if ( request('show_deleted') != 1 )<th style="text-align:center;"><input type="checkbox" id="select-all" /></th>@endif
                         @endcan
-
                         <th>@lang('quickadmin.schools.fields.name')</th>
                         <th>@lang('quickadmin.schools.fields.acronym')</th>
                         <th>@lang('quickadmin.schools.fields.cover-img')</th>

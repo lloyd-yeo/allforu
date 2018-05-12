@@ -1435,8 +1435,9 @@
                     <h1>Events</h1>
                     <span></span>
                 </div>
-
-                @include('cards.event')
+                @foreach ($events as $event)
+                    @include('cards.event', ['event' => $event])
+                @endforeach
 
                 <div class="clear"></div>
 
