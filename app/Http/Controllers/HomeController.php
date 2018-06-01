@@ -33,7 +33,7 @@ class HomeController extends Controller
 
     public function dashboard() {
         
-        if (!Auth::user()) {
+        if (!Auth::user() || Auth::user() == NULL) {
             redirect('/');
         }
 
