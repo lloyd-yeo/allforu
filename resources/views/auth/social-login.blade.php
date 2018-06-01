@@ -169,7 +169,7 @@
 
                             <div class="line line-sm"></div>
 
-                            <div class="center">
+                            <div class="center" style="display:none;">
                                 <h4 style="margin-bottom: 15px;">or Login with:</h4>
                                 @desktop
                                     <div style="width:240px; margin-left:40px;">
