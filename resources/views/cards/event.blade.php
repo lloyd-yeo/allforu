@@ -35,9 +35,9 @@
                      data-items-xs="1" data-items-sm="1" data-items-lg="3">
 
                     @foreach($event->getMedia('images') as $media)
-                        <p class="form-group">
-                            <a href="{{ $media->getUrl() }}" target="_blank">{{ $media->name }} ({{ $media->size }} KB)</a>
-                        </p>
+                        {{--<p class="form-group">--}}
+                            {{--<a href="{{ $media->getUrl() }}" target="_blank">{{ $media->name }} ({{ $media->size }} KB)</a>--}}
+                        {{--</p>--}}
                         <div class="oc-item">
                             <div class="iportfolio">
                                 <div class="portfolio-image">
