@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\User;
 use Auth;
+use Hash;
 
 class SocialLoginController extends Controller
 {
@@ -38,6 +39,20 @@ class SocialLoginController extends Controller
         } else {
             return response()->json(['success' => FALSE, 'message' => 'Failed to authenticate user.']);
         }
+    }
+
+    public function registerUser(Request $request) {
+        $user = User::where('email', $request->input('email'))->first();
+        if ($user == NULL) {
+            $user = new User;
+            $user->email = $request->input('name');
+            $user->name = $request->input('name');
+            $user->password = Hash::make($request->input('password'));
+            $user->save();
+            Auth::login($user);
+            session(['new_user' => TRUE]);
+        }
+        return redirect()->action('HomeController@dashboard');
     }
 
     public function registration(Request $request) {

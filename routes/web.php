@@ -10,6 +10,8 @@ $this->post('logout', 'Auth\LoginController@logout')->name('auth.logout');
 Route::post('/user/social/register', 'SocialLoginController@login')->name('social.login');
 Route::get('/registration', 'HomeController@onboarding');
 Route::post('/registration', 'SocialLoginController@registration');
+Route::get('/register-profile', function(){ return view('auth.register'); });
+Route::post('/register-profile', 'SocialLoginController@registerUser');
 Route::get('/club/show', 'ClubController@showProfile');
 Route::get('/club-wall/{club_id}', 'ClubController@showWall');
 
