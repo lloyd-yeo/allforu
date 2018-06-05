@@ -160,9 +160,13 @@
                                     </button>
                                     @desktop
                                         <a href="#" class="fright">Forgot Password?</a>
+                                        <br/>
+                                        <a href="/register-profile" class="fright">Register Here</a>
                                     @elsedesktop
                                         <br/>
                                         <a href="#">Forgot Password?</a>
+                                        <br/>
+                                        <a href="/register-profile" class="">Register Here</a>
                                     @enddesktop
                                 </div>
                             </form>
