@@ -42,7 +42,7 @@
                             <div class="iportfolio">
                                 <div class="portfolio-image">
                                     <a href="#">
-                                        {{--<img src="{{ $media->getUrl() }}" alt="{{ $media->name }}">--}}
+                                        <img src="{{ $media->getUrl() }}" alt="{{ $media->name }}">
                                     </a>
                                     <div class="portfolio-overlay">
                                         <a href="#" class="left-icon" data-lightbox="image"><i class="icon-line-plus"></i></a>
