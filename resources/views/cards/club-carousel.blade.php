@@ -3,7 +3,7 @@
         <div class="card">
             <div class="front">
                 <div class="arrow"><i class="fa fa-arrow-left"></i></div>
-                <div class="top-pic">
+                <div class="top-pic" style="background-image: url({{ asset(env('UPLOAD_PATH').'/thumb/' . $club->cover_img) }});">
                     <button style="margin-top:10px; margin-left: 20px; background-color:yellow; border-color: yellow; float:left;">FEATURED</button>
                     <a style="float:right; margin-top: 10px; margin-right: 20px; color:white; font-weight:bold;" href="https://www.codepen.io/designcouch/public">
                         <i class="fa fa-share"></i>
@@ -28,7 +28,7 @@
                 </div>
             </div>
 
-            <div class="back">
+            <div class="back" style="display:none;">
                 <div class="back-info">
                     <p>My name is Jesse Couch, and I am an award winning, intensely creative, coffee-fueled front-end web designer and developer. My style and approach are very straight-forward — I obsess about keeping things as simple as humanly possible. That's it. If you like bells and whistles for the sake of bells and whistles, look elsewhere - but if you want to remain laser-focused on the goals for your new website, it's time time to talk.</p>
                 </div>
