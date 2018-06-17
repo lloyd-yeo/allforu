@@ -1,4 +1,4 @@
-<div class="col_full testimonial event-card-template" style="margin-bottom:20px;">
+<div class="col_full testimonial event-card-template" id="event-{{ $event->id  }}" style="margin-bottom:20px;">
     <div id="post-lists" class="widget clearfix">
         <div class="fancy-title title-bottom-border">
             <h2>{{ $event->name }}</h2>
@@ -55,14 +55,14 @@
                 </div><!-- .portfolio-carousel end -->
                 {{--visible-lg-block--}}
                 {{--visible-md-block visible-sm-block visible-xs-block--}}
+                {{--<center>--}}
+                    {{--<a href="#" class="button button-3d button-rounded button-reveal button-large button-red tright">--}}
+                        {{--<i class="icon-heart"></i><span>LIKE</span>--}}
+                    {{--</a>--}}
+                {{--</center>--}}
+                {{--<br/>--}}
                 <center>
-                    <a href="#" class="button button-3d button-rounded button-reveal button-large button-red tright">
-                        <i class="icon-heart"></i><span>LIKE</span>
-                    </a>
-                </center>
-                <br/>
-                <center>
-                    <a href="#" class="button button-3d button-xlarge
+                    <a href="/event-wall/{{ $event->id }}" class="button button-3d button-xlarge
                                     button-rounded button-aqua
                                     text-center">LEARN MORE</a></center>
             </div>
