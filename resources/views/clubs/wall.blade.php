@@ -1404,7 +1404,11 @@
 
         <div class="content-wrap">
 
+            @desktop
+            <div class="container clearfix" style="width: 600px;">
+            @elsedesktop
             <div class="container clearfix">
+            @enddesktop
 
                 <div class="col_full testimonial" style="background-color:white; overflow:auto; margin-bottom: 10px;">
                     <div class="col_two_fifth topmargin nobottommargin" style="min-height: 350px;">
