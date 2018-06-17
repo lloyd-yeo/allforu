@@ -1465,7 +1465,7 @@
 
                         <div class="clear"></div>
 
-                        <a href="#!" class="button button-3d button-xlarge
+                        <a href="#!" data-id="{{ $event->id }}" class="join-event-btn button button-3d button-xlarge
                                     button-rounded
                                     text-center">JOIN EVENT</a></center>
 
@@ -1879,6 +1879,21 @@
 <script type="text/javascript" src="../canvas/js/functions.js"></script>
 
 <script>
+
+    $(".join-event-btn").on("click", function(){
+        $event_id = $(this).data('id');
+
+        var jqxhr = $.post("/event/join",
+            {
+                event_id: $event_id
+            }
+            , function (data) {
+                if (data.success) {
+                    alert(data.message);
+                }
+            }, "json");
+
+    });
     //    $("#group-info-btn").on("click", function(){
     //        $("#highlights").hide();
     //        $("#group-info").show();
