@@ -1472,7 +1472,7 @@
                         @else
                             <a href="#!" style="opacity: 0.5;" data-id="{{ $event->id }}" class="button button-3d button-xlarge
                                     button-rounded
-                                    text-center">JOINED</a></center>
+                                    text-center">JOINED - CODE: {{ $auth_code }}</a></center>
                         @endif
 
                     </div>

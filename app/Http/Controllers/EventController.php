@@ -7,6 +7,8 @@ use App\Event;
 use App\Club;
 use Auth;
 use App\User;
+use Overtrue\LaravelFollow\FollowRelation;
+use Carbon\Carbon;
 
 class EventController extends Controller
 {
@@ -16,8 +18,17 @@ class EventController extends Controller
         if ($event == NULL) {
             return redirect()->back();
         }
+        $auth_code = NULL;
+        $relation = FollowRelation::where('user_id', Auth::user()->id)
+            ->where('followable_id', $event->id)
+            ->where('relation', 'subscribe')
+            ->first();
+        if ($relation != NULL) {
+            $auth_code = Carbon::parse($relation->created_at)->getTimestamp();
+            $auth_code = substr($auth_code, -4);
+        }
         $club = Club::find($event->club_id);
-        return view('events.show', [ 'event' => $event, 'club' => $club ]);
+        return view('events.show', [ 'event' => $event, 'club' => $club, 'auth_code' => $auth_code ]);
     }
 
     public function join(Request $request) {
