@@ -1433,8 +1433,8 @@
                         <div class="heading-block">
                             <span><span class="label label-warning">Featured</span></span>
                             <h3>{{ $event->name }}</h3>
-                            <h4><i class="fa fa-map-pin"></i> {{ $event->address_description }}</h4>
-                            <h4><i class="fa fa-calendar"></i> {{ $event->created_at }}</h4>
+                            <h6><i class="fa fa-map-marker"></i> {{ $event->address_description }}</h6>
+                            <h6><i class="fa fa-calendar"></i> {{ $event->created_at }}</h6>
 {{--                            <span>{{ $event->school->name }}</span><br/>--}}
                             {{--<span>--}}
 {{--                                <i>{{ \Carbon\Carbon::parse($event->created_at)->diffForHumans() }}</i>--}}
