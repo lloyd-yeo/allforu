@@ -1431,7 +1431,16 @@
                     <div class="col_three_fifth notopmargin nobottommargin col_last">
 
                         <div class="heading-block">
-                            <span><span class="label label-warning">Featured</span></span>
+                            <span>
+                                <span class="label label-warning">Featured</span>
+
+                                @if ($event->free == 1)
+                                    <span class="label label-success">Free</span>
+                                @else
+                                    <span class="label label-primary">Paid</span>
+                                @endif
+
+                            </span>
                             <h3>{{ $event->name }}</h3>
                             <span style="font-size:12px;"><i
                                         class="fa fa-map-marker"></i> {{ $event->address_description }}</span>
@@ -1468,7 +1477,7 @@
                 <div id="organizer-info">
                     <div class="col_full testimonial" style="background-color:white; overflow-y:auto;">
                         <div class="col_two_third">
-                            <h3>Meet your organizer,</h3>
+                            <h3><u>Meet your organizer,</u></h3>
                             <h4>{{ $club->name }}</h4>
 
                             <h4 style="margin-top:15px; color: lightseagreen;">
@@ -1486,9 +1495,38 @@
                                     width: 100px;
                                     height: 100px;">
                                 </center>
-{{--                                <div class="avatar" style="background-image: url({{ asset(env('UPLOAD_PATH').'/thumb/' . $club->cover_img) }});"></div>--}}
+                                {{--                                <div class="avatar" style="background-image: url({{ asset(env('UPLOAD_PATH').'/thumb/' . $club->cover_img) }});"></div>--}}
                             @else
-                                <div class="avatar" style="background-image: url(https://via.placeholder.com/150x150);"></div>
+                                <div class="avatar"
+                                     style="background-image: url(https://via.placeholder.com/150x150);"></div>
+                            @endif
+                        </div>
+                    </div>
+
+                    <div class="col_full testimonial" style="background-color:white; overflow-y:auto;">
+                        <div class="col_two_third">
+                            <h3><u>Event Notes</u></h3>
+                            <h4>{{ $event->notes }}</h4>
+
+                            <h4 style="margin-top:15px; color: lightseagreen;">
+                                MESSAGE
+                            </h4>
+
+                            <p>{{ $club->description }}</p>
+                        </div>
+                        <div class="col_one_third col_last">
+                            @if($club->cover_img)
+                                <center>
+                                    <img src="{{ asset(env('UPLOAD_PATH').'/thumb/' . $club->cover_img) }}" style="
+                                    border-radius: 50px;
+                                    margin-top: 20px;
+                                    width: 100px;
+                                    height: 100px;">
+                                </center>
+                                {{--                                <div class="avatar" style="background-image: url({{ asset(env('UPLOAD_PATH').'/thumb/' . $club->cover_img) }});"></div>--}}
+                            @else
+                                <div class="avatar"
+                                     style="background-image: url(https://via.placeholder.com/150x150);"></div>
                             @endif
                         </div>
                     </div>
