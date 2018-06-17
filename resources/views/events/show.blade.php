@@ -1466,7 +1466,7 @@
                 <div class="clear"></div>
 
                 <div id="organizer-info">
-                    <div class="col_full testimonial" style="background-color:white;">
+                    <div class="col_full testimonial" style="background-color:white; overflow-y:auto;">
                         <div class="col_two_third">
                             <h3>Meet your organizer,</h3>
                             <p>{{ $club->description }}</p>
