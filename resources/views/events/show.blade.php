@@ -1475,7 +1475,7 @@
                 <div class="clear"></div>
 
                 <div id="organizer-info">
-                    <div class="col_full testimonial" style="background-color:white; overflow-y:auto; padding-bottom:5px;">
+                    <div class="col_full testimonial" style="background-color:white; overflow-y:auto; margin-bottom:10px;">
                         <div class="col_two_third">
                             <h3><u>Meet your organizer,</u></h3>
                             <h4>{{ $club->name }}</h4>
@@ -1503,7 +1503,7 @@
                         </div>
                     </div>
 
-                    <div class="col_full testimonial" style="background-color:white; overflow-y:auto; padding-bottom:5px;">
+                    <div class="col_full testimonial" style="background-color:white; overflow-y:auto; margin-bottom:10px;">
                         <div class="col_full">
                             <h3><u>Event Notes</u></h3>
 
@@ -1511,7 +1511,7 @@
                         </div>
                     </div>
 
-                    <div class="col_full testimonial" style="background-color:white; overflow-y:auto; padding-bottom:5px;">
+                    <div class="col_full testimonial" style="background-color:white; overflow-y:auto; margin-bottom:10px;">
                         <div class="col_full">
                             <h3><u>Who can come</u></h3>
 
@@ -1519,7 +1519,7 @@
                         </div>
                     </div>
 
-                    <div class="col_full testimonial" style="background-color:white; overflow-y:auto; padding-bottom:5px;">
+                    <div class="col_full testimonial" style="background-color:white; overflow-y:auto; margin-bottom:10px;">
                         <div class="col_full">
                             <h3><u>Where will the event be?</u></h3>
 
