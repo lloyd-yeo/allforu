@@ -1452,6 +1452,13 @@
                         <p>
                             "{{ $event->description }}"
                         </p>
+
+                        <div class="clear"></div>
+
+                        <a href="#!" class="button button-3d button-xlarge
+                                    button-rounded
+                                    text-center">JOIN EVENT</a></center>
+
                     </div>
                 </div>
 
