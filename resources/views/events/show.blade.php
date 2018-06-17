@@ -1409,17 +1409,17 @@
                 <div class="col_full testimonial" style="background-color:white; overflow:auto; margin-bottom: 10px;">
                     <div class="col_two_fifth topmargin nobottommargin" style="min-height: 350px;">
                         @desktop
-                        @if($club->cover_img)
+                        @if($event->cover_img)
                             <img style="margin-left: 15px; border-radius: 400px;"
-                                 src="{{ asset(env('UPLOAD_PATH').'/' . $club->cover_img) }}"/>
+                                 src="{{ asset(env('UPLOAD_PATH').'/' . $event->cover_img) }}"/>
                         @else
                             <img style="margin-left: 15px; border-radius: 400px;"
                                  src="https://via.placeholder.com/400x400"/>
                         @endif
                         @elsedesktop
-                        @if($club->cover_img)
+                        @if($event->cover_img)
                             <img style="margin-left: 15px; border-radius: 400px;"
-                                 src="{{ asset(env('UPLOAD_PATH').'/' . $club->cover_img) }}"/>
+                                 src="{{ asset(env('UPLOAD_PATH').'/' . $event->cover_img) }}"/>
                         @else
                             <img style="margin-left: 15px; border-radius: 400px;"
                                  src="https://via.placeholder.com/400x400"/>
@@ -1432,9 +1432,9 @@
 
                         <div class="heading-block">
                             <span><span class="label label-warning">Featured</span></span>
-                            <h3>{{ $club->name }}</h3>
-                            <span>{{ $club->school->name }}</span><br/>
-                            <span><i>{{ \Carbon\Carbon::parse($club->created_at)->diffForHumans() }}</i> <span class="label label-primary">Official</span></span>
+                            <h3>{{ $event->name }}</h3>
+                            <span>{{ $event->school->name }}</span><br/>
+                            <span><i>{{ \Carbon\Carbon::parse($event->created_at)->diffForHumans() }}</i> <span class="label label-primary">Official</span></span>
                         </div>
 
                         <div class="col_full" style="margin-bottom:0;">
@@ -1445,7 +1445,7 @@
                         <div class="line" style="margin:15px 0;"></div>
 
                         <p>
-                            "{{ $club->description }}"
+                            "{{ $event->description }}"
                         </p>
                     </div>
                 </div>
@@ -1479,61 +1479,61 @@
                     </li>
                 </ul>
 
-                <div id="highlights">
-                    <h1>Upcoming Events</h1>
-                    <div class="col_full testimonial" style="background-color:white;">
+                {{--<div id="highlights">--}}
+                    {{--<h1>Upcoming Events</h1>--}}
+                    {{--<div class="col_full testimonial" style="background-color:white;">--}}
 
-                        <div id="related-portfolio" class="owl-carousel portfolio-carousel carousel-widget"
-                             data-margin="30" data-nav="true"
-                             data-autoplay="5000"
-                             data-items-xxs="1" data-items-xs="1" data-items-sm="1" data-items-lg="3">
-                            @foreach ($events as $event)
-                                @include('cards.event', ['event' => $event, 'club' => $club])
-                            @endforeach
-                        </div>
-                    </div>
+                        {{--<div id="related-portfolio" class="owl-carousel portfolio-carousel carousel-widget"--}}
+                             {{--data-margin="30" data-nav="true"--}}
+                             {{--data-autoplay="5000"--}}
+                             {{--data-items-xxs="1" data-items-xs="1" data-items-sm="1" data-items-lg="3">--}}
+                            {{--@foreach ($events as $event)--}}
+                                {{--@include('cards.event', ['event' => $event, 'club' => $club])--}}
+                            {{--@endforeach--}}
+                        {{--</div>--}}
+                    {{--</div>--}}
 
-                    <div class="clear"></div>
+                    {{--<div class="clear"></div>--}}
 
-                    <h1>Top 3 News Highlight</h1>
+                    {{--<h1>Top 3 News Highlight</h1>--}}
 
-                    <div class="col_full testimonial" style="background-color:white;">
-                        @foreach ($club->news as $news)
-                            @include('clubs.news', [ 'news' => $news ])
-                        @endforeach
-                    </div>
-                </div>
+                    {{--<div class="col_full testimonial" style="background-color:white;">--}}
+                        {{--@foreach ($club->news as $news)--}}
+                            {{--@include('clubs.news', [ 'news' => $news ])--}}
+                        {{--@endforeach--}}
+                    {{--</div>--}}
+                {{--</div>--}}
 
-                <div id="group-info" style="display:none;">
-                    <div class="col_full testimonial" style="background-color:white;">
-                        <h3><u>Our Club Profile</u></h3>
-                        <p>{{ $club->description }}</p>
-                    </div>
+                {{--<div id="group-info" style="display:none;">--}}
+                    {{--<div class="col_full testimonial" style="background-color:white;">--}}
+                        {{--<h3><u>Our Club Profile</u></h3>--}}
+                        {{--<p>{{ $club->description }}</p>--}}
+                    {{--</div>--}}
 
-                    <div class="col_full testimonial" style="background-color:white;">
-                        <h3><u>Top 3 Opportunities That Benefits You</u></h3>
-                        @if ($club->opportunity_1 != NULL)
-                            <p>
-                                <span style="color:orange; font-weight: bold; font-size: 20px;">Opportunity 1:</span>
-                                {{ $club->opportunity_1 }}
-                            </p>
-                        @endif
+                    {{--<div class="col_full testimonial" style="background-color:white;">--}}
+                        {{--<h3><u>Top 3 Opportunities That Benefits You</u></h3>--}}
+                        {{--@if ($club->opportunity_1 != NULL)--}}
+                            {{--<p>--}}
+                                {{--<span style="color:orange; font-weight: bold; font-size: 20px;">Opportunity 1:</span>--}}
+                                {{--{{ $club->opportunity_1 }}--}}
+                            {{--</p>--}}
+                        {{--@endif--}}
 
-                        @if ($club->opportunity_2 != NULL)
-                            <p>
-                                <span style="color:orange; font-weight: bold; font-size: 20px;">Opportunity 2:</span>
-                                {{ $club->opportunity_2 }}
-                            </p>
-                        @endif
+                        {{--@if ($club->opportunity_2 != NULL)--}}
+                            {{--<p>--}}
+                                {{--<span style="color:orange; font-weight: bold; font-size: 20px;">Opportunity 2:</span>--}}
+                                {{--{{ $club->opportunity_2 }}--}}
+                            {{--</p>--}}
+                        {{--@endif--}}
 
-                        @if ($club->opportunity_3 != NULL)
-                            <p>
-                                <span style="color:orange; font-weight: bold; font-size: 20px;">Opportunity 3:</span>
-                                {{ $club->opportunity_3 }}
-                            </p>
-                        @endif
-                    </div>
-                </div>
+                        {{--@if ($club->opportunity_3 != NULL)--}}
+                            {{--<p>--}}
+                                {{--<span style="color:orange; font-weight: bold; font-size: 20px;">Opportunity 3:</span>--}}
+                                {{--{{ $club->opportunity_3 }}--}}
+                            {{--</p>--}}
+                        {{--@endif--}}
+                    {{--</div>--}}
+                {{--</div>--}}
 
             </div>
         </div>
@@ -1802,25 +1802,25 @@
 <script type="text/javascript" src="../canvas/js/functions.js"></script>
 
 <script>
-    $("#group-info-btn").on("click", function(){
-        $("#highlights").hide();
-        $("#group-info").show();
-        $("#highlights-list").removeClass('active');
-        $("#highlights-btn").css('background-color', '#E3E7F3');
-        $("#group-info-btn").css('background-color', 'orange');
-        $("#group-info-list").addClass('active');
-    });
-
-    $("#highlights-btn").on("click", function(){
-        $("#group-info").hide();
-        $("#highlights").show()
-
-        $("#highlights-list").addClass('active');
-        $("#highlights-btn").css('background-color', 'orange');
-
-        $("#group-info-btn").css('background-color', '#E3E7F3');
-        $("#group-info-list").removeClass('active');
-    });
+//    $("#group-info-btn").on("click", function(){
+//        $("#highlights").hide();
+//        $("#group-info").show();
+//        $("#highlights-list").removeClass('active');
+//        $("#highlights-btn").css('background-color', '#E3E7F3');
+//        $("#group-info-btn").css('background-color', 'orange');
+//        $("#group-info-list").addClass('active');
+//    });
+//
+//    $("#highlights-btn").on("click", function(){
+//        $("#group-info").hide();
+//        $("#highlights").show()
+//
+//        $("#highlights-list").addClass('active');
+//        $("#highlights-btn").css('background-color', 'orange');
+//
+//        $("#group-info-btn").css('background-color', '#E3E7F3');
+//        $("#group-info-list").removeClass('active');
+//    });
 </script>
 </body>
 </html>
