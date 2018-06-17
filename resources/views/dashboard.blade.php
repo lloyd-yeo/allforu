@@ -1456,7 +1456,7 @@
                 <div id="related-portfolio" class="owl-carousel portfolio-carousel carousel-widget"
                      data-margin="0" data-nav="true"
                      data-autoplay="5000"
-                     data-items-xxs="1" data-items-xs="1" data-items-sm="1" data-items-lg="3">
+                     data-items-xxs="1" data-items-xs="1" data-items-sm="1" data-items-lg="2">
                     @foreach ($clubs as $club)
                         <div class="oc-item">
                             @include('cards.club-carousel', [ 'club' => $club ])
