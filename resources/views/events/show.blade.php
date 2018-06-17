@@ -1479,7 +1479,8 @@
                         </div>
                         <div class="col_one_third col_last">
                             @if($club->cover_img)
-                                <div class="avatar" style="background-image: url({{ asset(env('UPLOAD_PATH').'/thumb/' . $club->cover_img) }});"></div>
+                                <img src="{{ asset(env('UPLOAD_PATH').'/thumb/' . $club->cover_img) }}">
+{{--                                <div class="avatar" style="background-image: url({{ asset(env('UPLOAD_PATH').'/thumb/' . $club->cover_img) }});"></div>--}}
                             @else
                                 <div class="avatar" style="background-image: url(https://via.placeholder.com/150x150);"></div>
                             @endif
