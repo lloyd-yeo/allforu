@@ -1470,9 +1470,9 @@
                                     button-rounded
                                     text-center">JOIN EVENT</a></center>
                         @else
-                            <a href="#!" data-id="{{ $event->id }}" class="button button-3d button-xlarge
+                            <a href="#!" style="opacity: 0.5;" data-id="{{ $event->id }}" class="button button-3d button-xlarge
                                     button-rounded
-                                    text-center" disabled="disabled">JOINED</a></center>
+                                    text-center">JOINED</a></center>
                         @endif
 
                     </div>
