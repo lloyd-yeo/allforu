@@ -1504,32 +1504,29 @@
                     </div>
 
                     <div class="col_full testimonial" style="background-color:white; overflow-y:auto;">
-                        <div class="col_two_third">
+                        <div class="col_full">
                             <h3><u>Event Notes</u></h3>
-                            <h4>{{ $event->notes }}</h4>
 
-                            <h4 style="margin-top:15px; color: lightseagreen;">
-                                MESSAGE
-                            </h4>
-
-                            <p>{{ $club->description }}</p>
-                        </div>
-                        <div class="col_one_third col_last">
-                            @if($club->cover_img)
-                                <center>
-                                    <img src="{{ asset(env('UPLOAD_PATH').'/thumb/' . $club->cover_img) }}" style="
-                                    border-radius: 50px;
-                                    margin-top: 20px;
-                                    width: 100px;
-                                    height: 100px;">
-                                </center>
-                                {{--                                <div class="avatar" style="background-image: url({{ asset(env('UPLOAD_PATH').'/thumb/' . $club->cover_img) }});"></div>--}}
-                            @else
-                                <div class="avatar"
-                                     style="background-image: url(https://via.placeholder.com/150x150);"></div>
-                            @endif
+                            <p>{{ $event->notes }}</p>
                         </div>
                     </div>
+
+                    <div class="col_full testimonial" style="background-color:white; overflow-y:auto;">
+                        <div class="col_full">
+                            <h3><u>Who can come</u></h3>
+
+                            <p>{{ $event->participants }}</p>
+                        </div>
+                    </div>
+
+                    <div class="col_full testimonial" style="background-color:white; overflow-y:auto;">
+                        <div class="col_full">
+                            <h3><u>Where will the event be?</u></h3>
+
+                            <p>{{ $event->address_description }}</p>
+                        </div>
+                    </div>
+
                 </div>
 
                 {{--<div class="col_full center testimonial" style="background-color:white; margin-bottom: 10px;">--}}
