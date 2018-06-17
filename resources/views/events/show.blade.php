@@ -1433,7 +1433,7 @@
                         <div class="heading-block">
                             <span><span class="label label-warning">Featured</span></span>
                             <h3>{{ $event->name }}</h3>
-                            <span>{{ $event->school->name }}</span><br/>
+{{--                            <span>{{ $event->school->name }}</span><br/>--}}
                             <span><i>{{ \Carbon\Carbon::parse($event->created_at)->diffForHumans() }}</i> <span class="label label-primary">Official</span></span>
                         </div>
 
