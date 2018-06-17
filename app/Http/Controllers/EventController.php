@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 use App\Event;
 use App\Club;
 use Auth;
-use User;
+use App\User;
 
 class EventController extends Controller
 {
