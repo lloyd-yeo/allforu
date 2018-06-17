@@ -46,7 +46,7 @@ class SocialLoginController extends Controller
         if ($user == NULL) {
             $user = new User;
             $user->email = $request->input('name');
-            $user->name = $request->input('name');
+            $user->name = $request->input('email');
             $user->password = Hash::make($request->input('password'));
             $user->save();
             Auth::login($user);
