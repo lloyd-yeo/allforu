@@ -1429,7 +1429,11 @@
                 </div>
             @endif
 
-            <div class="container clearfix">
+                @desktop
+                <div class="container clearfix" style="width: 600px;">
+                @elsedesktop
+                <div class="container clearfix">
+                @enddesktop
 
                 <div class="title-block">
                     <h1>Events</h1>
