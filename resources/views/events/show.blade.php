@@ -1469,6 +1469,12 @@
                     <div class="col_full testimonial" style="background-color:white; overflow-y:auto;">
                         <div class="col_two_third">
                             <h3>Meet your organizer,</h3>
+                            <h4>{{ $club->name }}</h4>
+
+                            <h4 style="margin-top:15px; color: lightseagreen;">
+                                MESSAGE
+                            </h4>
+
                             <p>{{ $club->description }}</p>
                         </div>
                         <div class="col_one_third">
