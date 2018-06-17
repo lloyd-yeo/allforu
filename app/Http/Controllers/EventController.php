@@ -13,7 +13,7 @@ class EventController extends Controller
         if ($event == NULL) {
             return redirect()->back();
         }
-
-        return view('events.show', [ 'event' => $event ]);
+        $club = Club::find($event->club_id);
+        return view('events.show', [ 'event' => $event, 'club' => $club ]);
     }
 }

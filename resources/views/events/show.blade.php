@@ -1433,12 +1433,13 @@
                         <div class="heading-block">
                             <span><span class="label label-warning">Featured</span></span>
                             <h3>{{ $event->name }}</h3>
-                            <span style="font-size:12px;"><i class="fa fa-map-marker"></i> {{ $event->address_description }}</span>
+                            <span style="font-size:12px;"><i
+                                        class="fa fa-map-marker"></i> {{ $event->address_description }}</span>
                             <span style="font-size:12px;"><i class="fa fa-calendar"></i> {{ $event->created_at }}</span>
-{{--                            <span>{{ $event->school->name }}</span><br/>--}}
+                            {{--                            <span>{{ $event->school->name }}</span><br/>--}}
                             {{--<span>--}}
-{{--                                <i>{{ \Carbon\Carbon::parse($event->created_at)->diffForHumans() }}</i>--}}
-                                {{--<span class="label label-primary">Official</span>--}}
+                            {{--                                <i>{{ \Carbon\Carbon::parse($event->created_at)->diffForHumans() }}</i>--}}
+                            {{--<span class="label label-primary">Official</span>--}}
                             {{--</span>--}}
                         </div>
 
@@ -1464,87 +1465,99 @@
 
                 <div class="clear"></div>
 
-                <div class="col_full center testimonial" style="background-color:white; margin-bottom: 10px;">
-                    <div class="col_one_third" style="margin-bottom:0px;">
-                        <h3 style="margin-bottom:0;"><i class="fa fa-users"></i> 330 users</h3>
+                <div id="organizer-info">
+                    <div class="col_full testimonial" style="background-color:white;">
+                        <div class="col_two_third">
+                            <h3>Meet your organizer,</h3>
+                            <p>{{ $club->description }}</p>
+                        </div>
+                        <div class="col_one_third">
+                            {{ $club->description }}
+                        </div>
                     </div>
-
-                    <div class="col_one_third" style="margin-bottom:0px;">
-                        <h3 style="margin-bottom:0;"><i class="fa fa-heart" style="color:red;"></i> 546 followers</h3>
-                    </div>
-
-                    <div class="col_one_third col_last" style="margin-bottom:0 !important;">
-                        <h3 style="margin-bottom:0 !important;"><i class="fa fa-star-o" style="color:orange;"></i> 33 reviews
-                        </h3>
-                    </div>
-
-                    <div class="clear"></div>
                 </div>
 
-                <ul class="nav nav-pills nav-justified" style="margin-bottom:20px;">
-                    <li class="active" id="highlights-list"
-                        style="border-radius:5px; border-color:black; border-width:1px; border-style:solid;">
-                        <a href="#!" id="highlights-btn" style="margin-bottom: 0; background-color:orange; font-weight:bold;">Highlights (5)</a>
-                    </li>
-                    <li id="group-info-list" style="border-radius:5px; border-color:black; border-width:1px; border-style:solid;">
-                        <a href="#!" id="group-info-btn" style="margin-bottom: 0; font-weight:bold;">Group Info</a>
-                    </li>
-                </ul>
+                {{--<div class="col_full center testimonial" style="background-color:white; margin-bottom: 10px;">--}}
+                {{--<div class="col_one_third" style="margin-bottom:0px;">--}}
+                {{--<h3 style="margin-bottom:0;"><i class="fa fa-users"></i> 330 users</h3>--}}
+                {{--</div>--}}
+
+                {{--<div class="col_one_third" style="margin-bottom:0px;">--}}
+                {{--<h3 style="margin-bottom:0;"><i class="fa fa-heart" style="color:red;"></i> 546 followers</h3>--}}
+                {{--</div>--}}
+
+                {{--<div class="col_one_third col_last" style="margin-bottom:0 !important;">--}}
+                {{--<h3 style="margin-bottom:0 !important;"><i class="fa fa-star-o" style="color:orange;"></i> 33 reviews--}}
+                {{--</h3>--}}
+                {{--</div>--}}
+
+                {{--<div class="clear"></div>--}}
+                {{--</div>--}}
+
+                {{--<ul class="nav nav-pills nav-justified" style="margin-bottom:20px;">--}}
+                {{--<li class="active" id="highlights-list"--}}
+                {{--style="border-radius:5px; border-color:black; border-width:1px; border-style:solid;">--}}
+                {{--<a href="#!" id="highlights-btn" style="margin-bottom: 0; background-color:orange; font-weight:bold;">Highlights (5)</a>--}}
+                {{--</li>--}}
+                {{--<li id="group-info-list" style="border-radius:5px; border-color:black; border-width:1px; border-style:solid;">--}}
+                {{--<a href="#!" id="group-info-btn" style="margin-bottom: 0; font-weight:bold;">Group Info</a>--}}
+                {{--</li>--}}
+                {{--</ul>--}}
 
                 {{--<div id="highlights">--}}
-                    {{--<h1>Upcoming Events</h1>--}}
-                    {{--<div class="col_full testimonial" style="background-color:white;">--}}
+                {{--<h1>Upcoming Events</h1>--}}
+                {{--<div class="col_full testimonial" style="background-color:white;">--}}
 
-                        {{--<div id="related-portfolio" class="owl-carousel portfolio-carousel carousel-widget"--}}
-                             {{--data-margin="30" data-nav="true"--}}
-                             {{--data-autoplay="5000"--}}
-                             {{--data-items-xxs="1" data-items-xs="1" data-items-sm="1" data-items-lg="3">--}}
-                            {{--@foreach ($events as $event)--}}
-                                {{--@include('cards.event', ['event' => $event, 'club' => $club])--}}
-                            {{--@endforeach--}}
-                        {{--</div>--}}
-                    {{--</div>--}}
+                {{--<div id="related-portfolio" class="owl-carousel portfolio-carousel carousel-widget"--}}
+                {{--data-margin="30" data-nav="true"--}}
+                {{--data-autoplay="5000"--}}
+                {{--data-items-xxs="1" data-items-xs="1" data-items-sm="1" data-items-lg="3">--}}
+                {{--@foreach ($events as $event)--}}
+                {{--@include('cards.event', ['event' => $event, 'club' => $club])--}}
+                {{--@endforeach--}}
+                {{--</div>--}}
+                {{--</div>--}}
 
-                    {{--<div class="clear"></div>--}}
+                {{--<div class="clear"></div>--}}
 
-                    {{--<h1>Top 3 News Highlight</h1>--}}
+                {{--<h1>Top 3 News Highlight</h1>--}}
 
-                    {{--<div class="col_full testimonial" style="background-color:white;">--}}
-                        {{--@foreach ($club->news as $news)--}}
-                            {{--@include('clubs.news', [ 'news' => $news ])--}}
-                        {{--@endforeach--}}
-                    {{--</div>--}}
+                {{--<div class="col_full testimonial" style="background-color:white;">--}}
+                {{--@foreach ($club->news as $news)--}}
+                {{--@include('clubs.news', [ 'news' => $news ])--}}
+                {{--@endforeach--}}
+                {{--</div>--}}
                 {{--</div>--}}
 
                 {{--<div id="group-info" style="display:none;">--}}
-                    {{--<div class="col_full testimonial" style="background-color:white;">--}}
-                        {{--<h3><u>Our Club Profile</u></h3>--}}
-                        {{--<p>{{ $club->description }}</p>--}}
-                    {{--</div>--}}
+                {{--<div class="col_full testimonial" style="background-color:white;">--}}
+                {{--<h3><u>Our Club Profile</u></h3>--}}
+                {{--<p>{{ $club->description }}</p>--}}
+                {{--</div>--}}
 
-                    {{--<div class="col_full testimonial" style="background-color:white;">--}}
-                        {{--<h3><u>Top 3 Opportunities That Benefits You</u></h3>--}}
-                        {{--@if ($club->opportunity_1 != NULL)--}}
-                            {{--<p>--}}
-                                {{--<span style="color:orange; font-weight: bold; font-size: 20px;">Opportunity 1:</span>--}}
-                                {{--{{ $club->opportunity_1 }}--}}
-                            {{--</p>--}}
-                        {{--@endif--}}
+                {{--<div class="col_full testimonial" style="background-color:white;">--}}
+                {{--<h3><u>Top 3 Opportunities That Benefits You</u></h3>--}}
+                {{--@if ($club->opportunity_1 != NULL)--}}
+                {{--<p>--}}
+                {{--<span style="color:orange; font-weight: bold; font-size: 20px;">Opportunity 1:</span>--}}
+                {{--{{ $club->opportunity_1 }}--}}
+                {{--</p>--}}
+                {{--@endif--}}
 
-                        {{--@if ($club->opportunity_2 != NULL)--}}
-                            {{--<p>--}}
-                                {{--<span style="color:orange; font-weight: bold; font-size: 20px;">Opportunity 2:</span>--}}
-                                {{--{{ $club->opportunity_2 }}--}}
-                            {{--</p>--}}
-                        {{--@endif--}}
+                {{--@if ($club->opportunity_2 != NULL)--}}
+                {{--<p>--}}
+                {{--<span style="color:orange; font-weight: bold; font-size: 20px;">Opportunity 2:</span>--}}
+                {{--{{ $club->opportunity_2 }}--}}
+                {{--</p>--}}
+                {{--@endif--}}
 
-                        {{--@if ($club->opportunity_3 != NULL)--}}
-                            {{--<p>--}}
-                                {{--<span style="color:orange; font-weight: bold; font-size: 20px;">Opportunity 3:</span>--}}
-                                {{--{{ $club->opportunity_3 }}--}}
-                            {{--</p>--}}
-                        {{--@endif--}}
-                    {{--</div>--}}
+                {{--@if ($club->opportunity_3 != NULL)--}}
+                {{--<p>--}}
+                {{--<span style="color:orange; font-weight: bold; font-size: 20px;">Opportunity 3:</span>--}}
+                {{--{{ $club->opportunity_3 }}--}}
+                {{--</p>--}}
+                {{--@endif--}}
+                {{--</div>--}}
                 {{--</div>--}}
 
             </div>
@@ -1814,25 +1827,25 @@
 <script type="text/javascript" src="../canvas/js/functions.js"></script>
 
 <script>
-//    $("#group-info-btn").on("click", function(){
-//        $("#highlights").hide();
-//        $("#group-info").show();
-//        $("#highlights-list").removeClass('active');
-//        $("#highlights-btn").css('background-color', '#E3E7F3');
-//        $("#group-info-btn").css('background-color', 'orange');
-//        $("#group-info-list").addClass('active');
-//    });
-//
-//    $("#highlights-btn").on("click", function(){
-//        $("#group-info").hide();
-//        $("#highlights").show()
-//
-//        $("#highlights-list").addClass('active');
-//        $("#highlights-btn").css('background-color', 'orange');
-//
-//        $("#group-info-btn").css('background-color', '#E3E7F3');
-//        $("#group-info-list").removeClass('active');
-//    });
+    //    $("#group-info-btn").on("click", function(){
+    //        $("#highlights").hide();
+    //        $("#group-info").show();
+    //        $("#highlights-list").removeClass('active');
+    //        $("#highlights-btn").css('background-color', '#E3E7F3');
+    //        $("#group-info-btn").css('background-color', 'orange');
+    //        $("#group-info-list").addClass('active');
+    //    });
+    //
+    //    $("#highlights-btn").on("click", function(){
+    //        $("#group-info").hide();
+    //        $("#highlights").show()
+    //
+    //        $("#highlights-list").addClass('active');
+    //        $("#highlights-btn").css('background-color', 'orange');
+    //
+    //        $("#group-info-btn").css('background-color', '#E3E7F3');
+    //        $("#group-info-list").removeClass('active');
+    //    });
 </script>
 </body>
 </html>
