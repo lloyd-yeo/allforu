@@ -121,26 +121,25 @@ class EventsController extends Controller
             return abort(401);
         }
         $request = $this->saveFiles($request);
-        $club = Event::findOrFail($id);
-        $club->update($request->all());
-
-
+        $event = Event::findOrFail($id);
+        $event->update($request->all());
+        
         $media = [];
         foreach ($request->input('images_id', []) as $index => $id) {
             $model          = config('laravel-medialibrary.media_model');
             $file           = $model::find($id);
-            $file->model_id = $club->id;
+            $file->model_id = $event->id;
             $file->save();
             $media[] = $file->toArray();
         }
-        $club->updateMedia($media, 'images');
+        $event->updateMedia($media, 'images');
 
-        return redirect()->route('admin.clubs.index');
+        return redirect()->route('admin.event.index');
     }
 
 
     /**
-     * Display Club.
+     * Display Event.
      *
      * @param  int  $id
      * @return \Illuminate\Http\Response
@@ -151,14 +150,16 @@ class EventsController extends Controller
             return abort(401);
         }
 
-        $schools = \App\School::get()->pluck('name', 'id')->prepend(trans('quickadmin.qa_please_select'), '');$users = \App\User::whereHas('clubs',
-                    function ($query) use ($id) {
-                        $query->where('id', $id);
-                    })->get();
+        $schools = \App\School::get()->pluck('name', 'id')->prepend(trans('quickadmin.qa_please_select'), '');
+//        $users = \App\User::whereHas('event',
+//                    function ($query) use ($id) {
+//                        $query->where('id', $id);
+//                    })->get();
 
-        $club = Club::findOrFail($id);
+        $event = Event::findOrFail($id);
+        $users = $event->subscribers();
 
-        return view('admin.clubs.show', compact('club', 'users'));
+        return view('admin.events.show', compact('event', 'users'));
     }
 
 
