@@ -13,6 +13,7 @@ use App\Http\Controllers\Controller;
 use App\Http\Requests\Admin\StoreEventsRequest;
 use App\Http\Requests\Admin\UpdateEventsRequest;
 use App\Http\Controllers\Traits\FileUploadTrait;
+use Overtrue\LaravelFollow\FollowRelation;
 use Carbon\Carbon;
 
 class EventsController extends Controller
