@@ -151,16 +151,25 @@ class EventsController extends Controller
         }
 
         $schools = \App\School::get()->pluck('name', 'id')->prepend(trans('quickadmin.qa_please_select'), '');
-//        $users = \App\User::whereHas('event',
-//                    function ($query) use ($id) {
-//                        $query->where('id', $id);
-//                    })->get();
 
         $event = Event::findOrFail($id);
         $users = $event->subscribers;
-        dump($users);
+        $user_auth_codes = array();
 
-        return view('admin.events.show', compact('event', 'users'));
+        foreach ($users as $user) {
+            $auth_code = NULL;
+            $relation = FollowRelation::where('user_id', $user->id)
+                ->where('followable_id', $event->id)
+                ->where('relation', 'subscribe')
+                ->first();
+            if ($relation != NULL) {
+                $auth_code = Carbon::parse($relation->created_at)->getTimestamp();
+                $auth_code = substr($auth_code, -4);
+                $user_auth_codes[$user->id] = $auth_code;
+            }
+        }
+
+        return view('admin.events.show', compact('event', 'users', 'user_auth_codes'));
     }
 
 
