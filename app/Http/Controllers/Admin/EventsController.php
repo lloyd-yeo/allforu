@@ -157,7 +157,7 @@ class EventsController extends Controller
 //                    })->get();
 
         $event = Event::findOrFail($id);
-        $users = $event->subscribers();
+        $users = $event->subscribers;
         dump($users);
 
         return view('admin.events.show', compact('event', 'users'));
