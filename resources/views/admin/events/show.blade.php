@@ -71,7 +71,8 @@
                         <tr>
                             <th>@lang('quickadmin.users.fields.name')</th>
                             <th>@lang('quickadmin.users.fields.email')</th>
-                            <th>@lang('quickadmin.users.fields.role')</th>
+{{--                            <th>@lang('quickadmin.users.fields.role')</th>--}}
+                            <th>Event Auth Code</th>
                             <th>@lang('quickadmin.users.fields.events')</th>
                             <th>&nbsp;</th>
 
