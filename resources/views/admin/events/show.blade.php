@@ -73,7 +73,7 @@
                             <th>@lang('quickadmin.users.fields.email')</th>
 {{--                            <th>@lang('quickadmin.users.fields.role')</th>--}}
                             <th>Event Auth Code</th>
-                            <th>@lang('quickadmin.users.fields.events')</th>
+{{--                            <th>@lang('quickadmin.users.fields.events')</th>--}}
                             <th>&nbsp;</th>
 
                         </tr>
@@ -87,11 +87,11 @@
                                     <td field-key='email'>{{ $user->email }}</td>
                                     <td field-key="auth-code">{{ $user_auth_codes[$user->id] }}</td>
                                     {{--<td field-key='role'>{{ $user->role->title or '' }}</td>--}}
-                                    <td field-key='clubs'>
-                                        @foreach ($user->clubs as $singleClubs)
-                                            <span class="label label-info label-many">{{ $singleClubs->name }}</span>
-                                        @endforeach
-                                    </td>
+                                    {{--<td field-key='clubs'>--}}
+                                        {{--@foreach ($user->clubs as $singleClubs)--}}
+                                            {{--<span class="label label-info label-many">{{ $singleClubs->name }}</span>--}}
+                                        {{--@endforeach--}}
+                                    {{--</td>--}}
                                     <td>
                                         @can('view')
                                             <a href="{{ route('users.show',[$user->id]) }}"
