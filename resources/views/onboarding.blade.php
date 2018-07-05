@@ -1502,7 +1502,7 @@
                                             <label for="template-contactform-subject">Which student organization are you from?</label>
                                             <select id="template-contactform-service" name="student_org"
                                                     class="sm-form-control">
-                                                <option value="">-- Select One --</option>
+                                                <option value="0">-- Select One --</option>
                                                 @foreach ($clubs as $club)
                                                 <option value="{{ $club->id }}">{{ $club->name }}</option>
                                                 @endforeach

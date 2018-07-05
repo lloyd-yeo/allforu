@@ -69,6 +69,9 @@ class SocialLoginController extends Controller
         $user->shirt_size = $request->input('shirt_size');
         $user->side_income_interest = $request->input('side_income_interest');
         $user->event_interest = $request->input('event_interest');
+        if ($request->input('student_org') > 0) {
+            $user->club_id = $request->input('student_org');
+        }
         $user->save();
         session(['new_user' => FALSE]);
         return redirect()->action('HomeController@dashboard');
