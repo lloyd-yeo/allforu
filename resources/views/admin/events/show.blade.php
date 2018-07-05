@@ -71,9 +71,8 @@
                         <tr>
                             <th>@lang('quickadmin.users.fields.name')</th>
                             <th>@lang('quickadmin.users.fields.email')</th>
-{{--                            <th>@lang('quickadmin.users.fields.role')</th>--}}
                             <th>Event Auth Code</th>
-{{--                            <th>@lang('quickadmin.users.fields.events')</th>--}}
+                            <th>Matriculation No.</th>
                             <th>&nbsp;</th>
 
                         </tr>
@@ -86,6 +85,7 @@
                                     <td field-key='name'>{{ $user->name }}</td>
                                     <td field-key='email'>{{ $user->email }}</td>
                                     <td field-key="auth-code">{{ $user_auth_codes[$user->id] }}</td>
+                                    <td field-key="matric-no">{{ $user->matric_no }}</td>
                                     {{--<td field-key='role'>{{ $user->role->title or '' }}</td>--}}
                                     {{--<td field-key='clubs'>--}}
                                         {{--@foreach ($user->clubs as $singleClubs)--}}
