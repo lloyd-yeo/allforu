@@ -53,7 +53,8 @@ class HomeController extends Controller
     }
 
     public function onboarding() {
-        return view('onboarding');
+        $clubs = Club::all();
+        return view('onboarding', ['clubs' => $clubs]);
     }
 
 }

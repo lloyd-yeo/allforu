@@ -1499,6 +1499,19 @@
                                         <div class="clear"></div>
 
                                         <div class="col_full">
+                                            <label for="template-contactform-subject">Which student organization are you from?</label>
+                                            <select id="template-contactform-service" name="student_org"
+                                                    class="sm-form-control">
+                                                <option value="">-- Select One --</option>
+                                                @foreach ($clubs as $club)
+                                                <option value="{{ $club->id }}">{{ $club->name }}</option>
+                                                @endforeach
+                                            </select>
+                                        </div>
+
+                                        <div class="clear"></div>
+
+                                        <div class="col_full">
                                             <label for="template-contactform-subject">Matric No.
                                                 <small>*</small>
                                             </label>
