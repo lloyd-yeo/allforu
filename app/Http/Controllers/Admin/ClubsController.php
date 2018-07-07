@@ -54,7 +54,7 @@ class ClubsController extends Controller
 
             return view('admin.clubs.index', compact('clubs','referred_by','society_classification','society_category'));
         } else {
-            return redirect()->back();
+            return redirect()->action('HomeController@dashboard');
         }
     }
 
