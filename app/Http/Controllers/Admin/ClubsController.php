@@ -24,7 +24,9 @@ class ClubsController extends Controller
      */
     public function index()
     {
-        if (Auth::user()->role_id != NULL && (Auth::user()->role_id == 1 || Auth::user()->role_id == 3 || Auth::user()->role_id == 4)) {
+        if (Auth::user()->role_id != NULL
+            && Auth::user()->student_leader == 1
+            && (Auth::user()->role_id == 1 || Auth::user()->role_id == 3 || Auth::user()->role_id == 4)) {
             if (! Gate::allows('club_access')) {
                 return abort(401);
             }
