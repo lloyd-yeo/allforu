@@ -40,7 +40,7 @@ class ClubsController extends Controller
                 if (Auth::user()->club_id != NULL) {
                     $clubs = Club::where('id', Auth::user()->club_id)->get();
                     if (count($clubs) == 0) {
-                        return redirect()->action('ClubsController@create');
+                        return redirect()->action('Admin\ClubsController@create');
                     }
                 } else {
                     $clubs = collect();
