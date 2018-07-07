@@ -28,7 +28,6 @@ class ClubsController extends Controller
             return abort(401);
         }
 
-
         if (request('show_deleted') == 1) {
             if (! Gate::allows('club_delete')) {
                 return abort(401);

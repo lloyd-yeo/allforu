@@ -64,6 +64,9 @@ class SocialLoginController extends Controller
         $user->year_of_study = $request->input('year_of_study');
         $user->matric_no = $request->input('matric_no');
         $user->student_leader = $request->input('student_leader');
+        if ($request->input('student_leader') == 1) {
+            $user->role_id = 3;
+        }
         $user->food_pref = $request->input('food_pref');
         $user->food_allergy = $request->input('food_allergy');
         $user->shirt_size = $request->input('shirt_size');

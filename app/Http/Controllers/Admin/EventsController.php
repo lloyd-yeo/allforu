@@ -27,7 +27,7 @@ class EventsController extends Controller
      */
     public function index()
     {
-        if (Auth::user()->student_leader == 1) {
+        if (Auth::user()->student_leader != 1) {
             return redirect()->back();
         }
 
@@ -39,6 +39,8 @@ class EventsController extends Controller
         } else {
             if (Auth::user()->club_id != NULL) {
                 $events = Event::where('club_id', Auth::user()->club_id)->get();
+            } else {
+                $events = collect();
             }
         }
 

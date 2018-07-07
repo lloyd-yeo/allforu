@@ -26,7 +26,6 @@ class UserActionsObserver
         }
     }
 
-
     public function deleting($model)
     {
         if (Auth::check()) {
