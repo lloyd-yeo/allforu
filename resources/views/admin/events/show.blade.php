@@ -59,7 +59,7 @@
             <ul class="nav nav-tabs" role="tablist">
 
                 <li role="presentation" class="active"><a href="#users" aria-controls="users" role="tab"
-                                                          data-toggle="tab">Students</a></li>
+                                                          data-toggle="tab">Attendees</a></li>
             </ul>
 
             <!-- Tab panes -->
@@ -73,7 +73,7 @@
                             <th>@lang('quickadmin.users.fields.email')</th>
                             <th>Matriculation No.</th>
                             <th>Event Auth Code</th>
-
+                            <th>Attendee Status</th>
                             <th>&nbsp;</th>
 
                         </tr>
@@ -87,6 +87,18 @@
                                     <td field-key='email'>{{ $user->email }}</td>
                                     <td field-key="matric-no">{{ $user->matric_no }}</td>
                                     <td field-key="auth-code">{{ $user_auth_codes[$user->id]->auth_code }}</td>
+                                    @switch ($user_auth_codes[$user->id]->status)
+                                        @case(0)
+                                            <td field-key="attendee-status">Indicated Interest</td>
+                                        @break
+
+                                        @case(1)
+                                            <td field-key="attendee-status">Verified</td>
+                                        @break
+                                        @default
+                                        <td field-key="attendee-status">Indicated Interest</td>
+                                    @endswitch
+
 
                                     {{--<td field-key='role'>{{ $user->role->title or '' }}</td>--}}
                                     {{--<td field-key='clubs'>--}}
@@ -95,9 +107,8 @@
                                         {{--@endforeach--}}
                                     {{--</td>--}}
                                     <td>
-                                        {{ route('admin.events.confirm_attendance') }}
-                                        {{--<a href="{{ route('events.confirm_attendance', [ 'event_id' => $event->id, 'user_id' => $user->id, 'auth_code' => $user_auth_codes[$user->id]->auth_code ]) }}"--}}
-                                           {{--class="btn btn-xs btn-primary">@lang('quickadmin.qa_view')</a>--}}
+                                        <a href="{{ route('admin.events.confirm_attendance', [ 'event_id' => $event->id, 'user_id' => $user->id, 'auth_code' => $user_auth_codes[$user->id]->auth_code ]) }}"
+                                           class="btn btn-xs btn-primary">@lang('quickadmin.qa_view')</a>
                                         @can('view')
                                             <a href="{{ route('users.show',[$user->id]) }}"
                                                class="btn btn-xs btn-primary">@lang('quickadmin.qa_view')</a>
