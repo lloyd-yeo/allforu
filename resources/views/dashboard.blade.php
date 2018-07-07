@@ -98,9 +98,9 @@
                 <h3>Welcome back, {{ Auth::user()->name }}!</h3>
                 @if (Auth::user()->student_leader == 1 && Auth::user()->club_id != NULL)
                         <center>
-                            <a href="/admin/{{ $event->id }}" class="button button-3d button-xlarge
-                                    button-rounded button-aqua
-                                    text-center">LEARN MORE</a></center>
+                            <a href="/admin/events" class="button button-3d button-xlarge
+                                    button-rounded
+                                    text-center">Manage my club</a></center>
                 @endif
 
                 <div class="title-block">
