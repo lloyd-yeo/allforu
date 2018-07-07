@@ -21,15 +21,15 @@
                             <td field-key='description'>{{ $event->description }}</td>
                         </tr>
                         <tr>
-                            <th>@lang('quickadmin.events.fields.website')</th>
+                            <th>Website URL</th>
                             <td field-key='website'>{{ $event->website }}</td>
                         </tr>
                         <tr>
-                            <th>@lang('quickadmin.events.fields.fb-page-url')</th>
+                            <th>Facebook Page URL</th>
                             <td field-key='fb_page_url'>{{ $event->fb_page_url }}</td>
                         </tr>
                         <tr>
-                            <th>@lang('quickadmin.events.fields.ig-page-url')</th>
+                            <th>Instagram Page URL</th>
                             <td field-key='ig_page_url'>{{ $event->ig_page_url }}</td>
                         </tr>
                         <tr>
@@ -49,10 +49,6 @@
                                     </p>
                                 @endforeach</td>
                         </tr>
-                        {{--<tr>--}}
-                        {{--<th>@lang('quickadmin.events.fields.school')</th>--}}
-                        {{--<td field-key='school'>{{ $event->school->name or '' }}</td>--}}
-                        {{--</tr>--}}
                     </table>
                 </div>
             </div><!-- Nav tabs -->
