@@ -101,6 +101,10 @@
                             <a href="/admin/events" class="button button-3d button-xlarge
                                     button-rounded
                                     text-center">Manage my club</a></center>
+                        <center>
+                            <a href="/admin/events" class="button button-3d button-xlarge
+                                    button-rounded button-amber
+                                    text-center">Manage my club events</a></center>
                 @endif
 
                 <div class="title-block">
