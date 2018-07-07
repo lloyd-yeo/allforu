@@ -1435,7 +1435,7 @@
                 <div class="container clearfix">
                 @enddesktop
 
-                <h6>Welcome back, {{ Auth::user()->name }}!</h6>
+                <h3>Welcome back, {{ Auth::user()->name }}!</h3>
 
                 <div class="title-block">
                     <h1>Events</h1>
