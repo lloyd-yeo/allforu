@@ -28,6 +28,7 @@ class ClubsController extends Controller
         if (Auth::user()->role_id != NULL
             && Auth::user()->student_leader == 1
             && (Auth::user()->role_id == 1 || Auth::user()->role_id == 3 || Auth::user()->role_id == 4)) {
+
             if (! Gate::allows('club_access')) {
                 return abort(401);
             }
@@ -41,8 +42,7 @@ class ClubsController extends Controller
                 if (Auth::user()->club_id != NULL) {
                     Log::info("[CLUB ADMIN] Auth::user() = " . Auth::user());
                     Log::info("[CLUB ADMIN] Auth::user()->club_id = " . Auth::user()->club_id);
-                    $clubs = Club::where('id', Auth::user()->club_id);
-                    dump($clubs);
+                    $clubs = Club::where('id', Auth::user()->club_id)->get();
                     if (count($clubs) < 1) {
                         return redirect()->action('Admin\ClubsController@create');
                     }
