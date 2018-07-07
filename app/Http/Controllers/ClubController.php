@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Event;
 use Illuminate\Http\Request;
 use App\Club;
+use Overtrue\LaravelFollow\FollowRelation;
 
 class ClubController extends Controller
 {
