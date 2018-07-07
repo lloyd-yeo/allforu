@@ -1453,9 +1453,24 @@
                         </p>
 
                         <br/>
-                        <a href="/join-club/{{ $club->id }}" class="button button-3d button-xlarge
-                                    button-rounded
-                                    text-center">REQUEST TO JOIN</a>
+                        @if ($join_request == NULL)
+                            <a href="/join-club/{{ $club->id }}" class="button button-3d button-xlarge
+                                        button-rounded
+                                        text-center">REQUEST TO JOIN</a>
+                        @else
+                            @switch ($join_request->status)
+                                @case (0)
+                                <a href="#!" style="opacity: 0.5;" class="button button-3d button-xlarge
+                                        button-rounded
+                                        text-center">REQUEST SUBMITTED</a>
+                                    @break
+                                @case (1)
+                                <a href="#!" class="button button-3d button-xlarge
+                                        button-rounded
+                                        text-center">MEMBER</a>
+                                    @break
+                            @endswitch
+                        @endif
                     </div>
                 </div>
 

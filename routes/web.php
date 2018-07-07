@@ -16,6 +16,7 @@ Route::get('/club/show', 'ClubController@showProfile');
 Route::get('/club-wall/{club_id}', 'ClubController@showWall');
 Route::get('/event-wall/{event_id}', 'EventController@showWall');
 Route::post('/event/join', 'EventController@join');
+Route::get('/join-club/{club_id}', 'ClubController@addRequestToJoin');
 
 // Change Password Routes...
 $this->get('change_password', 'Auth\ChangePasswordController@showChangePasswordForm')->name('auth.change_password');
