@@ -45,7 +45,7 @@ Route::group(['middleware' => ['auth'], 'prefix' => 'admin', 'as' => 'admin.'], 
     Route::post('/spatie/media/upload', 'Admin\SpatieMediaController@create')->name('media.upload');
     Route::post('/spatie/media/remove', 'Admin\SpatieMediaController@destroy')->name('media.remove');
     Route::resource('events', 'Admin\EventsController');
-    Route::post('events_confirm_attendance', ['uses' => 'Admin\EventsController@confirmAttendance', 'as' => 'events.confirm_attendance']);
+    Route::get('events_confirm_attendance', ['uses' => 'Admin\EventsController@confirmAttendance', 'as' => 'events.confirm_attendance']);
     Route::post('events_mass_destroy', ['uses' => 'Admin\EventsController@massDestroy', 'as' => 'events.mass_destroy']);
     Route::post('events_restore/{id}', ['uses' => 'Admin\EventsController@restore', 'as' => 'events.restore']);
     Route::delete('events_perma_del/{id}', ['uses' => 'Admin\EventsController@perma_del', 'as' => 'events.perma_del']);
