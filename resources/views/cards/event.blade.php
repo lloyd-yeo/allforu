@@ -14,7 +14,7 @@
                              src="https://via.placeholder.com/400x400"/>
                     @endif
                 </div>
-                <div class="entry-c">
+                <div class="entry-c" style="padding-left:15px;">
                     <div class="entry-title">
                         <h4><a href="#">{{ $event->club->name }}</a> <span class="label label-primary" style="color:white;">Featured</span></h4>
                     </div>
