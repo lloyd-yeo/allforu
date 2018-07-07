@@ -253,9 +253,8 @@ class EventsController extends Controller
 
             if ($relation != NULL) {
                 if ($relation->auth_code == $request->input('auth_code')) {
-                    $relation->status == 1;
+                    $relation->status = 1;
                     $relation->save();
-
                     return response()->json(['success' => TRUE, 'message' => 'This attendee\'s attendance has been successfully approved.']);
                 } else {
                     return response()->json(['success' => TRUE, 'message' => 'Auth Code is incorrect.']);
