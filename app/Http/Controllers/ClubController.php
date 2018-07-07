@@ -6,6 +6,7 @@ use App\Event;
 use Illuminate\Http\Request;
 use App\Club;
 use Overtrue\LaravelFollow\FollowRelation;
+use Auth;
 
 class ClubController extends Controller
 {
