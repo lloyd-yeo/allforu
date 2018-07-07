@@ -27,13 +27,19 @@ class EventsController extends Controller
      */
     public function index()
     {
+        if (Auth::user()->student_leader == 1) {
+            return redirect()->back();
+        }
+
         if (request('show_deleted') == 1) {
             if (! Gate::allows('club_delete')) {
                 return abort(401);
             }
             $events = Event::onlyTrashed()->get();
         } else {
-            $events = Event::all();
+            if (Auth::user()->club_id != NULL) {
+                $events = Event::where('club_id', Auth::user()->club_id)->get();
+            }
         }
 
         $referred_by = array(['Facebook', 'Instagram', 'Linkedin', 'Friend’s referral', 'Referred by other clubs', 'Internet search',
