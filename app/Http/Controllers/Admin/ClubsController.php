@@ -145,9 +145,9 @@ class ClubsController extends Controller
      */
     public function edit($id)
     {
-        if (! Gate::allows('club_edit')) {
-            return abort(401);
-        }
+//        if (! Gate::allows('club_edit')) {
+//            return abort(401);
+//        }
 
         $schools = \App\School::get()->pluck('name', 'id')->prepend(trans('quickadmin.qa_please_select'), '');
 
@@ -165,9 +165,9 @@ class ClubsController extends Controller
      */
     public function update(UpdateClubsRequest $request, $id)
     {
-        if (! Gate::allows('club_edit')) {
-            return abort(401);
-        }
+//        if (! Gate::allows('club_edit')) {
+//            return abort(401);
+//        }
         $request = $this->saveFiles($request);
         $club = Club::findOrFail($id);
         $club->update($request->all());
@@ -195,9 +195,9 @@ class ClubsController extends Controller
      */
     public function show($id)
     {
-        if (! Gate::allows('club_view')) {
-            return abort(401);
-        }
+//        if (! Gate::allows('club_view')) {
+//            return abort(401);
+//        }
 
         $schools = \App\School::get()->pluck('name', 'id')->prepend(trans('quickadmin.qa_please_select'), '');$users = \App\User::whereHas('clubs',
                     function ($query) use ($id) {
