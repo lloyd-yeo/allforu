@@ -7,6 +7,7 @@ use Spatie\MediaLibrary\HasMedia\HasMediaTrait;
 use Spatie\MediaLibrary\HasMedia\Interfaces\HasMedia;
 use Overtrue\LaravelFollow\Traits\CanBeLiked;
 use Overtrue\LaravelFollow\Traits\CanBeFollowed;
+use Overtrue\LaravelFollow\Traits\CanBeSubscribed;
 
 /**
  * Class Club
