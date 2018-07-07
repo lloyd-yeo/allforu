@@ -6,6 +6,9 @@
         <div id="post-list-footer">
             <div class="spost clearfix">
                 <div class="entry-image">
+                    @php
+                        echo $event->id;
+                    @endphp
                     @if($event->club->cover_img)
                         <img style="margin-left: 15px; border-radius: 400px;"
                              src="{{ asset(env('UPLOAD_PATH').'/' . $event->club->cover_img) }}"/>
@@ -13,9 +16,6 @@
                         <img style="margin-left: 15px; border-radius: 400px;"
                              src="https://via.placeholder.com/400x400"/>
                     @endif
-                    {{--<a href="#" class="nobg">--}}
-                        {{--<img src="canvas/images/magazine/small/1.jpg" alt="">--}}
-                    {{--</a>--}}
                 </div>
                 <div class="entry-c">
                     <div class="entry-title">
