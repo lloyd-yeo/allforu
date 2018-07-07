@@ -1440,10 +1440,9 @@
                     <span></span>
                 </div>
                 @foreach ($events as $event)
-                    @php
-                        dump($event);
-                    @endphp
-                    @include('cards.event', ['event' => $event])
+                    @if ($event->club != NULL)
+                        @include('cards.event', ['event' => $event])
+                    @endif
                 @endforeach
 
                 <div class="clear"></div>
