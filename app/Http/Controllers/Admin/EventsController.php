@@ -164,11 +164,7 @@ class EventsController extends Controller
                 ->where('relation', 'subscribe')
                 ->first();
             if ($relation != NULL) {
-                $auth_code = Carbon::parse($relation->created_at)->getTimestamp();
-                $auth_code = substr($auth_code, -4);
                 $user_auth_codes[$user->id] = $relation;
-                $relation->auth_code = $auth_code;
-                $relation->save();
             }
         }
 
