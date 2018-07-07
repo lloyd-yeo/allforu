@@ -259,9 +259,9 @@ class EventsController extends Controller
                         'status' => 1
                     ]);
 
-                    return redirect()->action('EventsController@show', ['id' => $request->input('event_id')]);
+                    return redirect()->action('Admin\EventsController@show', ['id' => $request->input('event_id')]);
                 } else {
-                    return redirect()->action('EventsController@show', ['id' => $request->input('event_id')]);
+                    return redirect()->action('Admin\EventsController@show', ['id' => $request->input('event_id')]);
                 }
             }
         } else {
