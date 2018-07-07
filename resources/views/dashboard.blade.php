@@ -1435,6 +1435,8 @@
                 <div class="container clearfix">
                 @enddesktop
 
+                <h6>Welcome back, Auth::user()->name!</h6>
+
                 <div class="title-block">
                     <h1>Events</h1>
                     <span></span>
