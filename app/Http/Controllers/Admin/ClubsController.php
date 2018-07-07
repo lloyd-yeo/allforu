@@ -41,7 +41,7 @@ class ClubsController extends Controller
                 if (Auth::user()->club_id != NULL) {
                     Log::info("[CLUB ADMIN] Auth::user() = " . Auth::user());
                     Log::info("[CLUB ADMIN] Auth::user()->club_id = " . Auth::user()->club_id);
-                    $clubs = Club::where('id', Auth::user()->club_id)->get();
+                    $clubs = Club::where('id', Auth::user()->club_id);
                     Log::info($clubs);
                     if (count($clubs) < 1) {
                         return redirect()->action('Admin\ClubsController@create');
