@@ -108,7 +108,7 @@
                                     {{--</td>--}}
                                     <td>
                                         <a href="{{ route('admin.events.confirm_attendance', [ 'event_id' => $event->id, 'user_id' => $user->id, 'auth_code' => $user_auth_codes[$user->id]->auth_code ]) }}"
-                                           class="btn btn-xs btn-primary">@lang('quickadmin.qa_view')</a>
+                                           class="btn btn-xs btn-primary">Confirm Attendance</a>
                                         @can('view')
                                             <a href="{{ route('users.show',[$user->id]) }}"
                                                class="btn btn-xs btn-primary">@lang('quickadmin.qa_view')</a>
