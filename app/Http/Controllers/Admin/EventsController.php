@@ -166,7 +166,7 @@ class EventsController extends Controller
             if ($relation != NULL) {
                 $auth_code = Carbon::parse($relation->created_at)->getTimestamp();
                 $auth_code = substr($auth_code, -4);
-                $user_auth_codes[$user->id] = $auth_code;
+                $user_auth_codes[$user->id] = $relation;
                 $relation->auth_code = $auth_code;
                 $relation->save();
             }
@@ -245,5 +245,28 @@ class EventsController extends Controller
         $club->forceDelete();
 
         return redirect()->route('admin.clubs.index');
+    }
+
+    public function event_confirm_attendance($request) {
+
+        if ($request->input('event_id') && $request->input('auth_code') && $request->input('user_id')) {
+            $relation = FollowRelation::where('user_id', $request->input('user_id'))
+                ->where('followable_id', $request->input('event_id'))
+                ->where('relation', 'subscribe')
+                ->first();
+
+            if ($relation != NULL) {
+                if ($relation->auth_code == $request->input('auth_code')) {
+                    $relation->status == 1;
+                    $relation->save();
+
+                    return response()->json(['success' => TRUE, 'message' => 'This attendee\'s attendance has been successfully approved.']);
+                } else {
+                    return response()->json(['success' => TRUE, 'message' => 'Auth Code is incorrect.']);
+                }
+            }
+        } else {
+            return abort(404);
+        }
     }
 }

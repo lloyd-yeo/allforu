@@ -71,8 +71,9 @@
                         <tr>
                             <th>@lang('quickadmin.users.fields.name')</th>
                             <th>@lang('quickadmin.users.fields.email')</th>
-                            <th>Event Auth Code</th>
                             <th>Matriculation No.</th>
+                            <th>Event Auth Code</th>
+
                             <th>&nbsp;</th>
 
                         </tr>
@@ -84,8 +85,9 @@
                                 <tr data-entry-id="{{ $user->id }}">
                                     <td field-key='name'>{{ $user->name }}</td>
                                     <td field-key='email'>{{ $user->email }}</td>
-                                    <td field-key="auth-code">{{ $user_auth_codes[$user->id] }}</td>
                                     <td field-key="matric-no">{{ $user->matric_no }}</td>
+                                    <td field-key="auth-code">{{ $user_auth_codes[$user->id]->auth_code }}</td>
+
                                     {{--<td field-key='role'>{{ $user->role->title or '' }}</td>--}}
                                     {{--<td field-key='clubs'>--}}
                                         {{--@foreach ($user->clubs as $singleClubs)--}}
@@ -93,6 +95,8 @@
                                         {{--@endforeach--}}
                                     {{--</td>--}}
                                     <td>
+                                        <a href="{{ route('events.confirm_attendance',[$user->id]) }}"
+                                           class="btn btn-xs btn-primary">@lang('quickadmin.qa_view')</a>
                                         @can('view')
                                             <a href="{{ route('users.show',[$user->id]) }}"
                                                class="btn btn-xs btn-primary">@lang('quickadmin.qa_view')</a>
