@@ -15,6 +15,7 @@ use App\Http\Requests\Admin\UpdateEventsRequest;
 use App\Http\Controllers\Traits\FileUploadTrait;
 use Overtrue\LaravelFollow\FollowRelation;
 use Carbon\Carbon;
+use DB;
 
 class EventsController extends Controller
 {
@@ -253,8 +254,13 @@ class EventsController extends Controller
 
             if ($relation != NULL) {
                 if ($relation->auth_code == $request->input('auth_code')) {
-                    $relation->status = 1;
-                    $relation->save();
+
+                    DB::table('followables')->where('followable_id', $request->input('event_id'))->where('user_id', $request->input('user_id'))->update([
+                        'status' => 1
+                    ]);
+
+//                    $relation->status = 1;
+//                    $relation->save();
                     return response()->json(['success' => TRUE, 'message' => 'This attendee\'s attendance has been successfully approved.']);
                 } else {
                     return response()->json(['success' => TRUE, 'message' => 'Auth Code is incorrect.']);

@@ -1458,15 +1458,15 @@
 
                 <div class="col_full center testimonial" style="background-color:white; margin-bottom: 10px;">
                     <div class="col_one_third" style="margin-bottom:0px;">
-                        <h3 style="margin-bottom:0;"><i class="fa fa-users"></i> 330 users</h3>
+                        <h3 style="margin-bottom:0;"><i class="fa fa-users"></i> 0 users</h3>
                     </div>
 
                     <div class="col_one_third" style="margin-bottom:0px;">
-                        <h3 style="margin-bottom:0;"><i class="fa fa-heart" style="color:red;"></i> 546 followers</h3>
+                        <h3 style="margin-bottom:0;"><i class="fa fa-heart" style="color:red;"></i> 0 followers</h3>
                     </div>
 
                     <div class="col_one_third col_last" style="margin-bottom:0 !important;">
-                        <h3 style="margin-bottom:0 !important;"><i class="fa fa-star-o" style="color:orange;"></i> 33 reviews
+                        <h3 style="margin-bottom:0 !important;"><i class="fa fa-star-o" style="color:orange;"></i> 0 reviews
                         </h3>
                     </div>
 

@@ -18,6 +18,7 @@ class ClubController extends Controller
             return redirect()->back();
         }
         $events = Event::where('club_id', $club_id);
+//        $users =
         return view('clubs.wall', [ 'club' => $club, 'events' => $events ]);
     }
 }
