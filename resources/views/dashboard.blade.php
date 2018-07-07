@@ -1440,6 +1440,9 @@
                     <span></span>
                 </div>
                 @foreach ($events as $event)
+                    @php
+                        dump($event);
+                    @endphp
                     @include('cards.event', ['event' => $event])
                 @endforeach
 
