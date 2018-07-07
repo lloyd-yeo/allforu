@@ -243,7 +243,7 @@ class EventsController extends Controller
         return redirect()->route('admin.clubs.index');
     }
 
-    public function event_confirm_attendance($request) {
+    public function confirmAttendance($request) {
 
         if ($request->input('event_id') && $request->input('auth_code') && $request->input('user_id')) {
             $relation = FollowRelation::where('user_id', $request->input('user_id'))
