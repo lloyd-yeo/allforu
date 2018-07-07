@@ -259,11 +259,9 @@ class EventsController extends Controller
                         'status' => 1
                     ]);
 
-//                    $relation->status = 1;
-//                    $relation->save();
-                    return response()->json(['success' => TRUE, 'message' => 'This attendee\'s attendance has been successfully approved.']);
+                    return redirect()->action('EventsController@show', ['id' => $request->input('event_id')]);
                 } else {
-                    return response()->json(['success' => TRUE, 'message' => 'Auth Code is incorrect.']);
+                    return redirect()->action('EventsController@show', ['id' => $request->input('event_id')]);
                 }
             }
         } else {
