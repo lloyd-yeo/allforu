@@ -40,6 +40,17 @@ class EventController extends Controller
         $user = User::find(Auth::user()->id);
         $user->subscribe($event);
 
+        $relation = FollowRelation::where('user_id', Auth::user()->id)
+            ->where('followable_id', $event->id)
+            ->where('relation', 'subscribe')
+            ->first();
+        if ($relation != NULL) {
+            $auth_code = Carbon::parse($relation->created_at)->getTimestamp();
+            $auth_code = substr($auth_code, -4);
+            $relation->auth_code = $auth_code;
+            $relation->save();
+        }
+
         return response()->json([
             'success' => TRUE,
             'message' => 'Successfully joined this event!'

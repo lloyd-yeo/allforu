@@ -80,10 +80,6 @@ class EventsController extends Controller
      */
     public function store(StoreEventsRequest $request)
     {
-//        if (! Gate::allows('club_create')) {
-//            return abort(401);
-//        }
-
         $request = $this->saveFiles($request);
         $event = Event::create($request->all());
 
@@ -106,10 +102,6 @@ class EventsController extends Controller
      */
     public function edit($id)
     {
-//        if (! Gate::allows('club_edit')) {
-//            return abort(401);
-//        }
-
         $clubs = \App\Club::get()->pluck('name', 'id')->prepend(trans('quickadmin.qa_please_select'), '');
 
         $event = Event::findOrFail($id);
@@ -175,6 +167,8 @@ class EventsController extends Controller
                 $auth_code = Carbon::parse($relation->created_at)->getTimestamp();
                 $auth_code = substr($auth_code, -4);
                 $user_auth_codes[$user->id] = $auth_code;
+                $relation->auth_code = $auth_code;
+                $relation->save();
             }
         }
 

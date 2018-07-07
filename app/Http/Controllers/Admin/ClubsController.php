@@ -45,7 +45,6 @@ class ClubsController extends Controller
                 } else {
                     $clubs = collect();
                 }
-
             }
 
             $referred_by = ['Facebook', 'Instagram', 'Linkedin', 'Friend’s referral', 'Referred by other clubs', 'Internet search',
