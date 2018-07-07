@@ -24,26 +24,38 @@ class ClubsController extends Controller
      */
     public function index()
     {
-        if (! Gate::allows('club_access')) {
-            return abort(401);
-        }
-
-        if (request('show_deleted') == 1) {
-            if (! Gate::allows('club_delete')) {
+        if (Auth::user()->role_id != NULL && (Auth::user()->role_id == 1 || Auth::user()->role_id == 3 || Auth::user()->role_id == 4)) {
+            if (! Gate::allows('club_access')) {
                 return abort(401);
             }
-            $clubs = Club::onlyTrashed()->get();
+
+            if (request('show_deleted') == 1) {
+                if (! Gate::allows('club_delete')) {
+                    return abort(401);
+                }
+                $clubs = Club::onlyTrashed()->get();
+            } else {
+                if (Auth::user()->club_id != NULL) {
+                    $clubs = Club::where('id', Auth::user()->club_id)->get();
+                    if (count($clubs) == 0) {
+                        return redirect()->action('ClubsController@create');
+                    }
+                } else {
+                    $clubs = collect();
+                }
+
+            }
+
+            $referred_by = ['Facebook', 'Instagram', 'Linkedin', 'Friend’s referral', 'Referred by other clubs', 'Internet search',
+                'Flyers', 'Events'];
+            $society_classification = ['Club', 'CCA', 'Interest Group', 'Hall'];
+            $society_category = ['Sports', 'Hall of residence', 'Performing arts', 'Voluntary role','Student welfare',
+                'Academic'];
+
+            return view('admin.clubs.index', compact('clubs','referred_by','society_classification','society_category'));
         } else {
-            $clubs = Club::all();
+            return redirect()->back();
         }
-
-        $referred_by = ['Facebook', 'Instagram', 'Linkedin', 'Friend’s referral', 'Referred by other clubs', 'Internet search',
-            'Flyers', 'Events'];
-        $society_classification = ['Club', 'CCA', 'Interest Group', 'Hall'];
-        $society_category = ['Sports', 'Hall of residence', 'Performing arts', 'Voluntary role','Student welfare',
-            'Academic'];
-
-        return view('admin.clubs.index', compact('clubs','referred_by','society_classification','society_category'));
     }
 
     /**
