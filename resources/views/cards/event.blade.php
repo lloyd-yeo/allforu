@@ -7,7 +7,7 @@
             <div class="spost clearfix">
                 <div class="entry-image">
                     @php
-                        echo $event->id;
+                        echo $event->id . "<br/>" . $event->club
                     @endphp
                     @if($event->club->cover_img)
                         <img style="margin-left: 15px; border-radius: 400px;"
