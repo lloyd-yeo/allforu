@@ -12,6 +12,7 @@ use App\Http\Controllers\Controller;
 use App\Http\Requests\Admin\StoreClubsRequest;
 use App\Http\Requests\Admin\UpdateClubsRequest;
 use App\Http\Controllers\Traits\FileUploadTrait;
+use Log;
 
 class ClubsController extends Controller
 {
@@ -38,6 +39,7 @@ class ClubsController extends Controller
                 $clubs = Club::onlyTrashed()->get();
             } else {
                 if (Auth::user()->club_id != NULL) {
+                    Log::info(Auth::user());
                     $clubs = Club::where('id', Auth::user()->club_id)->get();
                     if (count($clubs) < 1) {
                         return redirect()->action('Admin\ClubsController@create');
