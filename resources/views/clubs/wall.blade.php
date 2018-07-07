@@ -1451,6 +1451,11 @@
                         <p>
                             "{{ $club->description }}"
                         </p>
+
+                        <br/>
+                        <a href="/join-club/{{ $club->id }}" class="button button-3d button-xlarge
+                                    button-rounded
+                                    text-center">REQUEST TO JOIN</a>
                     </div>
                 </div>
 
